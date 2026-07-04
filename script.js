@@ -2,14 +2,41 @@
    HOLGENVY - Website Interactions
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
+// === COMPONENT LOADER ===
+async function loadComponent(url, targetId) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`Failed to load ${url}`);
+        const html = await response.text();
+        const target = document.getElementById(targetId);
+        if (target) {
+            target.innerHTML = html;
+        }
+    } catch (error) {
+        console.error('Component load error:', error);
+    }
+}
+
+async function loadAllComponents() {
+    await Promise.all([
+        loadComponent('components/header.html', 'site-header'),
+        loadComponent('components/nav.html', 'site-nav'),
+        loadComponent('components/footer.html', 'site-footer')
+    ]);
+    // Re-initialize interactions after components are loaded
+    initInteractions();
+}
+
+// === INTERACTIONS INITIALIZER ===
+function initInteractions() {
 
     // === MOBILE MENU TOGGLE ===
     const mobileToggle = document.getElementById('mobileToggle');
     const catNav = document.getElementById('catNav');
 
     if (mobileToggle && catNav) {
-        mobileToggle.addEventListener('click', () => {
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             mobileToggle.classList.toggle('active');
             catNav.classList.toggle('active');
         });
@@ -232,5 +259,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
 
     progressBars.forEach(bar => progressObserver.observe(bar));
+}
 
+// === INITIALIZE ===
+document.addEventListener('DOMContentLoaded', () => {
+    loadAllComponents();
 });
