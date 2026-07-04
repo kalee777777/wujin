@@ -11,7 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle && catNav) {
         mobileToggle.addEventListener('click', () => {
             mobileToggle.classList.toggle('active');
-            catNav.style.display = catNav.style.display === 'block' ? 'none' : 'block';
+            catNav.classList.toggle('active');
+        });
+
+        // Close nav when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileToggle.contains(e.target) && !catNav.contains(e.target)) {
+                mobileToggle.classList.remove('active');
+                catNav.classList.remove('active');
+            }
         });
     }
 
