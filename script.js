@@ -239,6 +239,38 @@ function initInteractions() {
     }, { threshold: 0.5 });
 
     progressBars.forEach(bar => progressObserver.observe(bar));
+
+    // === PRODUCT PAGE FILTER ===
+    const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+    const productCards = document.querySelectorAll('.product-page-card');
+    const productCount = document.querySelector('.product-count strong');
+
+    if (filterBtns.length && productCards.length) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                let visible = 0;
+
+                productCards.forEach(card => {
+                    const cat = card.getAttribute('data-category');
+                    if (filter === 'all' || cat === filter) {
+                        card.classList.remove('hidden');
+                        visible++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+
+                if (productCount) {
+                    productCount.textContent = visible;
+                }
+            });
+        });
+    }
 }
 
 // === INITIALIZE ===
