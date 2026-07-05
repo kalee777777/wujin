@@ -79,26 +79,6 @@ function initInteractions() {
         });
     });
 
-    // === DEAL COUNTDOWN TIMER ===
-    const timerEl = document.getElementById('dealTimer');
-    if (timerEl) {
-        let hours = 4, minutes = 23, seconds = 15;
-
-        function updateTimer() {
-            seconds--;
-            if (seconds < 0) { seconds = 59; minutes--; }
-            if (minutes < 0) { minutes = 59; hours--; }
-            if (hours < 0) { hours = 23; minutes = 59; seconds = 59; }
-
-            const hh = String(hours).padStart(2, '0');
-            const mm = String(minutes).padStart(2, '0');
-            const ss = String(seconds).padStart(2, '0');
-            timerEl.textContent = `Ends in: ${hh}:${mm}:${ss}`;
-        }
-
-        setInterval(updateTimer, 1000);
-    }
-
     // === NEWSLETTER FORM ===
     const newsletterForm = document.getElementById('newsletterForm');
     if (newsletterForm) {
