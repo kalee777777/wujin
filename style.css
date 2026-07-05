@@ -1414,14 +1414,7 @@ img { max-width: 100%; display: block; }
     background: var(--bg-section);
 }
 
-.split-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    align-items: start;
-}
-
-.split-list h3 {
+.split-section-title {
     font-family: var(--font-display);
     font-size: 1.8rem;
     font-weight: 400;
@@ -1431,11 +1424,25 @@ img { max-width: 100%; display: block; }
     color: var(--text);
 }
 
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.split-list {
+    display: flex;
+    flex-direction: column;
+}
+
 /* 2x2 Product Grid */
 .split-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 16px;
+    flex: 1;
 }
 
 .split-card {
@@ -1445,6 +1452,9 @@ img { max-width: 100%; display: block; }
     overflow: hidden;
     transition: var(--transition);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .split-card:hover {
@@ -1456,11 +1466,13 @@ img { max-width: 100%; display: block; }
 .split-card-img {
     position: relative;
     overflow: hidden;
+    flex: 1;
 }
 
 .split-card-img .img-placeholder {
     width: 100%;
-    height: 140px;
+    height: 100%;
+    min-height: 120px;
     background: linear-gradient(135deg, #F0F2F5, #E8EAEE);
     display: flex;
     align-items: center;
