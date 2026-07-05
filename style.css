@@ -1525,21 +1525,22 @@ img { max-width: 100%; display: block; }
 
 /* Right Feature Banner */
 .split-feature {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: var(--transition);
-    box-shadow: var(--shadow-sm);
+    height: 100%;
+    min-height: 420px;
 }
 
 .split-feature:hover {
-    border-color: var(--neon);
     box-shadow: var(--shadow-neon);
 }
 
 .feature-img-placeholder {
-    height: 320px;
+    position: absolute;
+    inset: 0;
+    height: 100%;
     background: linear-gradient(135deg, #F0F2F5, #E8EAEE);
     display: flex;
     align-items: center;
@@ -1559,15 +1560,21 @@ img { max-width: 100%; display: block; }
 }
 
 .split-feature-info {
-    padding: 28px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
 }
 
 .feature-tag {
     display: inline-block;
     padding: 4px 12px;
-    background: rgba(57, 255, 20, 0.1);
-    border: 1px solid rgba(57, 255, 20, 0.2);
-    color: var(--neon-dark);
+    background: rgba(57, 255, 20, 0.15);
+    border: 1px solid rgba(57, 255, 20, 0.4);
+    color: var(--neon);
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1584,12 +1591,12 @@ img { max-width: 100%; display: block; }
     text-transform: uppercase;
     line-height: 1.1;
     margin-bottom: 12px;
-    color: var(--text);
+    color: var(--text-light);
 }
 
 .split-feature-info p {
     font-size: 0.88rem;
-    color: var(--text-secondary);
+    color: var(--text-light-secondary);
     margin-bottom: 16px;
     line-height: 1.6;
 }
