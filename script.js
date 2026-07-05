@@ -242,10 +242,10 @@ function initInteractions() {
 
     // === PRODUCT PAGE FILTER ===
     const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
-    const productCards = document.querySelectorAll('.product-page-card');
+    const productPageCards = document.querySelectorAll('.product-page-card');
     const productCount = document.querySelector('.product-count strong');
 
-    if (filterBtns.length && productCards.length) {
+    if (filterBtns.length && productPageCards.length) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 // Update active state
@@ -255,7 +255,7 @@ function initInteractions() {
                 const filter = btn.getAttribute('data-filter');
                 let visible = 0;
 
-                productCards.forEach(card => {
+                productPageCards.forEach(card => {
                     const cat = card.getAttribute('data-category');
                     if (filter === 'all' || cat === filter) {
                         card.classList.remove('hidden');
