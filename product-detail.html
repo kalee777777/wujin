@@ -402,6 +402,62 @@
                 <div class="inquiry-info">
                     <h2>Request a <span class="neon">Quote</span></h2>
                     <p>Send us your inquiry and our sales team will get back to you within 24 hours with a detailed quotation.</p>
+
+                    <div class="inquiry-steps">
+                        <div class="inq-step">
+                            <div class="inq-step-num">1</div>
+                            <div class="inq-step-text">
+                                <strong>Submit Inquiry</strong>
+                                <span>Fill out the form with your requirements</span>
+                            </div>
+                        </div>
+                        <div class="inq-step">
+                            <div class="inq-step-num">2</div>
+                            <div class="inq-step-text">
+                                <strong>We Review</strong>
+                                <span>Our team evaluates your request within 24h</span>
+                            </div>
+                        </div>
+                        <div class="inq-step">
+                            <div class="inq-step-num">3</div>
+                            <div class="inq-step-text">
+                                <strong>Receive Quotation</strong>
+                                <span>Detailed pricing and lead time delivered</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inquiry-faq">
+                        <h4>Frequently Asked Questions</h4>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>How long does it take to get a quote?</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>We typically respond within 24 hours on business days. For urgent requests, please contact us directly by phone or WhatsApp.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Can I request a sample before ordering?</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, samples are available for quality evaluation. Sample cost and shipping fees may apply, which can be refunded in subsequent bulk orders.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Do you support OEM/ODM customization?</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Absolutely. We offer full OEM/ODM services including custom branding, packaging design, color options, and product modifications to meet your specific requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="inquiry-contact">
                         <div class="inquiry-contact-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -541,6 +597,7 @@
                 initPDPTabs();
                 initGalleryThumbs();
                 initInquiryForm();
+                initFAQ();
             }, 500);
         });
 
@@ -609,6 +666,29 @@
                     form.reset();
                     document.getElementById('inqProduct').value = '36V MAX Lithium Cordless Drill - HGV-CD36V-PRO';
                 }, 3000);
+            });
+        }
+
+        // FAQ accordion
+        function initFAQ() {
+            const faqBtns = document.querySelectorAll('.faq-question');
+            faqBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const expanded = btn.getAttribute('aria-expanded') === 'true';
+                    const answer = btn.nextElementSibling;
+
+                    // Close all
+                    faqBtns.forEach(b => {
+                        b.setAttribute('aria-expanded', 'false');
+                        b.nextElementSibling.classList.remove('open');
+                    });
+
+                    // Toggle current
+                    if (!expanded) {
+                        btn.setAttribute('aria-expanded', 'true');
+                        answer.classList.add('open');
+                    }
+                });
             });
         }
     </script>

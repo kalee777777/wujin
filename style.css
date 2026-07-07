@@ -4561,6 +4561,131 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================
+   INQUIRY STEPS & FAQ
+   ============================================ */
+
+.inquiry-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 24px 0;
+    padding: 20px;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+}
+
+.inq-step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.inq-step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(57, 255, 20, 0.12);
+    border: 1px solid rgba(57, 255, 20, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    color: var(--neon);
+    flex-shrink: 0;
+}
+
+.inq-step-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.inq-step-text strong {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.inq-step-text span {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* FAQ */
+.inquiry-faq {
+    margin-bottom: 24px;
+}
+
+.inquiry-faq h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-of-type {
+    border-top: 1px solid var(--border);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 0;
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.2s;
+}
+
+.faq-question:hover {
+    color: var(--neon);
+}
+
+.faq-question svg {
+    flex-shrink: 0;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+    color: var(--neon);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.open {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: 0 0 14px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ============================================
    PDP RESPONSIVE
    ============================================ */
 
