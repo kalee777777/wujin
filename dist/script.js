@@ -50,9 +50,9 @@ function initInteractions() {
         });
     }
 
-    // === PRODUCT TABS ===
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const productCards = document.querySelectorAll('.product-card');
+    // === PRODUCT TABS (Bottom Featured Products) ===
+    const tabBtns = document.querySelectorAll('.featured-products:not(.featured-products-top) .tab-btn');
+    const productCards = document.querySelectorAll('.featured-products:not(.featured-products-top) .product-card');
 
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -63,6 +63,35 @@ function initInteractions() {
 
             productCards.forEach(card => {
                 const cardTab = card.getAttribute('data-tab');
+                if (tab === 'all' || cardTab === tab) {
+                    card.classList.remove('hidden');
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(12px)';
+                    requestAnimationFrame(() => {
+                        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    });
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    // === PRODUCT TABS TOP (Industry Categories) ===
+    const tabBtnsTop = document.querySelectorAll('.featured-products-top .tab-btn');
+    const productCardsTop = document.querySelectorAll('.featured-products-top .product-card');
+
+    tabBtnsTop.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtnsTop.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const tab = btn.getAttribute('data-tab-top');
+
+            productCardsTop.forEach(card => {
+                const cardTab = card.getAttribute('data-tab-top');
                 if (tab === 'all' || cardTab === tab) {
                     card.classList.remove('hidden');
                     card.style.opacity = '0';
