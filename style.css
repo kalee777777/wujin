@@ -3869,6 +3869,10 @@ img { max-width: 100%; display: block; }
     height: 100%;
 }
 
+.product-page-img .product-carousel {
+    height: 200px;
+}
+
 .carousel-slides {
     position: relative;
     width: 100%;
