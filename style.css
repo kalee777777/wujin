@@ -536,6 +536,21 @@ img { max-width: 100%; display: block; }
     align-items: center;
 }
 
+/* Hero panel: non-active hidden */
+.hero-slide:not(.active) {
+    display: none;
+}
+
+/* Hero sidebar active state */
+.sidebar-cat-link.active {
+    background: var(--neon);
+    color: #fff;
+    border-radius: var(--radius-sm);
+}
+.sidebar-cat-link.active svg {
+    stroke: #fff;
+}
+
 .hero-slide-bg {
     position: absolute;
     inset: 0;
