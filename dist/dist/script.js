@@ -30,6 +30,38 @@ async function loadAllComponents() {
 // === INTERACTIONS INITIALIZER ===
 function initInteractions() {
 
+    // === HERO SIDEBAR CATEGORY SWITCH ===
+    const sidebarCatLinks = document.querySelectorAll('.sidebar-cat-link');
+    const heroPanels = document.querySelectorAll('.hero-slide[data-hero-panel]');
+
+    if (sidebarCatLinks.length && heroPanels.length) {
+        sidebarCatLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const cat = link.getAttribute('data-hero-cat');
+
+                // Update active sidebar link
+                sidebarCatLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+
+                // Switch hero panel
+                heroPanels.forEach(panel => {
+                    if (panel.getAttribute('data-hero-panel') === cat) {
+                        panel.classList.add('active');
+                        panel.style.opacity = '0';
+                        requestAnimationFrame(() => {
+                            panel.style.transition = 'opacity 0.5s ease';
+                            panel.style.opacity = '1';
+                        });
+                    } else {
+                        panel.classList.remove('active');
+                        panel.style.opacity = '0';
+                    }
+                });
+            });
+        });
+    }
+
     // === MOBILE MENU TOGGLE ===
     const mobileToggle = document.getElementById('mobileToggle');
     const catNav = document.getElementById('catNav');
