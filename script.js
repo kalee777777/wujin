@@ -271,6 +271,72 @@ function initInteractions() {
             });
         });
     }
+
+    // === PRODUCT CARD CAROUSELS ===
+    initCarousels();
+}
+
+// === PRODUCT CARD CAROUSELS ===
+function initCarousels() {
+    const carousels = document.querySelectorAll('.product-carousel');
+
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dots = carousel.querySelectorAll('.carousel-dots .dot');
+        const prevBtn = carousel.querySelector('.carousel-prev');
+        const nextBtn = carousel.querySelector('.carousel-next');
+        const autoplay = carousel.getAttribute('data-autoplay') === 'true';
+        const interval = parseInt(carousel.getAttribute('data-interval')) || 4000;
+
+        if (slides.length <= 1) return;
+
+        let currentIndex = 0;
+        let timer = null;
+
+        function goToSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+
+            slides[currentIndex].classList.remove('active');
+            if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
+
+            currentIndex = index;
+
+            slides[currentIndex].classList.add('active');
+            if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+        }
+
+        function next() { goToSlide(currentIndex + 1); }
+        function prev() { goToSlide(currentIndex - 1); }
+
+        function startAutoplay() {
+            if (autoplay) {
+                timer = setInterval(next, interval);
+            }
+        }
+
+        function stopAutoplay() {
+            if (timer) {
+                clearInterval(timer);
+                timer = null;
+            }
+        }
+
+        // Events
+        if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+        if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); next(); });
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', (e) => { e.stopPropagation(); goToSlide(i); });
+        });
+
+        // Pause on hover
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+
+        // Start
+        startAutoplay();
+    });
 }
 
 // === INITIALIZE ===
