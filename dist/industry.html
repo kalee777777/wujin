@@ -1,384 +1,660 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industry Solutions | HOLGENVY - Professional Hardware & Electric Tools</title>
-    <meta content="Explore HOLGENVY's industry-specific tool solutions. Tool kits, garden tools, brushed & brushless tools, automotive, measuring, industrial equipment and more." name="description">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Industry Solutions | HOLGENVY - Professional Hardware &amp; Electric Tools</title>
+<meta content="Explore HOLGENVY's industry-specific tool solutions. Tool kits, garden tools, brushed &amp; brushless tools, automotive, measuring, industrial equipment and more." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
+<!-- ========== HEADER (loaded via JS) ========== -->
+<div id="site-header"></div>
+<!-- ========== CATEGORY NAV (loaded via JS) ========== -->
+<div id="site-nav"></div>
+<!-- ========== PAGE HEADER ========== -->
+<section class="page-header">
+<div class="container">
+<h1>Industry <span class="neon">Solutions</span></h1>
+<p>Professional tool solutions tailored for every industry. From DIY to heavy-duty industrial applications.</p>
 
-    <!-- ========== HEADER (loaded via JS) ========== -->
-    <div id="site-header"></div>
 
-    <!-- ========== CATEGORY NAV (loaded via JS) ========== -->
-    <div id="site-nav"></div>
 
-    <!-- ========== PAGE HEADER ========== -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Industry <span class="neon">Solutions</span></h1>
-            <p>Professional tool solutions tailored for every industry. From DIY to heavy-duty industrial applications.</p>
-        </div>
-    </section>
 
-    <!-- ========== INDUSTRY SECTION ========== -->
-    <section class="products-page">
-        <div class="container">
-            <div class="products-layout">
-                <!-- Sidebar Filter -->
-                <aside class="product-sidebar">
-                    <div class="filter-box">
-                        <h4>Industry</h4>
-                        <ul class="filter-list">
-                            <li><button class="filter-btn active" data-filter="all">All Industries</button></li>
-                            <li><button class="filter-btn" data-filter="toolkits">Tool Kits & Combo Sets</button></li>
-                            <li><button class="filter-btn" data-filter="garden">Garden & Outdoor Power Tools</button></li>
-                            <li><button class="filter-btn" data-filter="brushed">Brushed Motor Tools</button></li>
-                            <li><button class="filter-btn" data-filter="brushless">Brushless Motor Tools</button></li>
-                            <li><button class="filter-btn" data-filter="diy">Home DIY & Everyday Tools</button></li>
-                            <li><button class="filter-btn" data-filter="automotive">Automotive & Workshop Tools</button></li>
-                            <li><button class="filter-btn" data-filter="measuring">Measuring & Inspection Tools</button></li>
-                            <li><button class="filter-btn" data-filter="industrial">Industrial & Heavy-Duty Tools</button></li>
-                            <li><button class="filter-btn" data-filter="machinery">Compact Machinery & Benchtop</button></li>
-                        </ul>
-                    </div>
-                    <div class="filter-box">
-                        <h4>MOQ</h4>
-                        <ul class="filter-list">
-                            <li><button class="filter-btn active">Any MOQ</button></li>
-                            <li><button class="filter-btn">MOQ 50+</button></li>
-                            <li><button class="filter-btn">MOQ 100+</button></li>
-                            <li><button class="filter-btn">MOQ 500+</button></li>
-                        </ul>
-                    </div>
-                    <div class="filter-cta">
-                        <p>Can't find what you need?</p>
-                        <a class="btn btn-neon btn-small" href="contact.html">Custom Inquiry</a>
-                    </div>
-                </aside>
 
-                <!-- Product Grid -->
-                <div class="product-main">
-                    <div class="product-toolbar">
-                        <span class="product-count">Showing <strong>18</strong> products</span>
-                        <div class="product-sort">
-                            <select>
-                                <option>Sort by: Default</option>
-                                <option>Sort by: Newest</option>
-                                <option>Sort by: Popular</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="products-grid" id="productsGrid">
 
-                        <!-- Tool Kits & Combo Sets -->
-                        <div class="product-page-card" data-category="toolkits">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Tool Kits & Combo Sets</span>
-                                <h4>50-Piece Professional Combo Kit</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
-                        <div class="product-page-card" data-category="toolkits">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Tool Kits & Combo Sets</span>
-                                <h4>Industrial Heavy-Duty Tool Set</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
 
-                        <!-- Garden & Outdoor Power Tools -->
-                        <div class="product-page-card" data-category="garden">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Garden & Outdoor</span>
-                                <h4>20V Cordless Grass Trimmer</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
 
-                        <!-- Brushed Motor Tools -->
-                        <div class="product-page-card" data-category="brushed">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Brushed Motor Tools</span>
-                                <h4>850W Electric Impact Drill</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
-                        <div class="product-page-card" data-category="brushed">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Brushed Motor Tools</span>
-                                <h4>710W Rotary Hammer Drill</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
 
-                        <!-- Brushless Motor Tools -->
-                        <div class="product-page-card" data-category="brushless">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Brushless Motor Tools</span>
-                                <h4>36V MAX Lithium Cordless Drill</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
-                        <div class="product-page-card" data-category="brushless">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Brushless Motor Tools</span>
-                                <h4>20V Brushless Impact Driver</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
 
-                        <!-- Home DIY & Everyday Tools -->
-                        <div class="product-page-card" data-category="diy">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Home DIY & Everyday</span>
-                                <h4>12V Cordless Screwdriver Set</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
 
-                        <!-- Automotive & Workshop Tools -->
-                        <div class="product-page-card" data-category="automotive">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Automotive & Workshop</span>
-                                <h4>High Torque Lithium Wrench</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
-                        <div class="product-page-card" data-category="automotive">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Automotive & Workshop</span>
-                                <h4>Cordless Wrench with Accessories</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
 
-                        <!-- Measuring & Inspection Tools -->
-                        <div class="product-page-card" data-category="measuring">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Measuring & Inspection</span>
-                                <h4>Digital Laser Distance Meter</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
 
-                        <!-- Industrial & Heavy-Duty Tools -->
-                        <div class="product-page-card" data-category="industrial">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Industrial & Heavy-Duty</span>
-                                <h4>26mm Rotary Hammer Drill Kit</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
-                        <div class="product-page-card" data-category="industrial">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Industrial & Heavy-Duty</span>
-                                <h4>125mm Cordless Angle Grinder</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
 
-                        <!-- Compact Machinery & Benchtop -->
-                        <div class="product-page-card" data-category="machinery">
-                            <div class="product-page-img">
-                                <div class="product-carousel" data-autoplay="true" data-interval="4000">
-                                    <div class="carousel-slides">
-                                        <div class="carousel-slide active"><div class="img-placeholder"><span>Image 1</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 2</span></div></div>
-                                        <div class="carousel-slide"><div class="img-placeholder"><span>Image 3</span></div></div>
-                                    </div>
-                                    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-                                    <button class="carousel-next" aria-label="Next">&#8250;</button>
-                                    <div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
-                                </div>
-                            </div>
-                            <div class="product-page-info">
-                                <span class="product-page-cat">Compact Machinery</span>
-                                <h4>Mini Bench Saw 10-Inch</h4>
-                                <a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
-                            </div>
-                        </div>
 
-                    </div>
 
-                    <!-- Pagination -->
-                    <div class="pagination">
-                        <a class="page-btn active" href="#">1</a>
-                        <a class="page-btn" href="#">2</a>
-                        <a class="page-btn" href="#">3</a>
-                        <span class="page-dots">...</span>
-                        <a class="page-btn" href="#">8</a>
-                        <a class="page-btn next" href="#">Next <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FOOTER (loaded via JS) ========== -->
-    <div id="site-footer"></div>
-
-    <script src="script.js?v=3"></script>
+</div>
+</section>
+<!-- ========== INDUSTRY SECTION ========== -->
+<section class="products-page">
+<div class="container">
+<div class="products-layout">
+<!-- Sidebar Filter -->
+<aside class="product-sidebar">
+<div class="filter-box">
+<h4>Industry</h4>
+<ul class="filter-list"><li><button class="filter-btn active" data-filter="all">All Industries</button></li><li><button class="filter-btn" data-filter="toolkits">Tool Kits &amp; Combo Sets</button></li><li><button class="filter-btn" data-filter="garden">Garden &amp; Outdoor Power Tools</button></li><li><button class="filter-btn" data-filter="brushed">Brushed Motor Tools</button></li><li><button class="filter-btn" data-filter="brushless">Brushless Motor Tools</button></li><li><button class="filter-btn" data-filter="diy">Home DIY &amp; Everyday Tools</button></li><li><button class="filter-btn" data-filter="automotive">Automotive &amp; Workshop Tools</button></li><li><button class="filter-btn" data-filter="measuring">Measuring &amp; Inspection Tools</button></li><li><button class="filter-btn" data-filter="industrial">Industrial &amp; Heavy-Duty Tools</button></li><li><button class="filter-btn" data-filter="machinery">Compact Machinery &amp; Benchtop</button></li><li><button class="filter-btn" data-filter="sanding">Sanding &amp; Surface Tools</button></li><li><button class="filter-btn" data-filter="grinding">Grinding &amp; Cutting Tools</button></li><li><button class="filter-btn" data-filter="welding">Welding &amp; Soldering</button></li><li><button class="filter-btn" data-filter="woodworking">Woodworking &amp; Planing</button></li><li><button class="filter-btn" data-filter="chainsaws">Chainsaws &amp; Saws</button></li><li><button class="filter-btn" data-filter="fastening">Fastening &amp; Tying Tools</button></li><li><button class="filter-btn" data-filter="cleaning">Cleaning &amp; Wash Tools</button></li><li><button class="filter-btn" data-filter="heat">Heat Guns &amp; Blowers</button></li><li><button class="filter-btn" data-filter="adhesive">Adhesive &amp; Glue Tools</button></li><li><button class="filter-btn" data-filter="sewing">Sewing Machines</button></li><li><button class="filter-btn" data-filter="saws">Electric Saws &amp; Shears</button></li><li><button class="filter-btn" data-filter="mixing">Mixing &amp; Blending</button></li><li><button class="filter-btn" data-filter="demolition">Demolition Hammers</button></li><li><button class="filter-btn" data-filter="generators">Generators</button></li><li><button class="filter-btn" data-filter="spray">Spray Equipment</button></li><li><button class="filter-btn" data-filter="pneumatic">Pneumatic Tools</button></li><li><button class="filter-btn" data-filter="handtools">Hand Tools</button></li></ul>
+</div>
+<div class="filter-box">
+<h4>MOQ</h4>
+<ul class="filter-list">
+<li><button class="filter-btn active">Any MOQ</button></li>
+<li><button class="filter-btn">MOQ 50+</button></li>
+<li><button class="filter-btn">MOQ 100+</button></li>
+<li><button class="filter-btn">MOQ 500+</button></li>
+</ul>
+</div>
+<div class="filter-cta">
+<p>Can't find what you need?</p>
+<a class="btn btn-neon btn-small" href="contact.html">Custom Inquiry</a>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="product-main">
+<div class="product-toolbar">
+<span class="product-count">Showing <strong>30</strong> products</span>
+<div class="product-sort">
+<select>
+<option>Sort by: Default</option>
+<option>Sort by: Newest</option>
+<option>Sort by: Popular</option>
+</select>
+</div>
+</div>
+<div class="products-grid" id="productsGrid">
+<!-- Tool Kits & Combo Sets -->
+<div class="product-page-card" data-category="toolkits">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="50-Piece Professional Combo Kit" loading="lazy" src="产品图片/套盒 Tool Sets/2合1套盒.jpg"/></div>
+<div class="carousel-slide"><img alt="50-Piece Professional Combo Kit" loading="lazy" src="产品图片/套盒 Tool Sets/4合1套盒.png"/></div>
+<div class="carousel-slide"><img alt="50-Piece Professional Combo Kit" loading="lazy" src="产品图片/套盒 Tool Sets/5合1套盒.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Tool Kits &amp; Combo Sets</span>
+<h4>50-Piece Professional Combo Kit</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<div class="product-page-card" data-category="toolkits">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Industrial Heavy-Duty Tool Set" loading="lazy" src="产品图片/电动工具套盒（Electric tool kit box）/主图_01.png"/></div>
+<div class="carousel-slide"><img alt="Industrial Heavy-Duty Tool Set" loading="lazy" src="产品图片/电动工具套盒（Electric tool kit box）/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="Industrial Heavy-Duty Tool Set" loading="lazy" src="产品图片/电动工具套盒（Electric tool kit box）/主图_03.png"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Tool Kits &amp; Combo Sets</span>
+<h4>Industrial Heavy-Duty Tool Set</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<!-- Garden & Outdoor Power Tools -->
+<div class="product-page-card" data-category="garden">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="20V Cordless Grass Trimmer" loading="lazy" src="产品图片/割草机Field Mower/1.jpg"/></div>
+<div class="carousel-slide"><img alt="20V Cordless Grass Trimmer" loading="lazy" src="产品图片/割草机Field Mower/2.jpg"/></div>
+<div class="carousel-slide"><img alt="20V Cordless Grass Trimmer" loading="lazy" src="产品图片/割草机Field Mower/割草机.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Garden &amp; Outdoor</span>
+<h4>20V Cordless Grass Trimmer</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<!-- Brushed Motor Tools -->
+<div class="product-page-card" data-category="brushed">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="850W Electric Impact Drill" loading="lazy" src="产品图片/有刷电钻Brushed Drill/1.jpg"/></div>
+<div class="carousel-slide"><img alt="850W Electric Impact Drill" loading="lazy" src="产品图片/有刷电钻Brushed Drill/2.jpg"/></div>
+<div class="carousel-slide"><img alt="850W Electric Impact Drill" loading="lazy" src="产品图片/有刷电钻Brushed Drill/有刷电钻.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Brushed Motor Tools</span>
+<h4>850W Electric Impact Drill</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<div class="product-page-card" data-category="brushed">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="710W Rotary Hammer Drill" loading="lazy" src="产品图片/电锤钻Hammer Drill/1.jpg"/></div>
+<div class="carousel-slide"><img alt="710W Rotary Hammer Drill" loading="lazy" src="产品图片/电锤钻Hammer Drill/2.png"/></div>
+<div class="carousel-slide"><img alt="710W Rotary Hammer Drill" loading="lazy" src="产品图片/电锤钻Hammer Drill/电锤钻.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Brushed Motor Tools</span>
+<h4>710W Rotary Hammer Drill</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<!-- Brushless Motor Tools -->
+<div class="product-page-card" data-category="brushless">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="36V MAX Lithium Cordless Drill" loading="lazy" src="产品图片/无刷电钻（electric drill）/主图_01.png"/></div>
+<div class="carousel-slide"><img alt="36V MAX Lithium Cordless Drill" loading="lazy" src="产品图片/无刷电钻（electric drill）/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="36V MAX Lithium Cordless Drill" loading="lazy" src="产品图片/无刷电钻（electric drill）/主图_03.png"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Brushless Motor Tools</span>
+<h4>36V MAX Lithium Cordless Drill</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<div class="product-page-card" data-category="brushless">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="20V Brushless Impact Driver" loading="lazy" src="产品图片/无刷电钻Brushless Drill/1.jpg"/></div>
+<div class="carousel-slide"><img alt="20V Brushless Impact Driver" loading="lazy" src="产品图片/无刷电钻Brushless Drill/2.jpg"/></div>
+<div class="carousel-slide"><img alt="20V Brushless Impact Driver" loading="lazy" src="产品图片/无刷电钻Brushless Drill/无刷.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Brushless Motor Tools</span>
+<h4>20V Brushless Impact Driver</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<!-- Home DIY & Everyday Tools -->
+<div class="product-page-card" data-category="diy">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="12V Cordless Screwdriver Set" loading="lazy" src="产品图片/电动螺丝刀（Electric Screwdriver）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="12V Cordless Screwdriver Set" loading="lazy" src="产品图片/电动螺丝刀（Electric Screwdriver）/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="12V Cordless Screwdriver Set" loading="lazy" src="产品图片/电动螺丝刀（Electric Screwdriver）/主图_03.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Home DIY &amp; Everyday</span>
+<h4>12V Cordless Screwdriver Set</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<!-- Automotive & Workshop Tools -->
+<div class="product-page-card" data-category="automotive">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="High Torque Lithium Wrench" loading="lazy" src="产品图片/电动扳手Electric Wrench/1.jpg"/></div>
+<div class="carousel-slide"><img alt="High Torque Lithium Wrench" loading="lazy" src="产品图片/电动扳手Electric Wrench/2.jpg"/></div>
+<div class="carousel-slide"><img alt="High Torque Lithium Wrench" loading="lazy" src="产品图片/电动扳手Electric Wrench/扳手.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Automotive &amp; Workshop</span>
+<h4>High Torque Lithium Wrench</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<div class="product-page-card" data-category="automotive">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Cordless Wrench with Accessories" loading="lazy" src="产品图片/有线电动冲击扳手（Wired electric impact wrench）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Cordless Wrench with Accessories" loading="lazy" src="产品图片/有线电动冲击扳手（Wired electric impact wrench）/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="Cordless Wrench with Accessories" loading="lazy" src="产品图片/有线电动冲击扳手（Wired electric impact wrench）/主图_03.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Automotive &amp; Workshop</span>
+<h4>Cordless Wrench with Accessories</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<!-- Measuring & Inspection Tools -->
+<div class="product-page-card" data-category="measuring">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Digital Laser Distance Meter" loading="lazy" src="产品图片/测绘工具Surveying Tools/1.jpg"/></div>
+<div class="carousel-slide"><img alt="Digital Laser Distance Meter" loading="lazy" src="产品图片/测绘工具Surveying Tools/2.jpg"/></div>
+<div class="carousel-slide"><img alt="Digital Laser Distance Meter" loading="lazy" src="产品图片/测绘工具Surveying Tools/激光水平仪.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Measuring &amp; Inspection</span>
+<h4>Digital Laser Distance Meter</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<!-- Industrial & Heavy-Duty Tools -->
+<div class="product-page-card" data-category="industrial">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="26mm Rotary Hammer Drill Kit" loading="lazy" src="产品图片/无线电锤钻（Power Hammer Drills）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="26mm Rotary Hammer Drill Kit" loading="lazy" src="产品图片/无线电锤钻（Power Hammer Drills）/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="26mm Rotary Hammer Drill Kit" loading="lazy" src="产品图片/无线电锤钻（Power Hammer Drills）/主图_04.png"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Industrial &amp; Heavy-Duty</span>
+<h4>26mm Rotary Hammer Drill Kit</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<div class="product-page-card" data-category="industrial">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="125mm Cordless Angle Grinder" loading="lazy" src="产品图片/无线角磨机（Wireless angle grinder）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="125mm Cordless Angle Grinder" loading="lazy" src="产品图片/无线角磨机（Wireless angle grinder）/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="125mm Cordless Angle Grinder" loading="lazy" src="产品图片/无线角磨机（Wireless angle grinder）/主图_03.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Industrial &amp; Heavy-Duty</span>
+<h4>125mm Cordless Angle Grinder</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<!-- Compact Machinery & Benchtop -->
+<div class="product-page-card" data-category="machinery">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Mini Bench Saw 10-Inch" loading="lazy" src="产品图片/锂电迷你电链锯(Power Saws)/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Mini Bench Saw 10-Inch" loading="lazy" src="产品图片/锂电迷你电链锯(Power Saws)/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="Mini Bench Saw 10-Inch" loading="lazy" src="产品图片/锂电迷你电链锯(Power Saws)/主图_03.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Compact Machinery</span>
+<h4>Mini Bench Saw 10-Inch</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div>
+<div class="product-page-card" data-category="cutting">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Electric Power Shears" loading="lazy" src="产品图片/电动剪切机（Power Shears）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Electric Power Shears" loading="lazy" src="产品图片/电动剪切机（Power Shears）/主图_03.jpg"/></div>
+<div class="carousel-slide"><img alt="Electric Power Shears" loading="lazy" src="产品图片/电动剪切机（Power Shears）/主图_04.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Cutting Tools</span>
+<h4>Electric Power Shears</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="mixing">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Electric Concrete Mixer" loading="lazy" src="产品图片/电动搅拌机（Electric Mixer ）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Electric Concrete Mixer" loading="lazy" src="产品图片/电动搅拌机（Electric Mixer ）/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="Electric Concrete Mixer" loading="lazy" src="产品图片/电动搅拌机（Electric Mixer ）/主图_03.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Mixing Tools</span>
+<h4>Electric Concrete Mixer</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="woodworking">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Electric Woodworking Planer" loading="lazy" src="产品图片/电动木工刨床（Electric Woodworking Planer）/1.jpg"/></div>
+<div class="carousel-slide"><img alt="Electric Woodworking Planer" loading="lazy" src="产品图片/电动木工刨床（Electric Woodworking Planer）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Electric Woodworking Planer" loading="lazy" src="产品图片/电动木工刨床（Electric Woodworking Planer）/主图_02.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Woodworking</span>
+<h4>Electric Woodworking Planer</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="saws">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Multi-Purpose Electric Saw" loading="lazy" src="产品图片/电锯Electric Saw/1.jpg"/></div>
+<div class="carousel-slide"><img alt="Multi-Purpose Electric Saw" loading="lazy" src="产品图片/电锯Electric Saw/2.jpg"/></div>
+<div class="carousel-slide"><img alt="Multi-Purpose Electric Saw" loading="lazy" src="产品图片/电锯Electric Saw/电锯.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Saws</span>
+<h4>Multi-Purpose Electric Saw</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="sewing">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Household Electric Sewing Machine" loading="lazy" src="产品图片/缝纫机（sewing machine）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Household Electric Sewing Machine" loading="lazy" src="产品图片/缝纫机（sewing machine）/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="Household Electric Sewing Machine" loading="lazy" src="产品图片/缝纫机（sewing machine）/主图_03.png"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Sewing Machines</span>
+<h4>Household Electric Sewing Machine</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="garden">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Backpack Cordless Lawn Mower" loading="lazy" src="产品图片/背包式割草机（Lawn Mowers）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Backpack Cordless Lawn Mower" loading="lazy" src="产品图片/背包式割草机（Lawn Mowers）/主图_03.jpg"/></div>
+<div class="carousel-slide"><img alt="Backpack Cordless Lawn Mower" loading="lazy" src="产品图片/背包式割草机（Lawn Mowers）/主图_04.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Garden &amp; Outdoor</span>
+<h4>Backpack Cordless Lawn Mower</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="adhesive">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Heavy-Duty Electric Glue Gun" loading="lazy" src="产品图片/胶枪Glue Gun/1.jpg"/></div>
+<div class="carousel-slide"><img alt="Heavy-Duty Electric Glue Gun" loading="lazy" src="产品图片/胶枪Glue Gun/2.jpg"/></div>
+<div class="carousel-slide"><img alt="Heavy-Duty Electric Glue Gun" loading="lazy" src="产品图片/胶枪Glue Gun/胶枪.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Adhesive Tools</span>
+<h4>Heavy-Duty Electric Glue Gun</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="grinding">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Professional Angle Grinder" loading="lazy" src="产品图片/角磨机Angle Grinder/1.jpg"/></div>
+<div class="carousel-slide"><img alt="Professional Angle Grinder" loading="lazy" src="产品图片/角磨机Angle Grinder/2.jpg"/></div>
+<div class="carousel-slide"><img alt="Professional Angle Grinder" loading="lazy" src="产品图片/角磨机Angle Grinder/角磨机.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Grinding Tools</span>
+<h4>Professional Angle Grinder</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="automotive">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Digital Tire Inflator Pump" loading="lazy" src="产品图片/轮胎充气泵（Tire Inflator）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Digital Tire Inflator Pump" loading="lazy" src="产品图片/轮胎充气泵（Tire Inflator）/主图_02.png"/></div>
+<div class="carousel-slide"><img alt="Digital Tire Inflator Pump" loading="lazy" src="产品图片/轮胎充气泵（Tire Inflator）/主图_03.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Automotive Tools</span>
+<h4>Digital Tire Inflator Pump</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="demolition">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Heavy Duty Electric Demolition Hammer" loading="lazy" src="产品图片/重型电镐（Heavy Duty Electric Demolition Hammer）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Heavy Duty Electric Demolition Hammer" loading="lazy" src="产品图片/重型电镐（Heavy Duty Electric Demolition Hammer）/主图_03.jpg"/></div>
+<div class="carousel-slide"><img alt="Heavy Duty Electric Demolition Hammer" loading="lazy" src="产品图片/重型电镐（Heavy Duty Electric Demolition Hammer）/主图_06.png"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Demolition Tools</span>
+<h4>Heavy Duty Electric Demolition Hammer</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="fastening">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Electric Brad Nailer Gun" loading="lazy" src="产品图片/钉枪Nail Gun/1.jpg"/></div>
+<div class="carousel-slide"><img alt="Electric Brad Nailer Gun" loading="lazy" src="产品图片/钉枪Nail Gun/2.jpg"/></div>
+<div class="carousel-slide"><img alt="Electric Brad Nailer Gun" loading="lazy" src="产品图片/钉枪Nail Gun/钉枪.png"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Fastening Tools</span>
+<h4>Electric Brad Nailer Gun</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="fastening">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Rebar Tying Gun" loading="lazy" src="产品图片/钢条绑扎枪（Bar Tying Gun）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Rebar Tying Gun" loading="lazy" src="产品图片/钢条绑扎枪（Bar Tying Gun）/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="Rebar Tying Gun" loading="lazy" src="产品图片/钢条绑扎枪（Bar Tying Gun）/主图_03.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Fastening Tools</span>
+<h4>Rebar Tying Gun</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="chainsaws">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Cordless Electric Chainsaw" loading="lazy" src="产品图片/链锯Chainsaw/1.jpg"/></div>
+<div class="carousel-slide"><img alt="Cordless Electric Chainsaw" loading="lazy" src="产品图片/链锯Chainsaw/2.jpg"/></div>
+<div class="carousel-slide"><img alt="Cordless Electric Chainsaw" loading="lazy" src="产品图片/链锯Chainsaw/链锯.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Chainsaws</span>
+<h4>Cordless Electric Chainsaw</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="saws">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Lithium Reciprocating Saw" loading="lazy" src="产品图片/锂电往复锯（Lithium battery reciprocating saw）/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Lithium Reciprocating Saw" loading="lazy" src="产品图片/锂电往复锯（Lithium battery reciprocating saw）/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="Lithium Reciprocating Saw" loading="lazy" src="产品图片/锂电往复锯（Lithium battery reciprocating saw）/主图_03.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Saws</span>
+<h4>Lithium Reciprocating Saw</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="cleaning">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Lithium High-Pressure Cleaning Gun" loading="lazy" src="产品图片/锂电无线高压清洗枪(Cleaning gun)/主图_01.jpg"/></div>
+<div class="carousel-slide"><img alt="Lithium High-Pressure Cleaning Gun" loading="lazy" src="产品图片/锂电无线高压清洗枪(Cleaning gun)/主图_02.jpg"/></div>
+<div class="carousel-slide"><img alt="Lithium High-Pressure Cleaning Gun" loading="lazy" src="产品图片/锂电无线高压清洗枪(Cleaning gun)/主图_03.jpg"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Cleaning Tools</span>
+<h4>Lithium High-Pressure Cleaning Gun</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div><div class="product-page-card" data-category="sanding">
+<div class="product-page-img">
+<div class="product-carousel" data-autoplay="true" data-interval="4000">
+<div class="carousel-slides">
+<div class="carousel-slide active"><img alt="Lithium Cordless Sander" loading="lazy" src="产品图片/锂电砂光机（Lithium battery sanding machine）/主图_01.png"/></div>
+<div class="carousel-slide"><img alt="Lithium Cordless Sander" loading="lazy" src="产品图片/锂电砂光机（Lithium battery sanding machine）/主图_03.png"/></div>
+<div class="carousel-slide"><img alt="Lithium Cordless Sander" loading="lazy" src="产品图片/锂电砂光机（Lithium battery sanding machine）/主图_06.png"/></div>
+</div>
+<button aria-label="Previous" class="carousel-prev">‹</button>
+<button aria-label="Next" class="carousel-next">›</button>
+<div class="carousel-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span></div>
+</div>
+</div>
+<div class="product-page-info">
+<span class="product-page-cat">Sanding Tools</span>
+<h4>Lithium Cordless Sander</h4>
+<a class="btn btn-dark btn-small" href="product-detail.html">View Details</a>
+</div>
+</div></div>
+<!-- Pagination -->
+<div class="pagination">
+<a class="page-btn active" href="#">1</a>
+<a class="page-btn" href="#">2</a>
+<a class="page-btn" href="#">3</a>
+<span class="page-dots">...</span>
+<a class="page-btn" href="#">8</a>
+<a class="page-btn next" href="#">Next <svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><polyline points="9 18 15 12 9 6"></polyline></svg></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========== FOOTER (loaded via JS) ========== -->
+<div id="site-footer"></div>
+<script src="script.js?v=3"></script>
 </body>
 </html>

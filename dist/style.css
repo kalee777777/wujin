@@ -5108,4 +5108,39 @@ img { max-width: 100%; display: block; }
     .inquiry-info h2 { font-size: 1.6rem; }
 }
 
+/* === PRODUCT IMAGE STYLES === */
+.carousel-slide {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 0;
+}
+
+.product-img .carousel-slide img,
+.product-page-img .carousel-slide img,
+.deal-img .carousel-slide img,
+.seller-img .carousel-slide img,
+.split-card-img .carousel-slide img,
+.collection-img .carousel-slide img,
+.related-img .carousel-slide img {
+    border-radius: var(--radius-md);
+}
+
+.gallery-thumbs .thumb {
+    background: #FFFFFF;
+}
+.gallery-thumbs .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 

@@ -5109,10 +5109,16 @@ img { max-width: 100%; display: block; }
 }
 
 /* === PRODUCT IMAGE STYLES === */
+.carousel-slide {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .carousel-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
     border-radius: 0;
 }
@@ -5127,10 +5133,13 @@ img { max-width: 100%; display: block; }
     border-radius: var(--radius-md);
 }
 
+.gallery-thumbs .thumb {
+    background: #FFFFFF;
+}
 .gallery-thumbs .thumb img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
