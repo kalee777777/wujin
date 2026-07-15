@@ -83,62 +83,100 @@ function initInteractions() {
     }
 
     // === PRODUCT TABS (Bottom Featured Products) ===
-    const tabBtns = document.querySelectorAll('.featured-products:not(.featured-products-top) .tab-btn');
-    const productCards = document.querySelectorAll('.featured-products:not(.featured-products-top) .product-card');
-
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            tabBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const tab = btn.getAttribute('data-tab');
-
-            productCards.forEach(card => {
-                const cardTab = card.getAttribute('data-tab');
-                if (tab === 'all' || cardTab === tab) {
-                    card.classList.remove('hidden');
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(12px)';
-                    requestAnimationFrame(() => {
-                        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    });
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-        });
-    });
+    initHomeTabs('.featured-products:not(.featured-products-top)', 'data-tab', 'products.html');
 
     // === PRODUCT TABS TOP (Industry Categories) ===
-    const tabBtnsTop = document.querySelectorAll('.featured-products-top .tab-btn');
-    const productCardsTop = document.querySelectorAll('.featured-products-top .product-card');
+    initHomeTabs('.featured-products-top', 'data-tab-top', 'industry.html');
 
-    tabBtnsTop.forEach(btn => {
-        btn.addEventListener('click', () => {
-            tabBtnsTop.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+    function initHomeTabs(containerSelector, dataAttr, targetPage) {
+        const container = document.querySelector(containerSelector);
+        if (!container) return;
 
-            const tab = btn.getAttribute('data-tab-top');
+        const tabBtns = container.querySelectorAll('.tab-btn');
+        const allCards = Array.from(container.querySelectorAll('.product-card:not(.view-more-card)'));
+        const grid = container.querySelector('.product-grid');
+        let currentViewMore = null;
 
-            productCardsTop.forEach(card => {
-                const cardTab = card.getAttribute('data-tab-top');
-                if (tab === 'all' || cardTab === tab) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const tab = btn.getAttribute(dataAttr);
+
+                // Remove old View More card
+                if (currentViewMore && currentViewMore.parentNode) {
+                    currentViewMore.remove();
+                    currentViewMore = null;
+                }
+
+                // Filter matching cards
+                let matching = [];
+                if (tab === 'all') {
+                    matching = allCards.slice(0, 8);
+                } else {
+                    matching = allCards.filter(card => card.getAttribute(dataAttr) === tab);
+                }
+
+                // Hide all cards first
+                allCards.forEach(card => {
+                    card.classList.add('hidden');
+                    card.style.display = 'none';
+                });
+
+                // Show up to 7 matching cards
+                const showCards = matching.slice(0, 7);
+                showCards.forEach((card, index) => {
                     card.classList.remove('hidden');
+                    card.style.display = '';
                     card.style.opacity = '0';
                     card.style.transform = 'translateY(12px)';
-                    requestAnimationFrame(() => {
+                    setTimeout(() => {
                         card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
                         card.style.opacity = '1';
                         card.style.transform = 'translateY(0)';
-                    });
-                } else {
-                    card.classList.add('hidden');
+                    }, index * 50);
+                });
+
+                // Add View More if more than 7
+                if (matching.length > 7 || (tab === 'all' && allCards.length > 7)) {
+                    const totalInCategory = tab === 'all' ? allCards.length : matching.length;
+                    const viewMore = document.createElement('div');
+                    viewMore.className = 'product-card view-more-card';
+                    viewMore.setAttribute(dataAttr, tab);
+                    viewMore.innerHTML = `
+                        <div class="product-img">
+                            <a class="view-more-link" href="${targetPage}?category=${tab}">
+                                <div class="view-more-content">
+                                    <svg fill="none" height="32" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="32"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                    <span>View All</span>
+                                    <small>${totalInCategory} products</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product-details">
+                            <span class="p-cat">${tab === 'all' ? 'All' : btn.textContent}</span>
+                            <h4>View More Products</h4>
+                        </div>
+                    `;
+                    grid.appendChild(viewMore);
+                    currentViewMore = viewMore;
+
+                    viewMore.style.opacity = '0';
+                    viewMore.style.transform = 'translateY(12px)';
+                    setTimeout(() => {
+                        viewMore.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        viewMore.style.opacity = '1';
+                        viewMore.style.transform = 'translateY(0)';
+                    }, showCards.length * 50);
                 }
             });
         });
-    });
+
+        // Trigger initial tab (All)
+        const allBtn = container.querySelector('.tab-btn[data-tab="all"], .tab-btn[data-tab-top="all"]');
+        if (allBtn) allBtn.click();
+    }
 
     // === NEWSLETTER FORM ===
     const newsletterForm = document.getElementById('newsletterForm');
@@ -222,6 +260,7 @@ function initInteractions() {
     });
 
     // === PRODUCT CARD HOVER GLOW ===
+    const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.style.borderColor = 'var(--neon)';
@@ -303,38 +342,202 @@ function initInteractions() {
 
     // === PRODUCT PAGE FILTER ===
     const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+    const powerBtns = document.querySelectorAll('.power-btn[data-power]');
+    const industryBtns = document.querySelectorAll('.power-btn[data-industry]');
     const productPageCards = document.querySelectorAll('.product-page-card');
     const productCount = document.querySelector('.product-count strong');
+
+    let currentCategory = 'all';
+    let currentPower = 'all';
+    let currentIndustry = 'all';
+
+    function applyFilters() {
+        let visible = 0;
+        productPageCards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            const power = card.getAttribute('data-power') || 'all';
+            const industry = card.getAttribute('data-industry') || 'all';
+
+            const matchCategory = currentCategory === 'all' || cat === currentCategory;
+            const matchPower = currentPower === 'all' || power === currentPower;
+            const matchIndustry = currentIndustry === 'all' || industry === currentIndustry;
+
+            if (matchCategory && matchPower && matchIndustry) {
+                card.classList.remove('hidden');
+                visible++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        if (productCount) {
+            productCount.textContent = visible;
+        }
+    }
 
     if (filterBtns.length && productPageCards.length) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Update active state
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-                let visible = 0;
-
-                productPageCards.forEach(card => {
-                    const cat = card.getAttribute('data-category');
-                    if (filter === 'all' || cat === filter) {
-                        card.classList.remove('hidden');
-                        visible++;
-                    } else {
-                        card.classList.add('hidden');
-                    }
-                });
-
-                if (productCount) {
-                    productCount.textContent = visible;
-                }
+                currentCategory = btn.getAttribute('data-filter');
+                applyFilters();
             });
         });
     }
 
+    if (powerBtns.length && productPageCards.length) {
+        powerBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                powerBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentPower = btn.getAttribute('data-power');
+                applyFilters();
+            });
+        });
+    }
+
+    if (industryBtns.length && productPageCards.length) {
+        industryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                industryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentIndustry = btn.getAttribute('data-industry');
+                applyFilters();
+            });
+        });
+    }
+
+    // === PRODUCT PAGE PAGINATION ===
+    initPagination();
+
+    // === URL PARAMETER AUTO FILTER ===
+    initUrlFilter();
+
+    // === SHOP BY CATEGORY SCROLL SIZING ===
+    initCatScroll();
+
     // === PRODUCT CARD CAROUSELS ===
     initCarousels();
+}
+
+// === SHOP BY CATEGORY SCROLL SIZING ===
+function initCatScroll() {
+    const wrapper = document.querySelector('.cats-scroll-wrapper');
+    const track = document.querySelector('.cats-scroll-track');
+    if (!wrapper || !track) return;
+
+    function resize() {
+        const wrapperW = wrapper.clientWidth;
+        const gap = 20;
+        const cols = window.innerWidth <= 480 ? 2 : window.innerWidth <= 992 ? 3 : 6;
+        const itemW = (wrapperW - gap * (cols - 1)) / cols;
+        track.querySelectorAll('.cat-item').forEach(item => {
+            item.style.flex = '0 0 ' + itemW + 'px';
+            item.style.maxWidth = itemW + 'px';
+        });
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+}
+
+// === URL PARAMETER AUTO FILTER ===
+function initUrlFilter() {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    if (!category) return;
+
+    // Find matching filter button and click it
+    const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+    filterBtns.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+            btn.click();
+        }
+    });
+}
+
+// === PRODUCT PAGE PAGINATION ===
+function initPagination() {
+    const productsGrid = document.getElementById('productsGrid');
+    const paginationContainer = document.querySelector('.pagination');
+    if (!productsGrid || !paginationContainer) return;
+
+    const ITEMS_PER_PAGE = 12;
+    let currentPage = 1;
+
+    function getVisibleCards() {
+        return Array.from(productsGrid.querySelectorAll('.product-page-card:not(.hidden)'));
+    }
+
+    function renderPagination() {
+        const visibleCards = getVisibleCards();
+        const totalPages = Math.ceil(visibleCards.length / ITEMS_PER_PAGE);
+
+        // Hide all cards first
+        visibleCards.forEach(card => card.style.display = 'none');
+
+        // Show cards for current page
+        const start = (currentPage - 1) * ITEMS_PER_PAGE;
+        const end = start + ITEMS_PER_PAGE;
+        visibleCards.slice(start, end).forEach(card => card.style.display = '');
+
+        // Re-generate pagination HTML
+        if (totalPages <= 1) {
+            paginationContainer.style.display = 'none';
+            return;
+        }
+        paginationContainer.style.display = 'flex';
+
+        let html = '';
+
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
+            if (i === currentPage) {
+                html += `<a class="page-btn active" href="#" data-page="${i}">${i}</a>`;
+            } else {
+                html += `<a class="page-btn" href="#" data-page="${i}">${i}</a>`;
+            }
+        }
+
+        // Next button
+        if (currentPage < totalPages) {
+            html += `<a class="page-btn next" href="#" data-page="next">Next <svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="14"><polyline points="9 18 15 12 9 6"></polyline></svg></a>`;
+        }
+
+        paginationContainer.innerHTML = html;
+
+        // Re-attach click handlers
+        paginationContainer.querySelectorAll('.page-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = btn.getAttribute('data-page');
+                const total = Math.ceil(getVisibleCards().length / ITEMS_PER_PAGE);
+
+                if (page === 'next') {
+                    if (currentPage < total) currentPage++;
+                } else {
+                    currentPage = parseInt(page, 10);
+                }
+
+                renderPagination();
+                productsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    }
+
+    // Initial render
+    renderPagination();
+
+    // Re-render when filter changes
+    const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            currentPage = 1;
+            // Wait for filter logic to update visibility
+            setTimeout(renderPagination, 50);
+        });
+    });
 }
 
 // === PRODUCT CARD CAROUSELS ===

@@ -1,0 +1,628 @@
+[
+  {
+    "folder": "brushless-drill",
+    "name": "36V MAX Lithium Cordless Drill",
+    "category": "Drills & Drivers",
+    "description": "High-performance brushless cordless drill designed for professional industrial use. Delivers superior torque and extended runtime with advanced lithium-ion battery technology.",
+    "images": [
+      "product-images/brushless-drill/brushless-drill-1.png",
+      "product-images/brushless-drill/brushless-drill-2.jpg",
+      "product-images/brushless-drill/brushless-drill-3.png",
+      "product-images/brushless-drill/brushless-drill-4.png",
+      "product-images/brushless-drill/brushless-drill-5.jpg"
+    ]
+  },
+  {
+    "folder": "brushless-impact-drill",
+    "name": "BL Series Brushless Impact Drill",
+    "category": "Drills & Drivers",
+    "description": "Professional brushless impact drill with high torque output and durable all-metal gearbox for heavy-duty applications.",
+    "images": [
+      "product-images/brushless-impact-drill/brushless-impact-drill-1.jpg",
+      "product-images/brushless-impact-drill/brushless-impact-drill-2.jpg",
+      "product-images/brushless-impact-drill/brushless-impact-drill-main.jpg"
+    ]
+  },
+  {
+    "folder": "brushed-drill",
+    "name": "Brushed Impact Drill",
+    "category": "Drills & Drivers",
+    "description": "Reliable brushed motor impact drill with adjustable speed settings, ideal for general construction and home improvement tasks.",
+    "images": [
+      "product-images/brushed-drill/brushed-drill-1.jpg",
+      "product-images/brushed-drill/brushed-drill-main.jpg"
+    ]
+  },
+  {
+    "folder": "impact-drill-set",
+    "name": "Multifunction Impact Drill Set",
+    "category": "Drills & Drivers",
+    "description": "Versatile impact drill set with multiple accessories for drilling, driving, and fastening applications.",
+    "images": [
+      "product-images/impact-drill-set/impact-drill-set-1.jpg",
+      "product-images/impact-drill-set/impact-drill-set-2.jpg",
+      "product-images/impact-drill-set/impact-drill-set-3.jpg",
+      "product-images/impact-drill-set/impact-drill-set-6.jpg"
+    ]
+  },
+  {
+    "folder": "electric-screwdriver",
+    "name": "Electric Screwdriver",
+    "category": "Drills & Drivers",
+    "description": "Compact and lightweight electric screwdriver with adjustable torque settings for precision fastening tasks.",
+    "images": [
+      "product-images/electric-screwdriver/electric-screwdriver-1.jpg",
+      "product-images/electric-screwdriver/electric-screwdriver-2.jpg",
+      "product-images/electric-screwdriver/electric-screwdriver-3.jpg",
+      "product-images/electric-screwdriver/electric-screwdriver-4.jpg"
+    ]
+  },
+  {
+    "folder": "screwdriver-set",
+    "name": "Screwdriver Tool Set",
+    "category": "Drills & Drivers",
+    "description": "Complete screwdriver tool set with multiple bits and ergonomic handle design for various fastening needs.",
+    "images": [
+      "product-images/screwdriver-set/screwdriver-set-1.jpg",
+      "product-images/screwdriver-set/screwdriver-set-2.jpg",
+      "product-images/screwdriver-set/screwdriver-set-3.jpg"
+    ]
+  },
+  {
+    "folder": "high-torque-wrench",
+    "name": "High Torque Lithium Wrench",
+    "category": "Wrenches & Impact Tools",
+    "description": "Powerful cordless electric wrench with high torque output for automotive and industrial bolting applications.",
+    "images": [
+      "product-images/high-torque-wrench/high-torque-wrench-1.jpg",
+      "product-images/high-torque-wrench/high-torque-wrench-2.jpg",
+      "product-images/high-torque-wrench/high-torque-wrench-main.jpg"
+    ]
+  },
+  {
+    "folder": "cordless-impact-wrench",
+    "name": "Cordless Impact Wrench",
+    "category": "Wrenches & Impact Tools",
+    "description": "Professional cordless impact wrench with variable speed trigger and forward/reverse switch for versatile use.",
+    "images": [
+      "product-images/cordless-impact-wrench/cordless-impact-wrench-1.jpg",
+      "product-images/cordless-impact-wrench/cordless-impact-wrench-2.jpg",
+      "product-images/cordless-impact-wrench/cordless-impact-wrench-3.jpg",
+      "product-images/cordless-impact-wrench/cordless-impact-wrench-6.png"
+    ]
+  },
+  {
+    "folder": "ratchet-wrench",
+    "name": "Professional Ratchet Wrench Set",
+    "category": "Wrenches & Impact Tools",
+    "description": "Premium ratchet wrench set with multiple socket sizes for tight-space fastening operations.",
+    "images": [
+      "product-images/ratchet-wrench/ratchet-wrench-1.jpg",
+      "product-images/ratchet-wrench/ratchet-wrench-1.jpg",
+      "product-images/ratchet-wrench/ratchet-wrench-1.png",
+      "product-images/ratchet-wrench/ratchet-wrench-2.jpg",
+      "product-images/ratchet-wrench/ratchet-wrench-2.png"
+    ]
+  },
+  {
+    "folder": "pneumatic-impact-wrench",
+    "name": "Pneumatic Impact Wrench",
+    "category": "Wrenches & Impact Tools",
+    "description": "Heavy-duty pneumatic impact wrench for industrial assembly lines and automotive repair workshops.",
+    "images": [
+      "product-images/pneumatic-impact-wrench/pneumatic-impact-wrench-1.jpg",
+      "product-images/pneumatic-impact-wrench/pneumatic-impact-wrench-2.jpg",
+      "product-images/pneumatic-impact-wrench/pneumatic-impact-wrench-3.jpg",
+      "product-images/pneumatic-impact-wrench/pneumatic-impact-wrench-4.jpg"
+    ]
+  },
+  {
+    "folder": "tire-inflator",
+    "name": "Tire Inflator Pump",
+    "category": "Wrenches & Impact Tools",
+    "description": "Digital tire inflator with auto-stop function and pressure gauge for cars, motorcycles, and bicycles.",
+    "images": [
+      "product-images/tire-inflator/tire-inflator-1.jpg",
+      "product-images/tire-inflator/tire-inflator-2.png",
+      "product-images/tire-inflator/tire-inflator-3.jpg"
+    ]
+  },
+  {
+    "folder": "cordless-angle-grinder",
+    "name": "125mm Cordless Angle Grinder",
+    "category": "Grinding & Cutting",
+    "description": "Compact cordless angle grinder with brushless motor for cutting, grinding, and polishing applications.",
+    "images": [
+      "product-images/cordless-angle-grinder/cordless-angle-grinder-1.jpg",
+      "product-images/cordless-angle-grinder/cordless-angle-grinder-2.jpg",
+      "product-images/cordless-angle-grinder/cordless-angle-grinder-3.jpg"
+    ]
+  },
+  {
+    "folder": "wired-angle-grinder",
+    "name": "Wired Electric Angle Grinder",
+    "category": "Grinding & Cutting",
+    "description": "Professional wired angle grinder with powerful motor and ergonomic design for extended use.",
+    "images": [
+      "product-images/wired-angle-grinder/wired-angle-grinder-1.jpg",
+      "product-images/wired-angle-grinder/wired-angle-grinder-2.jpg",
+      "product-images/wired-angle-grinder/wired-angle-grinder-3.jpg",
+      "product-images/wired-angle-grinder/wired-angle-grinder-4.jpg"
+    ]
+  },
+  {
+    "folder": "angle-grinder",
+    "name": "Professional Angle Grinder",
+    "category": "Grinding & Cutting",
+    "description": "Heavy-duty angle grinder with adjustable guard and spindle lock for quick disc changes.",
+    "images": [
+      "product-images/angle-grinder/angle-grinder-1.jpg",
+      "product-images/angle-grinder/angle-grinder-2.jpg",
+      "product-images/angle-grinder/angle-grinder-main.jpg"
+    ]
+  },
+  {
+    "folder": "wired-sander",
+    "name": "Wired Electric Sander",
+    "category": "Grinding & Cutting",
+    "description": "Electric orbital sander with variable speed control for smooth finishing on wood and metal surfaces.",
+    "images": [
+      "product-images/wired-sander/wired-sander-1.jpg",
+      "product-images/wired-sander/wired-sander-2.png",
+      "product-images/wired-sander/wired-sander-3.png",
+      "product-images/wired-sander/wired-sander-4.png",
+      "product-images/wired-sander/wired-sander-5.jpg"
+    ]
+  },
+  {
+    "folder": "lithium-sander",
+    "name": "Lithium Cordless Sander",
+    "category": "Grinding & Cutting",
+    "description": "Cordless lithium-powered sander with efficient dust collection for clean and precise sanding work.",
+    "images": [
+      "product-images/lithium-sander/lithium-sander-1.png",
+      "product-images/lithium-sander/lithium-sander-3.png",
+      "product-images/lithium-sander/lithium-sander-6.png"
+    ]
+  },
+  {
+    "folder": "wall-sander",
+    "name": "Electric Wall Sanding Machine",
+    "category": "Grinding & Cutting",
+    "description": "Specialized wall sander with extension pole for sanding large wall and ceiling surfaces efficiently.",
+    "images": [
+      "product-images/wall-sander/wall-sander-1.jpg",
+      "product-images/wall-sander/wall-sander-2.png",
+      "product-images/wall-sander/wall-sander-main.jpg"
+    ]
+  },
+  {
+    "folder": "grooving-tool",
+    "name": "Electric Concrete Grooving Tool",
+    "category": "Grinding & Cutting",
+    "description": "Professional concrete grooving tool for creating clean channels and expansion joints in concrete surfaces.",
+    "images": [
+      "product-images/grooving-tool/grooving-tool-1.jpg",
+      "product-images/grooving-tool/grooving-tool-2.jpg",
+      "product-images/grooving-tool/grooving-tool-main.jpg"
+    ]
+  },
+  {
+    "folder": "power-shears",
+    "name": "Electric Power Shears",
+    "category": "Grinding & Cutting",
+    "description": "Heavy-duty electric power shears for cutting sheet metal, roofing, and other thin materials.",
+    "images": [
+      "product-images/power-shears/power-shears-1.jpg",
+      "product-images/power-shears/power-shears-3.jpg",
+      "product-images/power-shears/power-shears-4.jpg",
+      "product-images/power-shears/power-shears-2.jpg"
+    ]
+  },
+  {
+    "folder": "rotary-hammer",
+    "name": "26mm Rotary Hammer Drill Kit",
+    "category": "Saws & Hammers",
+    "description": "Professional SDS-plus rotary hammer drill with multiple modes: hammer drilling, chiseling, and drilling.",
+    "images": [
+      "product-images/rotary-hammer/rotary-hammer-1.jpg",
+      "product-images/rotary-hammer/rotary-hammer-2.jpg",
+      "product-images/rotary-hammer/rotary-hammer-4.png",
+      "product-images/rotary-hammer/rotary-hammer-5.jpg",
+      "product-images/rotary-hammer/rotary-hammer-6.jpg"
+    ]
+  },
+  {
+    "folder": "hammer-drill",
+    "name": "Electric Hammer Drill",
+    "category": "Saws & Hammers",
+    "description": "Versatile electric hammer drill with impact function for masonry, concrete, and stone drilling.",
+    "images": [
+      "product-images/hammer-drill/hammer-drill-1.jpg",
+      "product-images/hammer-drill/hammer-drill-2.png",
+      "product-images/hammer-drill/hammer-drill-main.jpg"
+    ]
+  },
+  {
+    "folder": "demolition-hammer",
+    "name": "Heavy Duty Demolition Hammer",
+    "category": "Saws & Hammers",
+    "description": "Professional demolition hammer with high-impact energy for breaking concrete, masonry, and asphalt.",
+    "images": [
+      "product-images/demolition-hammer/demolition-hammer-1.jpg",
+      "product-images/demolition-hammer/demolition-hammer-3.jpg",
+      "product-images/demolition-hammer/demolition-hammer-6.png"
+    ]
+  },
+  {
+    "folder": "electric-saw",
+    "name": "Multi-Purpose Electric Saw",
+    "category": "Saws & Hammers",
+    "description": "Multi-purpose electric saw with adjustable cutting depth and bevel for wood and metal cutting.",
+    "images": [
+      "product-images/electric-saw/electric-saw-1.jpg",
+      "product-images/electric-saw/electric-saw-2.jpg",
+      "product-images/electric-saw/electric-saw-main.jpg"
+    ]
+  },
+  {
+    "folder": "cordless-chainsaw",
+    "name": "Cordless Chainsaw",
+    "category": "Saws & Hammers",
+    "description": "Battery-powered cordless chainsaw with automatic chain lubrication and safety brake for tree pruning.",
+    "images": [
+      "product-images/cordless-chainsaw/cordless-chainsaw-1.jpg",
+      "product-images/cordless-chainsaw/cordless-chainsaw-2.jpg",
+      "product-images/cordless-chainsaw/cordless-chainsaw-main.jpg"
+    ]
+  },
+  {
+    "folder": "gasoline-chainsaw",
+    "name": "Gasoline-Powered Chainsaw",
+    "category": "Saws & Hammers",
+    "description": "Professional gasoline chainsaw with high-power engine for heavy-duty logging and forestry applications.",
+    "images": [
+      "product-images/gasoline-chainsaw/gasoline-chainsaw-1.jpg",
+      "product-images/gasoline-chainsaw/gasoline-chainsaw-2.jpg",
+      "product-images/gasoline-chainsaw/gasoline-chainsaw-3.jpg",
+      "product-images/gasoline-chainsaw/gasoline-chainsaw-4.jpg",
+      "product-images/gasoline-chainsaw/gasoline-chainsaw-5.jpg"
+    ]
+  },
+  {
+    "folder": "mini-chainsaw",
+    "name": "Mini Cordless Chainsaw",
+    "category": "Saws & Hammers",
+    "description": "Compact and lightweight mini cordless chainsaw for light pruning and DIY wood cutting tasks.",
+    "images": [
+      "product-images/mini-chainsaw/mini-chainsaw-1.jpg",
+      "product-images/mini-chainsaw/mini-chainsaw-2.jpg",
+      "product-images/mini-chainsaw/mini-chainsaw-3.jpg",
+      "product-images/mini-chainsaw/mini-chainsaw-4.jpg",
+      "product-images/mini-chainsaw/mini-chainsaw-6.jpg"
+    ]
+  },
+  {
+    "folder": "reciprocating-saw",
+    "name": "Lithium Reciprocating Saw",
+    "category": "Saws & Hammers",
+    "description": "Cordless reciprocating saw with variable speed for cutting wood, metal, and plastic materials.",
+    "images": [
+      "product-images/reciprocating-saw/reciprocating-saw-1.jpg",
+      "product-images/reciprocating-saw/reciprocating-saw-2.jpg",
+      "product-images/reciprocating-saw/reciprocating-saw-3.jpg"
+    ]
+  },
+  {
+    "folder": "nail-gun",
+    "name": "Electric Nail Gun",
+    "category": "Saws & Hammers",
+    "description": "Electric nail gun with adjustable depth control for framing, roofing, and finish nailing applications.",
+    "images": [
+      "product-images/nail-gun/nail-gun-1.jpg",
+      "product-images/nail-gun/nail-gun-2.jpg",
+      "product-images/nail-gun/nail-gun-main.png"
+    ]
+  },
+  {
+    "folder": "rebar-tying-gun",
+    "name": "Rebar Tying Gun",
+    "category": "Saws & Hammers",
+    "description": "Automatic rebar tying gun for rapid steel bar connection in construction and concrete reinforcement.",
+    "images": [
+      "product-images/rebar-tying-gun/rebar-tying-gun-1.jpg",
+      "product-images/rebar-tying-gun/rebar-tying-gun-2.jpg",
+      "product-images/rebar-tying-gun/rebar-tying-gun-3.jpg",
+      "product-images/rebar-tying-gun/rebar-tying-gun-4.jpg"
+    ]
+  },
+  {
+    "folder": "bonding-machine",
+    "name": "Portable Bonding Machine",
+    "category": "Welding & Heating",
+    "description": "Portable bonding machine with adjustable temperature for plastic pipe and sheet welding.",
+    "images": [
+      "product-images/bonding-machine/bonding-machine-1.jpg",
+      "product-images/bonding-machine/bonding-machine-2.jpg",
+      "product-images/bonding-machine/bonding-machine-main.jpg"
+    ]
+  },
+  {
+    "folder": "welding-machine",
+    "name": "Electric Welding Machine",
+    "category": "Welding & Heating",
+    "description": "Professional MMA welding machine with digital display and adjustable welding current for various materials.",
+    "images": [
+      "product-images/welding-machine/welding-machine-1.jpg",
+      "product-images/welding-machine/welding-machine-2.jpg",
+      "product-images/welding-machine/welding-machine-4.jpg"
+    ]
+  },
+  {
+    "folder": "welding-gun",
+    "name": "Professional Welding Gun",
+    "category": "Welding & Heating",
+    "description": "Ergonomic welding gun with compatible consumables for MIG/MAG and flux-cored wire welding.",
+    "images": [
+      "product-images/welding-gun/welding-gun-2.jpg",
+      "product-images/welding-gun/welding-gun-3.jpg",
+      "product-images/welding-gun/welding-gun-3.jpg",
+      "product-images/welding-gun/welding-gun-4.jpg"
+    ]
+  },
+  {
+    "folder": "heat-gun",
+    "name": "Variable Temperature Heat Gun",
+    "category": "Welding & Heating",
+    "description": "Professional heat gun with variable temperature control for paint stripping, shrink wrapping, and thawing.",
+    "images": [
+      "product-images/heat-gun/heat-gun-1.jpg",
+      "product-images/heat-gun/heat-gun-2.jpg",
+      "product-images/heat-gun/heat-gun-4.png",
+      "product-images/heat-gun/heat-gun-5.png"
+    ]
+  },
+  {
+    "folder": "hot-air-blower",
+    "name": "Industrial Hot Air Blower",
+    "category": "Welding & Heating",
+    "description": "Industrial-grade hot air blower with high airflow for drying, curing, and heating applications.",
+    "images": [
+      "product-images/hot-air-blower/hot-air-blower-1.jpg",
+      "product-images/hot-air-blower/hot-air-blower-2.png",
+      "product-images/hot-air-blower/hot-air-blower-main.jpg"
+    ]
+  },
+  {
+    "folder": "field-mower",
+    "name": "Field Mower",
+    "category": "Garden & Outdoor",
+    "description": "Robust field mower with adjustable cutting height for maintaining large grass areas and fields.",
+    "images": [
+      "product-images/field-mower/field-mower-1.jpg",
+      "product-images/field-mower/field-mower-2.jpg",
+      "product-images/field-mower/field-mower-main.jpg"
+    ]
+  },
+  {
+    "folder": "backpack-mower",
+    "name": "Backpack Lawn Mower",
+    "category": "Garden & Outdoor",
+    "description": "Ergonomic backpack-style lawn mower for comfortable operation on slopes and uneven terrain.",
+    "images": [
+      "product-images/backpack-mower/backpack-mower-1.jpg",
+      "product-images/backpack-mower/backpack-mower-3.jpg",
+      "product-images/backpack-mower/backpack-mower-4.jpg",
+      "product-images/backpack-mower/backpack-mower-5.jpg"
+    ]
+  },
+  {
+    "folder": "leaf-blower",
+    "name": "Cordless Electric Leaf Blower",
+    "category": "Garden & Outdoor",
+    "description": "Cordless electric leaf blower with variable speed for efficient yard cleaning and debris clearing.",
+    "images": [
+      "product-images/leaf-blower/leaf-blower-2.jpg",
+      "product-images/leaf-blower/leaf-blower-3.jpg",
+      "product-images/leaf-blower/leaf-blower-4.jpg",
+      "product-images/leaf-blower/leaf-blower-4.jpg",
+      "product-images/leaf-blower/leaf-blower-4.jpg"
+    ]
+  },
+  {
+    "folder": "pruning-shears",
+    "name": "Pruning Shears",
+    "category": "Garden & Outdoor",
+    "description": "Professional pruning shears with bypass cutting mechanism for clean cuts on branches and shrubs.",
+    "images": [
+      "product-images/pruning-shears/pruning-shears-1.jpg",
+      "product-images/pruning-shears/pruning-shears-2.jpg",
+      "product-images/pruning-shears/pruning-shears-main.png"
+    ]
+  },
+  {
+    "folder": "generator",
+    "name": "Portable Gasoline Generator",
+    "category": "Garden & Outdoor",
+    "description": "Portable gasoline generator with stable power output for construction sites and emergency backup power.",
+    "images": [
+      "product-images/generator/generator-1.jpg",
+      "product-images/generator/generator-2.jpg",
+      "product-images/generator/generator-6.jpg"
+    ]
+  },
+  {
+    "folder": "concrete-mixer",
+    "name": "Electric Concrete Mixer",
+    "category": "Garden & Outdoor",
+    "description": "Heavy-duty electric concrete mixer for construction material mixing with adjustable speed control.",
+    "images": [
+      "product-images/concrete-mixer/concrete-mixer-1.jpg",
+      "product-images/concrete-mixer/concrete-mixer-2.jpg",
+      "product-images/concrete-mixer/concrete-mixer-3.jpg",
+      "product-images/concrete-mixer/concrete-mixer-6.jpg"
+    ]
+  },
+  {
+    "folder": "tool-sets",
+    "name": "50-Piece Professional Combo Kit",
+    "category": "Tool Kits & Accessories",
+    "description": "Comprehensive 50-piece tool combo kit with hand tools, power tool accessories, and storage case.",
+    "images": [
+      "product-images/tool-sets/tool-sets-main.jpg",
+      "product-images/tool-sets/tool-sets-main.png",
+      "product-images/tool-sets/tool-sets-main.jpg"
+    ]
+  },
+  {
+    "folder": "electric-tool-kit",
+    "name": "Industrial Heavy-Duty Tool Set",
+    "category": "Tool Kits & Accessories",
+    "description": "Industrial-grade electric tool kit box with essential power tools and accessories for professional use.",
+    "images": [
+      "product-images/electric-tool-kit/electric-tool-kit-1.png",
+      "product-images/electric-tool-kit/electric-tool-kit-2.jpg",
+      "product-images/electric-tool-kit/electric-tool-kit-3.png",
+      "product-images/electric-tool-kit/electric-tool-kit-4.png",
+      "product-images/electric-tool-kit/electric-tool-kit-5.png"
+    ]
+  },
+  {
+    "folder": "hand-tools",
+    "name": "Professional Hand Tools Set",
+    "category": "Tool Kits & Accessories",
+    "description": "Complete hand tools set including wrenches, pliers, hammers, and screwdrivers for general repair work.",
+    "images": [
+      "product-images/hand-tools/hand-tools-1.jpg",
+      "product-images/hand-tools/hand-tools-2.jpg",
+      "product-images/hand-tools/hand-tools-main.jpg"
+    ]
+  },
+  {
+    "folder": "hot-melt-glue-gun",
+    "name": "Electric Hot-Melt Glue Gun",
+    "category": "Tool Kits & Accessories",
+    "description": "Fast-heating hot-melt glue gun with adjustable temperature for crafting, repair, and DIY projects.",
+    "images": [
+      "product-images/hot-melt-glue-gun/hot-melt-glue-gun-1.jpg",
+      "product-images/hot-melt-glue-gun/hot-melt-glue-gun-2.jpg",
+      "product-images/hot-melt-glue-gun/hot-melt-glue-gun-3.jpg"
+    ]
+  },
+  {
+    "folder": "glue-gun",
+    "name": "Heavy-Duty Glue Gun",
+    "category": "Tool Kits & Accessories",
+    "description": "Professional heavy-duty glue gun for construction adhesive application and sealing tasks.",
+    "images": [
+      "product-images/glue-gun/glue-gun-1.jpg",
+      "product-images/glue-gun/glue-gun-2.jpg",
+      "product-images/glue-gun/glue-gun-main.jpg"
+    ]
+  },
+  {
+    "folder": "wood-planer",
+    "name": "Electric Wood Planer",
+    "category": "Tool Kits & Accessories",
+    "description": "Electric wood planer with adjustable depth control for smoothing and flattening wood surfaces.",
+    "images": [
+      "product-images/wood-planer/wood-planer-1.jpg",
+      "product-images/wood-planer/wood-planer-2.jpg",
+      "product-images/wood-planer/wood-planer-main.jpg"
+    ]
+  },
+  {
+    "folder": "woodworking-planer",
+    "name": "Electric Woodworking Planer",
+    "category": "Tool Kits & Accessories",
+    "description": "Benchtop electric woodworking planer for precise thickness planing of hardwood and softwood boards.",
+    "images": [
+      "product-images/woodworking-planer/woodworking-planer-1.jpg",
+      "product-images/woodworking-planer/woodworking-planer-1.jpg",
+      "product-images/woodworking-planer/woodworking-planer-2.jpg",
+      "product-images/woodworking-planer/woodworking-planer-5.png"
+    ]
+  },
+  {
+    "folder": "sewing-machine",
+    "name": "Electric Sewing Machine",
+    "category": "Tool Kits & Accessories",
+    "description": "Multi-stitch electric sewing machine for home tailoring, crafting, and light textile work.",
+    "images": [
+      "product-images/sewing-machine/sewing-machine-1.jpg",
+      "product-images/sewing-machine/sewing-machine-2.jpg",
+      "product-images/sewing-machine/sewing-machine-3.png",
+      "product-images/sewing-machine/sewing-machine-4.jpg",
+      "product-images/sewing-machine/sewing-machine-5.jpg"
+    ]
+  },
+  {
+    "folder": "laser-level",
+    "name": "Self-Leveling Laser Level",
+    "category": "Measuring & Cleaning",
+    "description": "Professional self-leveling laser level with multiple beam modes for accurate alignment and layout work.",
+    "images": [
+      "product-images/laser-level/laser-level-1.jpg",
+      "product-images/laser-level/laser-level-2.jpg",
+      "product-images/laser-level/laser-level-3.jpg",
+      "product-images/laser-level/laser-level-4.png",
+      "product-images/laser-level/laser-level-5.jpg"
+    ]
+  },
+  {
+    "folder": "surveying-tools",
+    "name": "Surveying Tools Set",
+    "category": "Measuring & Cleaning",
+    "description": "Complete surveying tools set including measuring tape, level, and marking tools for construction layout.",
+    "images": [
+      "product-images/surveying-tools/surveying-tools-1.jpg",
+      "product-images/surveying-tools/surveying-tools-2.jpg",
+      "product-images/surveying-tools/surveying-tools-main.jpg"
+    ]
+  },
+  {
+    "folder": "spray-gun",
+    "name": "Professional HVLP Spray Gun",
+    "category": "Measuring & Cleaning",
+    "description": "HVLP spray gun with adjustable nozzle and pattern control for automotive and furniture painting.",
+    "images": [
+      "product-images/spray-gun/spray-gun-1.jpg",
+      "product-images/spray-gun/spray-gun-2.jpg",
+      "product-images/spray-gun/spray-gun-main.jpg"
+    ]
+  },
+  {
+    "folder": "power-spray-gun",
+    "name": "Electric Power Spray Gun",
+    "category": "Measuring & Cleaning",
+    "description": "Electric power spray gun for efficient painting, staining, and coating applications on large surfaces.",
+    "images": [
+      "product-images/power-spray-gun/power-spray-gun-1.jpg",
+      "product-images/power-spray-gun/power-spray-gun-2.jpg",
+      "product-images/power-spray-gun/power-spray-gun-3.jpg"
+    ]
+  },
+  {
+    "folder": "water-gun",
+    "name": "High-Pressure Water Gun",
+    "category": "Measuring & Cleaning",
+    "description": "High-pressure water gun for car washing, garden cleaning, and outdoor surface rinsing.",
+    "images": [
+      "product-images/water-gun/water-gun-1.png",
+      "product-images/water-gun/water-gun-2.png",
+      "product-images/water-gun/water-gun-main.png"
+    ]
+  },
+  {
+    "folder": "cleaning-gun",
+    "name": "Lithium Cleaning Gun",
+    "category": "Measuring & Cleaning",
+    "description": "Cordless lithium-powered high-pressure cleaning gun for portable outdoor and vehicle cleaning.",
+    "images": [
+      "product-images/cleaning-gun/cleaning-gun-1.jpg",
+      "product-images/cleaning-gun/cleaning-gun-2.jpg",
+      "product-images/cleaning-gun/cleaning-gun-3.jpg",
+      "product-images/cleaning-gun/cleaning-gun-6.png"
+    ]
+  }
+]
