@@ -1,0 +1,26 @@
+# 后端依赖
+backend/node_modules/
+backend/data/
+backend/*.db
+backend/*.db-*
+backend/package-lock.json
+
+# 管理后台依赖
+admin/node_modules/
+admin/package-lock.json
+
+# 环境变量
+backend/.env.production
+
+# 日志
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
