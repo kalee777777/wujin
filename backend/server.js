@@ -26,6 +26,14 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 const uploadDir = process.env.UPLOAD_DIR || path.join(__dirname, '../../product-images');
 app.use('/product-images', express.static(uploadDir));
 
+// Admin 前端静态文件
+const adminDistDir = path.join(__dirname, '../admin/dist');
+app.use('/admin', express.static(adminDistDir));
+
+// 前端静态文件（网站主页面）
+const frontendDir = path.join(__dirname, '../');
+app.use(express.static(frontendDir));
+
 // API 路由
 app.use('/api/auth', authRoutes);
 app.use('/api/products', productsRoutes);
@@ -43,9 +51,14 @@ app.get('/api/health', (req, res) => {
     });
 });
 
-// 404 处理
-app.use((req, res) => {
+// 404 处理 - 如果是 API 请求返回 JSON，否则返回前端页面
+app.use('/api/*', (req, res) => {
     res.status(404).json({ error: '接口不存在' });
+});
+
+// Admin SPA 路由回退
+app.use('/admin/*', (req, res) => {
+    res.sendFile(path.join(adminDistDir, 'index.html'));
 });
 
 // 错误处理

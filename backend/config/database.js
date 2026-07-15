@@ -87,6 +87,7 @@ function initDatabase() {
             author TEXT,
             status INTEGER DEFAULT 0,
             views INTEGER DEFAULT 0,
+            read_time INTEGER DEFAULT 5,
             published_at DATETIME,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
