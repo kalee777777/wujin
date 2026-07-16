@@ -2977,6 +2977,9 @@ img { max-width: 100%; display: block; }
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: var(--transition);
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .lab-card:hover {
@@ -3894,6 +3897,16 @@ img { max-width: 100%; display: block; }
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+
+.whitepaper-card h4 {
+    color: var(--text);
+}
+
+.whitepaper-card p {
+    color: var(--text-secondary);
 }
 
 .whitepaper-card:hover {
@@ -4088,6 +4101,9 @@ img { max-width: 100%; display: block; }
     overflow: hidden;
     transition: var(--transition);
     box-shadow: var(--shadow-sm);
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .event-card:hover {
@@ -5918,6 +5934,164 @@ img { max-width: 100%; display: block; }
 }
 .view-more-card .product-details h4 {
     color: var(--neon);
+}
+
+/* ============================================
+   REPORT SUBPAGE
+   ============================================ */
+
+.report-download-card {
+    background: linear-gradient(135deg, rgba(57, 255, 20, 0.05), rgba(0, 200, 255, 0.05));
+    border: 1px solid rgba(57, 255, 20, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.report-download-card:hover {
+    border-color: var(--neon);
+    box-shadow: var(--shadow-neon);
+}
+
+.download-card-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(57, 255, 20, 0.08);
+    border-radius: var(--radius);
+    color: var(--neon);
+}
+
+.download-card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.download-card-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: var(--text);
+    word-break: break-all;
+}
+
+.download-card-info p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.report-download-card .btn-neon {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.related-reports {
+    margin-top: 48px;
+    padding-top: 36px;
+    border-top: 1px solid var(--border);
+}
+
+.related-reports h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.related-reports-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.related-report-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.related-report-card:hover {
+    border-color: var(--neon);
+    box-shadow: var(--shadow-neon);
+    transform: translateY(-2px);
+}
+
+.related-report-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(57, 255, 20, 0.08);
+    border-radius: var(--radius);
+    color: var(--neon);
+}
+
+.related-report-card div:last-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.related-report-cat {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--neon-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.related-report-card h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+    color: var(--text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .report-download-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+    }
+
+    .download-card-info {
+        text-align: center;
+    }
+
+    .report-download-card .btn-neon {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .related-reports-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 
