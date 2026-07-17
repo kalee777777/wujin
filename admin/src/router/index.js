@@ -63,6 +63,12 @@ const routes = [
         meta: { title: '分类管理' }
       },
       {
+        path: 'inquiries',
+        name: 'Inquiries',
+        component: () => import('@/views/Inquiries.vue'),
+        meta: { title: '询盘管理' }
+      },
+      {
         path: 'settings',
         name: 'Settings',
         component: () => import('@/views/Settings.vue'),

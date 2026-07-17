@@ -47,53 +47,56 @@
         @selection-change="handleSelectionChange"
         stripe
       >
-        <el-table-column type="selection" width="50" />
-        
-        <el-table-column label="封面" width="100">
+        <el-table-column type="selection" width="45" />
+
+        <el-table-column label="封面" width="80">
           <template #default="{ row }">
             <el-image
               v-if="row.cover_image"
               :src="row.cover_image"
-              style="width: 80px; height: 50px; object-fit: cover;"
+              style="width: 60px; height: 40px; object-fit: cover; border-radius: 4px;"
               fit="cover"
             />
-            <div v-else style="width: 80px; height: 50px; background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
-              <el-icon color="#ccc"><Picture /></el-icon>
+            <div v-else style="width: 60px; height: 40px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; border-radius: 4px;">
+              <el-icon color="#ccc" :size="20"><Picture /></el-icon>
             </div>
           </template>
         </el-table-column>
-        
-        <el-table-column prop="title" label="标题" min-width="200" />
-        
-        <el-table-column label="分类" width="140">
+
+        <el-table-column prop="title" label="标题" min-width="180" show-overflow-tooltip />
+
+        <el-table-column label="分类" width="120">
           <template #default="{ row }">
             <el-tag size="small">{{ getCategoryLabel(row.category) }}</el-tag>
           </template>
         </el-table-column>
-        
-        <el-table-column prop="author" label="作者" width="120" />
-        <el-table-column prop="views" label="浏览量" width="80" />
-        <el-table-column :label="'阅读时间'" width="90">
+
+        <el-table-column prop="author" label="作者" width="90" />
+
+        <el-table-column label="数据" width="100">
           <template #default="{ row }">
-            {{ row.read_time || '—' }} min
+            <div style="font-size: 12px; color: #666; line-height: 1.6;">
+              <div>{{ row.views || 0 }} 浏览</div>
+              <div>{{ row.read_time || '—' }} min</div>
+            </div>
           </template>
         </el-table-column>
-        
-        <el-table-column prop="status" label="状态" width="80">
+
+        <el-table-column prop="status" label="状态" width="70">
           <template #default="{ row }">
             <el-tag :type="row.status === 1 ? 'success' : 'info'" size="small">
               {{ row.status === 1 ? '已发布' : '草稿' }}
             </el-tag>
           </template>
         </el-table-column>
-        
-        <el-table-column prop="created_at" label="创建时间" width="160">
+
+        <el-table-column prop="created_at" label="创建时间" width="150">
           <template #default="{ row }">
             {{ formatDate(row.created_at) }}
           </template>
         </el-table-column>
-        
-        <el-table-column label="操作" width="180" fixed="right">
+
+        <el-table-column label="操作" width="150" fixed="right">
           <template #default="{ row }">
             <el-button type="primary" link size="small" @click="handleEdit(row)">编辑</el-button>
             <el-button type="success" link size="small" :loading="syncingRow === row.id" @click="handlePublish(row)">发布</el-button>

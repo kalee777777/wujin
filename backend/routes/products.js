@@ -4,6 +4,62 @@ const { authMiddleware } = require('../middleware/auth');
 
 const router = express.Router();
 
+// 公开搜索接口（无需认证）
+router.get('/public/search', (req, res) => {
+    try {
+        const { q, limit = 8 } = req.query;
+
+        if (!q || q.trim().length === 0) {
+            return res.json({ success: true, data: { results: [], total: 0 } });
+        }
+
+        const keyword = q.trim();
+        const limitNum = Math.min(parseInt(limit), 20);
+
+        const stmt = db.prepare(`
+            SELECT
+                p.id, p.folder, p.name, p.description,
+                c.name as category_name, c.slug as category_slug
+            FROM products p
+            LEFT JOIN categories c ON p.category_id = c.id
+            WHERE p.status = 1
+              AND (p.name LIKE ? OR p.description LIKE ?)
+            ORDER BY p.created_at DESC
+            LIMIT ?
+        `);
+
+        const results = stmt.all(`%${keyword}%`, `%${keyword}%`, limitNum);
+
+        // 为每个结果获取第一张图片
+        const imageStmt = db.prepare('SELECT image_path FROM product_images WHERE product_id = ? ORDER BY sort_order ASC LIMIT 1');
+        const resultsWithImages = results.map(item => {
+            const firstImage = imageStmt.get(item.id);
+            return {
+                ...item,
+                image: firstImage ? firstImage.image_path : null
+            };
+        });
+
+        // 查询总数
+        const countStmt = db.prepare(`
+            SELECT COUNT(*) as total FROM products p
+            WHERE p.status = 1 AND (p.name LIKE ? OR p.description LIKE ?)
+        `);
+        const { total } = countStmt.get(`%${keyword}%`, `%${keyword}%`);
+
+        res.json({
+            success: true,
+            data: {
+                results: resultsWithImages,
+                total
+            }
+        });
+    } catch (error) {
+        console.error('搜索错误:', error);
+        res.status(500).json({ error: '搜索服务暂时不可用' });
+    }
+});
+
 // 获取所有产品列表
 router.get('/', authMiddleware, (req, res) => {
     try {

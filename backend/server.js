@@ -13,6 +13,7 @@ const postsRoutes = require('./routes/posts');
 const categoriesRoutes = require('./routes/categories');
 const uploadRoutes = require('./routes/upload');
 const statsRoutes = require('./routes/stats');
+const inquiriesRoutes = require('./routes/inquiries');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -41,6 +42,7 @@ app.use('/api/posts', postsRoutes);
 app.use('/api/categories', categoriesRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/stats', statsRoutes);
+app.use('/api/inquiries', inquiriesRoutes);
 
 // 健康检查
 app.get('/api/health', (req, res) => {

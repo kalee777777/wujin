@@ -69,3 +69,21 @@ export const getDashboardStats = (params) => api.get('/stats/dashboard', { param
 
 // 记录访问日志
 export const logVisit = (data) => api.post('/stats/log', data);
+
+// 获取询盘列表
+export const getInquiries = (params) => api.get('/inquiries', { params });
+
+// 获取询盘详情
+export const getInquiry = (id) => api.get(`/inquiries/${id}`);
+
+// 更新询盘状态
+export const updateInquiry = (id, data) => api.put(`/inquiries/${id}`, data);
+
+// 删除询盘
+export const deleteInquiry = (id) => api.delete(`/inquiries/${id}`);
+
+// 批量删除询盘
+export const batchDeleteInquiries = (ids) => api.post('/inquiries/batch-delete', { ids });
+
+// 获取询盘统计
+export const getInquiryStats = () => api.get('/inquiries/stats/summary');

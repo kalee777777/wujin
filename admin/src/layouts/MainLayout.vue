@@ -8,10 +8,10 @@
       
       <el-menu
         :default-active="activeMenu"
-        router
         background-color="transparent"
         text-color="rgba(255,255,255,0.7)"
         active-text-color="#fff"
+        @select="handleMenuSelect"
       >
         <el-menu-item index="/dashboard">
           <el-icon><DataAnalysis /></el-icon>
@@ -31,6 +31,11 @@
         <el-menu-item index="/categories">
           <el-icon><Grid /></el-icon>
           <span>分类管理</span>
+        </el-menu-item>
+        
+        <el-menu-item index="/inquiries">
+          <el-icon><ChatDotRound /></el-icon>
+          <span>询盘管理</span>
         </el-menu-item>
         
         <el-menu-item index="/settings">
@@ -115,6 +120,12 @@ const adminStore = useAdminStore();
 
 const activeMenu = computed(() => route.path);
 const pageTitle = computed(() => route.meta.title || '管理后台');
+
+function handleMenuSelect(index) {
+  if (route.path !== index) {
+    router.push(index);
+  }
+}
 
 // 修改密码
 const passwordDialogVisible = ref(false);

@@ -122,7 +122,7 @@ $header-height: 60px;
 .page-content {
   flex: 1;
   padding: 24px;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 // 卡片
@@ -173,6 +173,8 @@ $header-height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 
   .toolbar-left {
     display: flex;

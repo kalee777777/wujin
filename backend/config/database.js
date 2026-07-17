@@ -121,6 +121,26 @@ function initDatabase() {
         )
     `);
 
+    // 询盘表
+    db.exec(`
+        CREATE TABLE IF NOT EXISTS inquiries (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            company TEXT DEFAULT '',
+            email TEXT NOT NULL,
+            phone TEXT DEFAULT '',
+            subject TEXT NOT NULL,
+            products TEXT DEFAULT '',
+            quantity TEXT DEFAULT '',
+            message TEXT DEFAULT '',
+            status TEXT DEFAULT 'pending',
+            source TEXT DEFAULT 'website',
+            visitor_ip TEXT DEFAULT '',
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+    `);
+
     // 创建索引
     db.exec(`
         CREATE INDEX IF NOT EXISTS idx_products_category ON products(category_id);
@@ -129,6 +149,8 @@ function initDatabase() {
         CREATE INDEX IF NOT EXISTS idx_posts_category ON posts(category);
         CREATE INDEX IF NOT EXISTS idx_visit_logs_date ON visit_logs(created_at);
         CREATE INDEX IF NOT EXISTS idx_daily_stats_date ON daily_stats(date);
+        CREATE INDEX IF NOT EXISTS idx_inquiries_status ON inquiries(status);
+        CREATE INDEX IF NOT EXISTS idx_inquiries_created ON inquiries(created_at);
     `);
 
     console.log('✅ 数据库表创建完成');

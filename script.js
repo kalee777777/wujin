@@ -27,6 +27,71 @@ async function loadAllComponents() {
     initInteractions();
 }
 
+// === INQUIRY LIST SYSTEM (localStorage) ===
+const INQUIRY_STORAGE_KEY = 'holgenvy_inquiry_list';
+
+function getInquiryList() {
+    try {
+        return JSON.parse(localStorage.getItem(INQUIRY_STORAGE_KEY)) || [];
+    } catch (e) {
+        return [];
+    }
+}
+
+function saveInquiryList(list) {
+    localStorage.setItem(INQUIRY_STORAGE_KEY, JSON.stringify(list));
+}
+
+function updateInquiryBadge() {
+    const list = getInquiryList();
+    const count = list.length;
+    // Update all badges (header may have multiple)
+    document.querySelectorAll('.cart-badge, #inquiryBadge').forEach(badge => {
+        badge.textContent = count;
+        if (count > 0) {
+            badge.style.display = '';
+            badge.style.transform = 'scale(1.3)';
+            setTimeout(() => { badge.style.transform = 'scale(1)'; }, 200);
+        } else {
+            badge.style.display = '';
+        }
+    });
+}
+
+function addToInquiryList(product) {
+    const list = getInquiryList();
+    // Avoid duplicates by folder
+    if (list.some(item => item.folder === product.folder)) {
+        return false; // already in list
+    }
+    list.push(product);
+    saveInquiryList(list);
+    updateInquiryBadge();
+    return true;
+}
+
+function removeFromInquiryList(folder) {
+    let list = getInquiryList();
+    list = list.filter(item => item.folder !== folder);
+    saveInquiryList(list);
+    updateInquiryBadge();
+}
+
+function clearInquiryList() {
+    saveInquiryList([]);
+    updateInquiryBadge();
+}
+
+// === API BASE URL ===
+function getApiBase() {
+    // 如果页面从后端服务访问（同源），使用相对路径；否则使用完整后端地址
+    const port = window.location.port;
+    if (port === '3001' || port === '9090') {
+        return '/api';
+    }
+    return 'http://localhost:3001/api';
+}
+
 // === INTERACTIONS INITIALIZER ===
 function initInteractions() {
 
@@ -272,33 +337,166 @@ function initInteractions() {
         });
     });
 
-    // === SEARCH BAR FOCUS ===
-    const searchInput = document.querySelector('.search-bar input');
-    if (searchInput) {
+    // === SEARCH BAR ===
+    const searchInput = document.querySelector('#searchInput');
+    const searchBtn = document.querySelector('#searchBtn');
+    const searchResults = document.querySelector('#searchResults');
+    const searchBar = document.querySelector('#searchBar');
+    let searchTimeout = null;
+
+    async function performSearch(query) {
+        if (!query || query.trim().length === 0) {
+            if (searchResults) searchResults.classList.remove('active');
+            return;
+        }
+
+        // 显示加载状态
+        if (searchResults) {
+            searchResults.innerHTML = '<div class="search-loading">Searching...</div>';
+            searchResults.classList.add('active');
+        }
+
+        try {
+            const apiBase = getApiBase();
+            const response = await fetch(`${apiBase}/products/public/search?q=${encodeURIComponent(query.trim())}&limit=8`);
+            const data = await response.json();
+
+            if (searchResults) {
+                if (!data.success || !data.data.results || data.data.results.length === 0) {
+                    searchResults.innerHTML = '<div class="search-no-result">No products found for "' + query.trim() + '"</div>';
+                    return;
+                }
+
+                let html = '';
+                data.data.results.forEach(item => {
+                    const imgSrc = item.image
+                        ? (item.image.startsWith('http') ? item.image : '/product-images/' + item.image)
+                        : '';
+                    const imgHtml = imgSrc
+                        ? `<img class="search-result-img" src="${imgSrc}" alt="${item.name}" onerror="this.style.display='none'">`
+                        : `<div class="search-result-img" style="display:flex;align-items:center;justify-content:center;color:var(--text-light-muted);font-size:0.7rem;">N/A</div>`;
+                    const categoryName = item.category_name || 'Uncategorized';
+
+                    html += `
+                        <a class="search-result-item" href="product-detail.html?folder=${encodeURIComponent(item.folder)}">
+                            ${imgHtml}
+                            <div class="search-result-info">
+                                <div class="search-result-name">${item.name}</div>
+                                <div class="search-result-category">${categoryName}</div>
+                            </div>
+                        </a>`;
+                });
+
+                // 如果有更多结果，显示 "View All" 链接
+                if (data.data.total > data.data.results.length) {
+                    html += `<a class="search-view-all" href="products.html?search=${encodeURIComponent(query.trim())}">View All ${data.data.total} Results →</a>`;
+                }
+
+                searchResults.innerHTML = html;
+            }
+        } catch (error) {
+            console.error('Search error:', error);
+            if (searchResults) {
+                searchResults.innerHTML = '<div class="search-no-result">Search temporarily unavailable</div>';
+            }
+        }
+    }
+
+    function closeSearchResults() {
+        if (searchResults) searchResults.classList.remove('active');
+    }
+
+    if (searchInput && searchBtn && searchResults) {
+        // Focus effect
         searchInput.addEventListener('focus', () => {
-            document.querySelector('.search-bar')?.classList.add('focused');
+            if (searchBar) searchBar.classList.add('focused');
+            // 如果输入框有内容，聚焦时重新显示结果
+            if (searchInput.value.trim().length > 0) {
+                performSearch(searchInput.value);
+            }
         });
+
         searchInput.addEventListener('blur', () => {
-            document.querySelector('.search-bar')?.classList.remove('focused');
+            if (searchBar) searchBar.classList.remove('focused');
+            // 延迟关闭，允许点击结果链接
+            setTimeout(closeSearchResults, 200);
+        });
+
+        // Enter key search
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                performSearch(searchInput.value);
+            }
+            if (e.key === 'Escape') {
+                closeSearchResults();
+                searchInput.blur();
+            }
+        });
+
+        // Search button click
+        searchBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            performSearch(searchInput.value);
+        });
+
+        // Click outside to close
+        document.addEventListener('click', (e) => {
+            if (searchBar && !searchBar.contains(e.target)) {
+                closeSearchResults();
+            }
         });
     }
 
+    // Initialize badge on page load
+    updateInquiryBadge();
+
     // === ADD TO INQUIRY BUTTONS ===
-    const inquiryBtns = document.querySelectorAll('.deal-card .btn-neon');
+    // Support both deal-card buttons and product-detail page buttons
+    const inquiryBtns = document.querySelectorAll('.deal-card .btn-neon, .btn-add-inquiry');
     inquiryBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<span>Added!</span>';
-            btn.style.background = '#22C55E';
 
-            // Update cart badge
-            const badge = document.querySelector('.cart-badge');
-            if (badge) {
-                const current = parseInt(badge.textContent) || 0;
-                badge.textContent = current + 1;
-                badge.style.transform = 'scale(1.3)';
-                setTimeout(() => { badge.style.transform = 'scale(1)'; }, 200);
+            // Try to get product info from parent card
+            const card = btn.closest('.deal-card, .product-card, .product-page-card, .product-hero-layout');
+            let product = { folder: '', name: 'Unknown Product', image: '', category: '' };
+
+            if (card) {
+                const link = card.querySelector('a[href*="product-detail.html"]');
+                if (link) {
+                    const href = link.getAttribute('href');
+                    const match = href.match(/folder=([^&]+)/);
+                    if (match) product.folder = decodeURIComponent(match[1]);
+                }
+                const nameEl = card.querySelector('h3, h4, .product-name, .p-name');
+                if (nameEl) product.name = nameEl.textContent.trim();
+                const imgEl = card.querySelector('img');
+                if (imgEl) product.image = imgEl.getAttribute('src') || '';
+                const catEl = card.querySelector('.p-cat, .product-category');
+                if (catEl) product.category = catEl.textContent.trim();
+            }
+
+            // Fallback: check data attributes on button
+            if (!product.folder && btn.dataset.folder) {
+                product.folder = btn.dataset.folder;
+            }
+            if (product.name === 'Unknown Product' && btn.dataset.name) {
+                product.name = btn.dataset.name;
+            }
+            if (!product.image && btn.dataset.image) {
+                product.image = btn.dataset.image;
+            }
+
+            const added = addToInquiryList(product);
+            const originalText = btn.innerHTML;
+
+            if (added) {
+                btn.innerHTML = '<span>Added to List!</span>';
+                btn.style.background = '#22C55E';
+            } else {
+                btn.innerHTML = '<span>Already in List</span>';
+                btn.style.background = '#F59E0B';
             }
 
             setTimeout(() => {
@@ -603,7 +801,241 @@ function initCarousels() {
     });
 }
 
+// === INQUIRY LIST PAGE RENDERER ===
+function initInquiryListPage() {
+    const listContainer = document.getElementById('inquiryListItems');
+    const emptyState = document.getElementById('inquiryListEmpty');
+    const contentState = document.getElementById('inquiryListContent');
+    const itemCountEl = document.getElementById('inquiryItemCount');
+    const clearAllBtn = document.getElementById('clearAllBtn');
+
+    if (!listContainer) return; // Not on inquiry-list page
+
+    function renderList() {
+        const list = getInquiryList();
+
+        if (list.length === 0) {
+            emptyState.style.display = '';
+            contentState.style.display = 'none';
+            return;
+        }
+
+        emptyState.style.display = 'none';
+        contentState.style.display = '';
+        if (itemCountEl) itemCountEl.textContent = list.length;
+
+        let html = '';
+        list.forEach((item, index) => {
+            const imgSrc = item.image
+                ? (item.image.startsWith('http') ? item.image : item.image)
+                : '';
+            const imgHtml = imgSrc
+                ? `<img src="${imgSrc}" alt="${item.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                   <div class="inq-item-img-placeholder" style="display:none;">
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                   </div>`
+                : `<div class="inq-item-img-placeholder">
+                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                   </div>`;
+
+            html += `
+                <div class="inq-list-item" data-folder="${item.folder}">
+                    <div class="inq-item-img">${imgHtml}</div>
+                    <div class="inq-item-details">
+                        <span class="inq-item-cat">${item.category || 'General'}</span>
+                        <h4 class="inq-item-name">${item.name}</h4>
+                        <a href="product-detail.html?folder=${encodeURIComponent(item.folder)}" class="inq-item-link">View Details →</a>
+                    </div>
+                    <div class="inq-item-actions">
+                        <button class="btn-remove-item" data-folder="${item.folder}" title="Remove">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                        </button>
+                    </div>
+                </div>`;
+        });
+
+        listContainer.innerHTML = html;
+
+        // Attach remove handlers
+        listContainer.querySelectorAll('.btn-remove-item').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const folder = btn.getAttribute('data-folder');
+                const itemEl = btn.closest('.inq-list-item');
+                itemEl.style.opacity = '0';
+                itemEl.style.transform = 'translateX(30px)';
+                setTimeout(() => {
+                    removeFromInquiryList(folder);
+                    renderList();
+                }, 300);
+            });
+        });
+    }
+
+    // Clear all button
+    if (clearAllBtn) {
+        clearAllBtn.addEventListener('click', () => {
+            if (confirm('Are you sure you want to clear all items from your inquiry list?')) {
+                clearInquiryList();
+                renderList();
+            }
+        });
+    }
+
+    renderList();
+}
+
+// === SUBMIT INQUIRY TO BACKEND ===
+async function submitInquiryToBackend(formData, source) {
+    const apiBase = getApiBase();
+    const response = await fetch(`${apiBase}/inquiries/public/submit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, source: source || 'website' })
+    });
+    const data = await response.json();
+    if (!response.ok || !data.success) {
+        throw new Error(data.error || '提交失败');
+    }
+    return data;
+}
+
+// === INQUIRY PAGE FORM LOGIC ===
+function initInquiryPage() {
+    const form = document.getElementById('inquiryPageForm');
+    const productField = document.getElementById('inquiryProductField');
+
+    if (!form) return; // Not on inquiry page
+
+    // Auto-fill product field from inquiry list
+    if (productField) {
+        const list = getInquiryList();
+        if (list.length > 0) {
+            const names = list.map(item => item.name).filter(n => n && n !== 'Unknown Product');
+            productField.value = names.join(', ');
+            productField.removeAttribute('readonly');
+        } else {
+            productField.removeAttribute('readonly');
+            productField.value = '';
+        }
+    }
+
+    // Form submit
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalHTML = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span>Sending...</span>';
+        submitBtn.disabled = true;
+
+        try {
+            const formData = {
+                name: form.querySelector('[name="name"]').value,
+                company: form.querySelector('[name="company"]').value,
+                email: form.querySelector('[name="email"]').value,
+                phone: form.querySelector('[name="phone"]').value,
+                subject: form.querySelector('[name="subject"]').value,
+                products: productField ? productField.value : '',
+                quantity: form.querySelector('[name="quantity"]').value,
+                message: form.querySelector('[name="message"]').value
+            };
+
+            await submitInquiryToBackend(formData, 'inquiry-page');
+
+            submitBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Inquiry Sent!';
+            submitBtn.style.background = '#22C55E';
+
+            // Clear inquiry list after successful submission
+            clearInquiryList();
+
+            setTimeout(() => {
+                submitBtn.innerHTML = originalHTML;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+                form.reset();
+                if (productField) productField.value = '';
+            }, 3000);
+        } catch (error) {
+            submitBtn.innerHTML = originalHTML;
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+            alert('提交失败: ' + error.message);
+        }
+    });
+}
+
+// === CONTACT PAGE FORM LOGIC ===
+function initContactForm() {
+    const form = document.getElementById('inquiryForm');
+    if (!form) return; // Not on contact page
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalHTML = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span>Sending...</span>';
+        submitBtn.disabled = true;
+
+        try {
+            const formData = {
+                name: form.querySelector('input[type="text"]').value,
+                company: form.querySelectorAll('input[type="text"]')[1] ? form.querySelectorAll('input[type="text"]')[1].value : '',
+                email: form.querySelector('input[type="email"]').value,
+                phone: form.querySelector('input[type="tel"]').value,
+                subject: form.querySelector('select').value,
+                products: form.querySelector('input[placeholder*="e.g."]').value,
+                message: form.querySelector('textarea').value
+            };
+
+            await submitInquiryToBackend(formData, 'contact-page');
+
+            submitBtn.innerHTML = '<span>Inquiry Sent!</span>';
+            submitBtn.style.background = '#22C55E';
+
+            setTimeout(() => {
+                submitBtn.innerHTML = originalHTML;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+                form.reset();
+            }, 3000);
+        } catch (error) {
+            submitBtn.innerHTML = originalHTML;
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+            alert('提交失败: ' + error.message);
+        }
+    });
+}
+
+// === FAQ ACCORDION ===
+function initFaqAccordion() {
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            const answer = btn.nextElementSibling;
+
+            // Close all others
+            questions.forEach(q => {
+                q.setAttribute('aria-expanded', 'false');
+                q.nextElementSibling.classList.remove('open');
+            });
+
+            if (!expanded) {
+                btn.setAttribute('aria-expanded', 'true');
+                answer.classList.add('open');
+            }
+        });
+    });
+}
+
 // === INITIALIZE ===
 document.addEventListener('DOMContentLoaded', () => {
-    loadAllComponents();
+    loadAllComponents().then(() => {
+        initInquiryListPage();
+        initInquiryPage();
+        initContactForm();
+        initFaqAccordion();
+    });
 });

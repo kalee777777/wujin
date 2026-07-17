@@ -28,3 +28,7 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# Vite 临时文件
+admin/vite.config.js.timestamp-*.mjs
+admin/node_modules/.vite/
