@@ -2650,5 +2650,1638 @@
         "description": "Operating instructions"
       }
     ]
+  },
+  {
+    "folder": "hand-tool-set-16pcs",
+    "name": "16-Piece Hand Tool Set",
+    "category": "Tool Kits & Accessories",
+    "description": "Comprehensive 16-piece hand tool set including essential tools for daily repair and maintenance tasks. Compact storage case for easy portability.",
+    "images": [
+      "product-images/hand-tool-set-16pcs/hand-tool-set-16pcs-1.jpg",
+      "product-images/hand-tool-set-16pcs/hand-tool-set-16pcs-2.jpg",
+      "product-images/hand-tool-set-16pcs/hand-tool-set-16pcs-3.jpg"
+    ],
+    "specs": {
+      "Pieces": "16 pcs",
+      "Material": "Chrome Vanadium Steel",
+      "Case": "Blow-molded",
+      "Application": "Multi-purpose",
+      "Weight": "2.8 kg"
+    },
+    "applications": [
+      {
+        "title": "Home Repair",
+        "description": "Everyday household maintenance and repairs."
+      },
+      {
+        "title": "DIY Projects",
+        "description": "Home improvement and hobby applications."
+      },
+      {
+        "title": "General Maintenance",
+        "description": "Routine upkeep of equipment and fixtures."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "home-hand-tool-set",
+    "name": "Home Hand Tool Set",
+    "category": "Tool Kits & Accessories",
+    "description": "Essential hand tool set designed for home use. Includes commonly used tools for furniture assembly, plumbing, and electrical work.",
+    "images": [
+      "product-images/home-hand-tool-set/home-hand-tool-set-1.jpg",
+      "product-images/home-hand-tool-set/home-hand-tool-set-2.jpg",
+      "product-images/home-hand-tool-set/home-hand-tool-set-3.jpg"
+    ],
+    "specs": {
+      "Pieces": "Multi pcs",
+      "Material": "Carbon Steel",
+      "Case": "Plastic Toolbox",
+      "Application": "Household",
+      "Weight": "1.5 kg"
+    },
+    "applications": [
+      {
+        "title": "Furniture Assembly",
+        "description": "Quick assembly of flat-pack furniture."
+      },
+      {
+        "title": "Home Repair",
+        "description": "Everyday household maintenance and repairs."
+      },
+      {
+        "title": "Plumbing & Electrical",
+        "description": "Basic plumbing and electrical tasks."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "hand-tool-box-set",
+    "name": "Hand Tool Box Set",
+    "category": "Tool Kits & Accessories",
+    "description": "Professional-grade hand tool box set with a wide selection of tools for general repair and maintenance work.",
+    "images": [
+      "product-images/hand-tool-box-set/hand-tool-box-set-1.jpg",
+      "product-images/hand-tool-box-set/hand-tool-box-set-2.jpg",
+      "product-images/hand-tool-box-set/hand-tool-box-set-3.jpg"
+    ],
+    "specs": {
+      "Pieces": "Multi pcs",
+      "Material": "Chrome Vanadium Steel",
+      "Case": "Metal Toolbox",
+      "Application": "Professional",
+      "Weight": "4.2 kg"
+    },
+    "applications": [
+      {
+        "title": "Professional Use",
+        "description": "Industrial and commercial applications."
+      },
+      {
+        "title": "Maintenance Work",
+        "description": "Equipment and machinery maintenance."
+      },
+      {
+        "title": "Construction",
+        "description": "On-site construction and renovation tasks."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "lithium-angle-grinder",
+    "name": "Lithium Angle Grinder",
+    "category": "Grinding & Cutting",
+    "description": "Cordless lithium-powered angle grinder for cutting, grinding, and polishing metal and stone surfaces. Lightweight and portable design.",
+    "images": [
+      "product-images/lithium-angle-grinder/lithium-angle-grinder-1.jpg",
+      "product-images/lithium-angle-grinder/lithium-angle-grinder-2.jpg",
+      "product-images/lithium-angle-grinder/lithium-angle-grinder-3.jpg"
+    ],
+    "specs": {
+      "Voltage": "20V DC",
+      "Battery": "2.0Ah Li-ion",
+      "Disc Size": "100mm",
+      "Speed": "12000 RPM",
+      "Weight": "1.6 kg"
+    },
+    "applications": [
+      {
+        "title": "Metal Cutting",
+        "description": "Cutting metal pipes, bars, and sheets."
+      },
+      {
+        "title": "Surface Grinding",
+        "description": "Smoothing and finishing metal surfaces."
+      },
+      {
+        "title": "Stone Cutting",
+        "description": "Cutting tiles and masonry materials."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "2-piece-tool-set",
+    "name": "2-Piece Tool Set",
+    "category": "Tool Kits & Accessories",
+    "description": "Compact 2-piece lithium-powered tool set for light-duty tasks. Includes essential power tools for home and workshop use.",
+    "images": [
+      "product-images/2-piece-tool-set/2-piece-tool-set-1.jpg",
+      "product-images/2-piece-tool-set/2-piece-tool-set-2.jpg",
+      "product-images/2-piece-tool-set/2-piece-tool-set-3.jpg",
+      "product-images/2-piece-tool-set/2-piece-tool-set-4.jpg"
+    ],
+    "specs": {
+      "Voltage": "20V DC",
+      "Battery": "2.0Ah Li-ion",
+      "Pieces": "2 pcs",
+      "Charging Time": "60 min",
+      "Weight": "2.0 kg"
+    },
+    "applications": [
+      {
+        "title": "Home Improvement",
+        "description": "Light home renovation and repair tasks."
+      },
+      {
+        "title": "DIY Projects",
+        "description": "Hobby and craft applications."
+      },
+      {
+        "title": "Light Assembly",
+        "description": "Furniture and fixture assembly work."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "drill-wrench-2in1-kit",
+    "name": "Drill & Wrench 2-in-1 Kit",
+    "category": "Tool Kits & Accessories",
+    "description": "Versatile 2-in-1 cordless drill and impact wrench combo kit. Shares the same battery platform for convenience and efficiency.",
+    "images": [
+      "product-images/drill-wrench-2in1-kit/drill-wrench-2in1-kit-1.jpg",
+      "product-images/drill-wrench-2in1-kit/drill-wrench-2in1-kit-2.jpg",
+      "product-images/drill-wrench-2in1-kit/drill-wrench-2in1-kit-3.jpg",
+      "product-images/drill-wrench-2in1-kit/drill-wrench-2in1-kit-4.jpg"
+    ],
+    "specs": {
+      "Voltage": "20V DC",
+      "Battery": "2.0Ah Li-ion",
+      "Pieces": "2 pcs",
+      "Max Torque": "50 Nm",
+      "Weight": "3.2 kg"
+    },
+    "applications": [
+      {
+        "title": "Home Renovation",
+        "description": "Drilling and fastening in renovation projects."
+      },
+      {
+        "title": "Furniture Assembly",
+        "description": "Efficient screwdriving and bolt tightening."
+      },
+      {
+        "title": "Automotive Repair",
+        "description": "Light automotive maintenance tasks."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "edge-trimmer",
+    "name": "Cordless Edge Trimmer",
+    "category": "Garden & Outdoor",
+    "description": "Cordless electric edge trimmer for precise lawn edging and grass trimming. Lightweight design with adjustable cutting head.",
+    "images": [
+      "product-images/edge-trimmer/edge-trimmer-1.jpg",
+      "product-images/edge-trimmer/edge-trimmer-2.jpg",
+      "product-images/edge-trimmer/edge-trimmer-3.jpg"
+    ],
+    "specs": {
+      "Voltage": "20V DC",
+      "Battery": "2.0Ah Li-ion",
+      "Cutting Width": "200mm",
+      "Speed": "9000 RPM",
+      "Weight": "1.8 kg"
+    },
+    "applications": [
+      {
+        "title": "Lawn Edging",
+        "description": "Creating clean edges along walkways and flower beds."
+      },
+      {
+        "title": "Grass Trimming",
+        "description": "Trimming grass in hard-to-reach areas."
+      },
+      {
+        "title": "Garden Maintenance",
+        "description": "General garden and landscape upkeep."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "wire-stripper",
+    "name": "Wire Stripper",
+    "category": "Tool Kits & Accessories",
+    "description": "Professional wire stripper tool for cleanly stripping insulation from electrical wires. Multiple gauge compatibility.",
+    "images": [
+      "product-images/wire-stripper/wire-stripper-1.jpg",
+      "product-images/wire-stripper/wire-stripper-2.jpg",
+      "product-images/wire-stripper/wire-stripper-3.png"
+    ],
+    "specs": {
+      "Wire Range": "0.5-6mm²",
+      "Material": "Carbon Steel",
+      "Handle": "Ergonomic Anti-slip",
+      "Length": "180mm",
+      "Weight": "0.15 kg"
+    },
+    "applications": [
+      {
+        "title": "Electrical Work",
+        "description": "Stripping wires for electrical installations."
+      },
+      {
+        "title": "Cable Assembly",
+        "description": "Preparing cables for connectors and terminals."
+      },
+      {
+        "title": "Maintenance",
+        "description": "Repair and maintenance of electrical systems."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "measuring-tape",
+    "name": "Measuring Tape",
+    "category": "Measuring & Cleaning",
+    "description": "Professional-grade measuring tape with clear markings and durable casing. Auto-lock mechanism for easy single-handed operation.",
+    "images": [
+      "product-images/measuring-tape/measuring-tape-1.jpg",
+      "product-images/measuring-tape/measuring-tape-2.jpg",
+      "product-images/measuring-tape/measuring-tape-3.jpg"
+    ],
+    "specs": {
+      "Length": "5m / 16ft",
+      "Width": "25mm",
+      "Material": "Steel Blade",
+      "Case": "Rubber-coated",
+      "Weight": "0.2 kg"
+    },
+    "applications": [
+      {
+        "title": "Construction",
+        "description": "Measuring distances on construction sites."
+      },
+      {
+        "title": "Woodworking",
+        "description": "Precise measurements for cutting and assembly."
+      },
+      {
+        "title": "Interior Design",
+        "description": "Room and furniture measurements."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "socket-wrench-set",
+    "name": "Socket Wrench Set",
+    "category": "Tool Kits & Accessories",
+    "description": "Comprehensive socket wrench set with multiple socket sizes for automotive and mechanical applications.",
+    "images": [
+      "product-images/socket-wrench-set/socket-wrench-set-1.jpg",
+      "product-images/socket-wrench-set/socket-wrench-set-2.jpg",
+      "product-images/socket-wrench-set/socket-wrench-set-3.jpg"
+    ],
+    "specs": {
+      "Pieces": "Multi pcs",
+      "Drive Size": "1/4\" & 3/8\"",
+      "Material": "Chrome Vanadium Steel",
+      "Case": "Blow-molded",
+      "Weight": "3.0 kg"
+    },
+    "applications": [
+      {
+        "title": "Automotive Repair",
+        "description": "Vehicle maintenance and repair tasks."
+      },
+      {
+        "title": "Mechanical Work",
+        "description": "Machinery assembly and disassembly."
+      },
+      {
+        "title": "Equipment Maintenance",
+        "description": "Industrial equipment upkeep."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "caulking-gun",
+    "name": "Caulking Gun",
+    "category": "Tool Kits & Accessories",
+    "description": "Heavy-duty caulking gun for applying sealants, adhesives, and fillers. Smooth rod action for consistent bead application.",
+    "images": [
+      "product-images/caulking-gun/caulking-gun-1.png",
+      "product-images/caulking-gun/caulking-gun-2.jpg",
+      "product-images/caulking-gun/caulking-gun-3.png"
+    ],
+    "specs": {
+      "Cartridge Size": "300ml",
+      "Thrust Ratio": "10:1",
+      "Material": "Steel Frame",
+      "Barrel": "Aluminum",
+      "Weight": "0.5 kg"
+    },
+    "applications": [
+      {
+        "title": "Sealing",
+        "description": "Applying sealant around windows, doors, and joints."
+      },
+      {
+        "title": "Adhesive Application",
+        "description": "Applying construction adhesives."
+      },
+      {
+        "title": "Gap Filling",
+        "description": "Filling gaps and cracks in surfaces."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "slotting-cutter",
+    "name": "Slotting Cutter",
+    "category": "Grinding & Cutting",
+    "description": "Electric slotting cutter for creating clean grooves and channels in concrete, masonry, and walls. Ideal for pipe and cable installation.",
+    "images": [
+      "product-images/slotting-cutter/slotting-cutter-1.jpg",
+      "product-images/slotting-cutter/slotting-cutter-2.jpg",
+      "product-images/slotting-cutter/slotting-cutter-3.png"
+    ],
+    "specs": {
+      "Power": "1500W",
+      "Voltage": "220V AC",
+      "Cutting Depth": "0-40mm",
+      "Blade Diameter": "125mm",
+      "Weight": "3.5 kg"
+    },
+    "applications": [
+      {
+        "title": "Wall Chasing",
+        "description": "Creating channels for electrical wiring and plumbing."
+      },
+      {
+        "title": "Concrete Grooving",
+        "description": "Cutting grooves in concrete floors and walls."
+      },
+      {
+        "title": "Renovation",
+        "description": "Channel cutting for remodeling projects."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "cordless-vacuum",
+    "name": "Cordless Vacuum Cleaner",
+    "category": "Measuring & Cleaning",
+    "description": "Cordless lithium-powered vacuum cleaner for quick and efficient cleaning. Lightweight design with multiple attachments.",
+    "images": [
+      "product-images/cordless-vacuum/cordless-vacuum-1.png",
+      "product-images/cordless-vacuum/cordless-vacuum-2.jpg",
+      "product-images/cordless-vacuum/cordless-vacuum-3.png"
+    ],
+    "specs": {
+      "Voltage": "20V DC",
+      "Battery": "2.0Ah Li-ion",
+      "Suction Power": "8000Pa",
+      "Capacity": "0.5L",
+      "Weight": "1.2 kg"
+    },
+    "applications": [
+      {
+        "title": "Home Cleaning",
+        "description": "Daily household cleaning tasks."
+      },
+      {
+        "title": "Workshop Cleanup",
+        "description": "Removing dust and debris from work areas."
+      },
+      {
+        "title": "Car Interior",
+        "description": "Cleaning vehicle interiors and tight spaces."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "woodworking-tool-set",
+    "name": "Woodworking Tool Set",
+    "category": "Tool Kits & Accessories",
+    "description": "Specialized woodworking tool set for carpentry and wood crafting. Includes essential hand tools for shaping, cutting, and finishing wood.",
+    "images": [
+      "product-images/woodworking-tool-set/woodworking-tool-set-1.jpg",
+      "product-images/woodworking-tool-set/woodworking-tool-set-2.jpg",
+      "product-images/woodworking-tool-set/woodworking-tool-set-3.jpg"
+    ],
+    "specs": {
+      "Pieces": "Multi pcs",
+      "Material": "High Carbon Steel",
+      "Case": "Wooden Box",
+      "Application": "Woodworking",
+      "Weight": "2.5 kg"
+    },
+    "applications": [
+      {
+        "title": "Carpentry",
+        "description": "Professional woodworking and furniture making."
+      },
+      {
+        "title": "Wood Crafting",
+        "description": "Hobby carving and DIY wood projects."
+      },
+      {
+        "title": "Wood Finishing",
+        "description": "Sanding, shaping, and finishing wood surfaces."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "framing-nailer",
+    "name": "Framing Nailer",
+    "category": "Saws & Hammers",
+    "description": "Pneumatic framing nailer for heavy-duty nailing in construction and framing applications. High driving force for dense materials.",
+    "images": [
+      "product-images/framing-nailer/framing-nailer-1.jpg",
+      "product-images/framing-nailer/framing-nailer-2.jpg",
+      "product-images/framing-nailer/framing-nailer-3.jpg"
+    ],
+    "specs": {
+      "Power": "220V AC",
+      "Nail Length": "50-90mm",
+      "Magazine Capacity": "100 nails",
+      "Operating Pressure": "0.4-0.8 MPa",
+      "Weight": "3.0 kg"
+    },
+    "applications": [
+      {
+        "title": "Framing",
+        "description": "Wood framing for residential and commercial construction."
+      },
+      {
+        "title": "Deck Building",
+        "description": "Nailing deck boards and structural components."
+      },
+      {
+        "title": "Sheathing",
+        "description": "Attaching sheathing panels to framing."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "concrete-cutter",
+    "name": "Concrete Cutter",
+    "category": "Grinding & Cutting",
+    "description": "Heavy-duty concrete cutter for precise cutting of concrete, asphalt, and masonry. Water-cooling system for dust reduction.",
+    "images": [
+      "product-images/concrete-cutter/concrete-cutter-1.png",
+      "product-images/concrete-cutter/concrete-cutter-2.jpg",
+      "product-images/concrete-cutter/concrete-cutter-3.png"
+    ],
+    "specs": {
+      "Power": "2200W",
+      "Voltage": "220V AC",
+      "Blade Diameter": "350mm",
+      "Cutting Depth": "0-120mm",
+      "Weight": "9.5 kg"
+    },
+    "applications": [
+      {
+        "title": "Concrete Cutting",
+        "description": "Cutting concrete slabs and structures."
+      },
+      {
+        "title": "Road Work",
+        "description": "Cutting asphalt for road repairs."
+      },
+      {
+        "title": "Demolition",
+        "description": "Controlled cutting for demolition projects."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "concrete-surface-finisher",
+    "name": "Concrete Surface Finisher",
+    "category": "Grinding & Cutting",
+    "description": "Concrete surface finishing machine for leveling, grinding, and polishing concrete floors. Ideal for surface preparation and restoration.",
+    "images": [
+      "product-images/concrete-surface-finisher/concrete-surface-finisher-1.jpg",
+      "product-images/concrete-surface-finisher/concrete-surface-finisher-2.jpg",
+      "product-images/concrete-surface-finisher/concrete-surface-finisher-3.png"
+    ],
+    "specs": {
+      "Power": "1500W",
+      "Voltage": "220V AC",
+      "Disc Size": "250mm",
+      "Speed": "2800 RPM",
+      "Weight": "6.0 kg"
+    },
+    "applications": [
+      {
+        "title": "Floor Leveling",
+        "description": "Leveling uneven concrete surfaces."
+      },
+      {
+        "title": "Surface Grinding",
+        "description": "Removing coatings and preparing surfaces."
+      },
+      {
+        "title": "Floor Polishing",
+        "description": "Polishing concrete to a smooth finish."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "plastic-pipe-welder",
+    "name": "Plastic Pipe Welder",
+    "category": "Welding & Heating",
+    "description": "Hot melt plastic pipe welding machine for joining PP-R, PPR, PE, and PB pipes. Digital temperature control for precise welding.",
+    "images": [
+      "product-images/plastic-pipe-welder/plastic-pipe-welder-1.jpg",
+      "product-images/plastic-pipe-welder/plastic-pipe-welder-2.jpg",
+      "product-images/plastic-pipe-welder/plastic-pipe-welder-3.jpg"
+    ],
+    "specs": {
+      "Power": "1200W",
+      "Voltage": "220V AC",
+      "Temperature Range": "0-300°C",
+      "Pipe Size": "20-63mm",
+      "Weight": "2.5 kg"
+    },
+    "applications": [
+      {
+        "title": "Plumbing Installation",
+        "description": "Welding plastic pipes for water supply systems."
+      },
+      {
+        "title": "Floor Heating",
+        "description": "Installing underfloor heating pipe systems."
+      },
+      {
+        "title": "Industrial Piping",
+        "description": "Joining industrial plastic pipe networks."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "tile-leveling-machine",
+    "name": "Tile Leveling Machine",
+    "category": "Measuring & Cleaning",
+    "description": "Electric tile leveling machine for precise tile installation. Ensures even tile spacing and flat surfaces for professional results.",
+    "images": [
+      "product-images/tile-leveling-machine/tile-leveling-machine-1.jpg",
+      "product-images/tile-leveling-machine/tile-leveling-machine-2.jpg",
+      "product-images/tile-leveling-machine/tile-leveling-machine-3.jpg"
+    ],
+    "specs": {
+      "Power": "500W",
+      "Voltage": "220V AC",
+      "Vibration Frequency": "36000 RPM",
+      "Suction Cup": "Ø115mm",
+      "Weight": "1.8 kg"
+    },
+    "applications": [
+      {
+        "title": "Tile Installation",
+        "description": "Leveling floor and wall tiles during installation."
+      },
+      {
+        "title": "Renovation",
+        "description": "Professional tile laying for renovation projects."
+      },
+      {
+        "title": "Bathroom & Kitchen",
+        "description": "Precision tiling for wet areas."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "electric-grease-gun",
+    "name": "Electric Grease Gun",
+    "category": "Tool Kits & Accessories",
+    "description": "Cordless electric grease gun for efficient lubrication of machinery and vehicles. High-pressure delivery for thick grease applications.",
+    "images": [
+      "product-images/electric-grease-gun/electric-grease-gun-1.jpg",
+      "product-images/electric-grease-gun/electric-grease-gun-2.jpg",
+      "product-images/electric-grease-gun/electric-grease-gun-3.jpg"
+    ],
+    "specs": {
+      "Voltage": "20V DC",
+      "Battery": "2.0Ah Li-ion",
+      "Max Pressure": "10000 PSI",
+      "Tube Capacity": "400cc",
+      "Weight": "2.0 kg"
+    },
+    "applications": [
+      {
+        "title": "Automotive Maintenance",
+        "description": "Lubricating vehicle chassis and bearings."
+      },
+      {
+        "title": "Industrial Machinery",
+        "description": "Greasing heavy equipment and machinery."
+      },
+      {
+        "title": "Agricultural Equipment",
+        "description": "Maintaining farm machinery and implements."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "electric-pipe-expander",
+    "name": "Electric Pipe Expander",
+    "category": "Tool Kits & Accessories",
+    "description": "Electric pipe expander for expanding copper and aluminum pipes. Precise control for plumbing and HVAC installations.",
+    "images": [
+      "product-images/electric-pipe-expander/electric-pipe-expander-1.jpg",
+      "product-images/electric-pipe-expander/electric-pipe-expander-2.jpg",
+      "product-images/electric-pipe-expander/electric-pipe-expander-3.png"
+    ],
+    "specs": {
+      "Power": "800W",
+      "Voltage": "220V AC",
+      "Pipe Range": "16-32mm",
+      "Expanding Heads": "6 pcs",
+      "Weight": "2.8 kg"
+    },
+    "applications": [
+      {
+        "title": "Plumbing",
+        "description": "Expanding pipes for plumbing connections."
+      },
+      {
+        "title": "HVAC Installation",
+        "description": "Preparing pipes for air conditioning systems."
+      },
+      {
+        "title": "Refrigeration",
+        "description": "Pipe expansion for refrigeration systems."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "insulated-screwdriver",
+    "name": "Insulated Screwdriver",
+    "category": "Tool Kits & Accessories",
+    "description": "VDE certified insulated screwdriver set for safe electrical work. 1000V AC rated insulation for live wire operations.",
+    "images": [
+      "product-images/insulated-screwdriver/insulated-screwdriver-1.png",
+      "product-images/insulated-screwdriver/insulated-screwdriver-2.jpg",
+      "product-images/insulated-screwdriver/insulated-screwdriver-3.png"
+    ],
+    "specs": {
+      "Voltage Rating": "1000V AC",
+      "Material": "CR-V Steel",
+      "Insulation": "VDE Certified",
+      "Pieces": "Multi pcs",
+      "Weight": "0.8 kg"
+    },
+    "applications": [
+      {
+        "title": "Electrical Installation",
+        "description": "Safe work on live electrical components."
+      },
+      {
+        "title": "Panel Work",
+        "description": "Installing and maintaining electrical panels."
+      },
+      {
+        "title": "Industrial Electrical",
+        "description": "Professional electrical maintenance tasks."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "repair-tool-set",
+    "name": "Repair Tool Set",
+    "category": "Tool Kits & Accessories",
+    "description": "Multi-purpose repair tool set for general maintenance and repair work. Includes commonly used tools for various applications.",
+    "images": [
+      "product-images/repair-tool-set/repair-tool-set-1.jpg",
+      "product-images/repair-tool-set/repair-tool-set-2.jpg",
+      "product-images/repair-tool-set/repair-tool-set-3.png"
+    ],
+    "specs": {
+      "Pieces": "Multi pcs",
+      "Material": "Chrome Vanadium Steel",
+      "Case": "Blow-molded",
+      "Application": "Multi-purpose",
+      "Weight": "2.0 kg"
+    },
+    "applications": [
+      {
+        "title": "Equipment Repair",
+        "description": "Repairing household and office equipment."
+      },
+      {
+        "title": "Bicycle Maintenance",
+        "description": "Maintaining and repairing bicycles."
+      },
+      {
+        "title": "General Maintenance",
+        "description": "Routine repair and upkeep tasks."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "hedge-trimmer",
+    "name": "Cordless Hedge Trimmer",
+    "category": "Garden & Outdoor",
+    "description": "Cordless lithium-powered hedge trimmer for shaping and trimming hedges and shrubs. Dual-action blades for clean cuts.",
+    "images": [
+      "product-images/hedge-trimmer/hedge-trimmer-1.jpg",
+      "product-images/hedge-trimmer/hedge-trimmer-2.jpg",
+      "product-images/hedge-trimmer/hedge-trimmer-3.jpg"
+    ],
+    "specs": {
+      "Voltage": "20V DC",
+      "Battery": "2.0Ah Li-ion",
+      "Blade Length": "500mm",
+      "Cutting Capacity": "18mm",
+      "Weight": "2.5 kg"
+    },
+    "applications": [
+      {
+        "title": "Hedge Trimming",
+        "description": "Shaping and maintaining garden hedges."
+      },
+      {
+        "title": "Shrub Pruning",
+        "description": "Pruning shrubs and bushes."
+      },
+      {
+        "title": "Landscape Maintenance",
+        "description": "Professional landscape grooming."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "steam-cleaner",
+    "name": "Steam Cleaner",
+    "category": "Measuring & Cleaning",
+    "description": "Electric steam cleaner for deep cleaning and sanitizing surfaces. High-temperature steam removes grease, stains, and bacteria without chemicals.",
+    "images": [
+      "product-images/steam-cleaner/steam-cleaner-1.jpg",
+      "product-images/steam-cleaner/steam-cleaner-2.jpg",
+      "product-images/steam-cleaner/steam-cleaner-3.jpg"
+    ],
+    "specs": {
+      "Power": "1500W",
+      "Voltage": "220V AC",
+      "Steam Temperature": "100°C+",
+      "Tank Capacity": "1.5L",
+      "Weight": "3.0 kg"
+    },
+    "applications": [
+      {
+        "title": "Home Cleaning",
+        "description": "Deep cleaning floors, kitchens, and bathrooms."
+      },
+      {
+        "title": "Automotive",
+        "description": "Cleaning vehicle interiors and engines."
+      },
+      {
+        "title": "Sanitization",
+        "description": "Killing bacteria and dust mites on surfaces."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "rebar-cutter",
+    "name": "Rebar Cutter",
+    "category": "Saws & Hammers",
+    "description": "Electric rebar cutter for clean and precise cutting of steel reinforcing bars. Portable design for on-site use.",
+    "images": [
+      "product-images/rebar-cutter/rebar-cutter-1.jpg",
+      "product-images/rebar-cutter/rebar-cutter-2.jpg",
+      "product-images/rebar-cutter/rebar-cutter-3.jpg"
+    ],
+    "specs": {
+      "Power": "2200W",
+      "Voltage": "220V AC",
+      "Cutting Range": "Ø6-32mm",
+      "Cutting Speed": "2-3 sec",
+      "Weight": "15 kg"
+    },
+    "applications": [
+      {
+        "title": "Construction",
+        "description": "Cutting rebar for reinforced concrete structures."
+      },
+      {
+        "title": "Bridge Building",
+        "description": "Precision rebar cutting for bridge construction."
+      },
+      {
+        "title": "Pre-cast Concrete",
+        "description": "Preparing rebar for pre-cast elements."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "aluminum-sheet-cutter",
+    "name": "Aluminum Sheet Cutter",
+    "category": "Grinding & Cutting",
+    "description": "Electric nibbler for clean and precise cutting of aluminum sheets, metal plates, and corrugated roofing. No deformation of cut edges.",
+    "images": [
+      "product-images/aluminum-sheet-cutter/aluminum-sheet-cutter-1.jpg",
+      "product-images/aluminum-sheet-cutter/aluminum-sheet-cutter-2.jpg",
+      "product-images/aluminum-sheet-cutter/aluminum-sheet-cutter-3.jpg"
+    ],
+    "specs": {
+      "Power": "500W",
+      "Voltage": "220V AC",
+      "Cutting Capacity": "1.8mm (Steel) / 2.5mm (Aluminum)",
+      "Cutting Speed": "2m/min",
+      "Weight": "1.5 kg"
+    },
+    "applications": [
+      {
+        "title": "Sheet Metal Work",
+        "description": "Cutting aluminum and thin metal sheets."
+      },
+      {
+        "title": "Roofing",
+        "description": "Cutting corrugated roofing panels."
+      },
+      {
+        "title": "HVAC Ductwork",
+        "description": "Fabricating air duct components."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "cordless-rivet-gun",
+    "name": "Cordless Rivet Gun",
+    "category": "Wrenches & Impact Tools",
+    "description": "Cordless lithium-powered rivet gun for efficient riveting in metal fabrication and assembly work. Supports multiple rivet sizes.",
+    "images": [
+      "product-images/cordless-rivet-gun/cordless-rivet-gun-1.jpg",
+      "product-images/cordless-rivet-gun/cordless-rivet-gun-2.jpg",
+      "product-images/cordless-rivet-gun/cordless-rivet-gun-3.jpg"
+    ],
+    "specs": {
+      "Voltage": "20V DC",
+      "Battery": "2.0Ah Li-ion",
+      "Rivet Range": "Ø3.2-6.4mm",
+      "Pulling Force": "10 kN",
+      "Weight": "1.5 kg"
+    },
+    "applications": [
+      {
+        "title": "Sheet Metal Assembly",
+        "description": "Riveting sheet metal components together."
+      },
+      {
+        "title": "Automotive Repair",
+        "description": "Replacing rivets in vehicle bodywork."
+      },
+      {
+        "title": "Metal Fabrication",
+        "description": "Assembly of metal structures and frames."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "dust-collector",
+    "name": "Dust Collector",
+    "category": "Measuring & Cleaning",
+    "description": "Industrial dust collector for capturing fine dust and debris during construction and woodworking. High suction power with filter system.",
+    "images": [
+      "product-images/dust-collector/dust-collector-1.jpg",
+      "product-images/dust-collector/dust-collector-2.jpg",
+      "product-images/dust-collector/dust-collector-3.jpg"
+    ],
+    "specs": {
+      "Power": "1500W",
+      "Voltage": "220V AC",
+      "Airflow": "250 m³/h",
+      "Tank Capacity": "30L",
+      "Weight": "8.0 kg"
+    },
+    "applications": [
+      {
+        "title": "Woodworking",
+        "description": "Collecting sawdust and wood chips."
+      },
+      {
+        "title": "Construction",
+        "description": "Capturing dust from drilling and cutting."
+      },
+      {
+        "title": "Renovation",
+        "description": "Keeping work areas clean during renovation."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "snow-blower",
+    "name": "Gas Snow Blower",
+    "category": "Garden & Outdoor",
+    "description": "Gas-powered snow blower for efficient snow removal from driveways, walkways, and parking areas. Wide clearing width for heavy snowfall.",
+    "images": [
+      "product-images/snow-blower/snow-blower-1.jpg",
+      "product-images/snow-blower/snow-blower-2.jpg",
+      "product-images/snow-blower/snow-blower-3.jpg"
+    ],
+    "specs": {
+      "Engine": "4-Stroke Gasoline",
+      "Clearing Width": "600mm",
+      "Throwing Distance": "10m",
+      "Auger Diameter": "300mm",
+      "Weight": "35 kg"
+    },
+    "applications": [
+      {
+        "title": "Snow Removal",
+        "description": "Clearing snow from driveways and paths."
+      },
+      {
+        "title": "Commercial Use",
+        "description": "Snow clearing for commercial properties."
+      },
+      {
+        "title": "Parking Lots",
+        "description": "Maintaining clear parking areas in winter."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "rotary-hammer-pro",
+    "name": "Rotary Hammer Pro",
+    "category": "Saws & Hammers",
+    "description": "Professional rotary hammer with SDS-Plus chuck for heavy-duty drilling in concrete and masonry. Three modes: hammer drill, drill only, and chisel.",
+    "images": [
+      "product-images/rotary-hammer-pro/rotary-hammer-pro-1.png",
+      "product-images/rotary-hammer-pro/rotary-hammer-pro-2.png",
+      "product-images/rotary-hammer-pro/rotary-hammer-pro-3.png"
+    ],
+    "specs": {
+      "Power": "1500W",
+      "Voltage": "220V AC",
+      "Impact Energy": "5.0J",
+      "Chuck": "SDS-Plus",
+      "Weight": "5.5 kg"
+    },
+    "applications": [
+      {
+        "title": "Concrete Drilling",
+        "description": "Drilling holes in concrete and masonry."
+      },
+      {
+        "title": "Chiseling",
+        "description": "Chipping and breaking concrete surfaces."
+      },
+      {
+        "title": "Heavy Construction",
+        "description": "Professional construction and renovation tasks."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "screwdriver-tool-set",
+    "name": "Screwdriver Tool Set",
+    "category": "Tool Kits & Accessories",
+    "description": "Comprehensive screwdriver set with multiple bit types and sizes for various fastening applications. Magnetic tips for easy screw handling.",
+    "images": [
+      "product-images/screwdriver-tool-set/screwdriver-tool-set-1.jpg",
+      "product-images/screwdriver-tool-set/screwdriver-tool-set-2.jpg",
+      "product-images/screwdriver-tool-set/screwdriver-tool-set-3.jpg"
+    ],
+    "specs": {
+      "Pieces": "Multi pcs",
+      "Material": "S2 Steel Bits",
+      "Handle": "Ergonomic TPR",
+      "Case": "Blow-molded",
+      "Weight": "1.2 kg"
+    },
+    "applications": [
+      {
+        "title": "Electronics Repair",
+        "description": "Precision screwdriving for electronics."
+      },
+      {
+        "title": "Furniture Assembly",
+        "description": "Assembling flat-pack furniture."
+      },
+      {
+        "title": "General Fastening",
+        "description": "Various screwdriving and fastening tasks."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "electric-shears",
+    "name": "Electric Shears",
+    "category": "Grinding & Cutting",
+    "description": "Cordless electric shears for cutting sheet metal, chicken wire, and corrugated iron. Clean cuts without deforming the material.",
+    "images": [
+      "product-images/electric-shears/electric-shears-1.jpg",
+      "product-images/electric-shears/electric-shears-2.jpg",
+      "product-images/electric-shears/electric-shears-3.jpg"
+    ],
+    "specs": {
+      "Voltage": "20V DC",
+      "Battery": "2.0Ah Li-ion",
+      "Cutting Capacity": "1.6mm (Steel)",
+      "Cutting Speed": "3m/min",
+      "Weight": "1.3 kg"
+    },
+    "applications": [
+      {
+        "title": "Sheet Metal Cutting",
+        "description": "Cutting thin metal sheets and plates."
+      },
+      {
+        "title": "Roofing",
+        "description": "Cutting corrugated roofing materials."
+      },
+      {
+        "title": "Wire Mesh Cutting",
+        "description": "Cutting wire mesh and fencing materials."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
+  },
+  {
+    "folder": "brushed-drill-kit",
+    "name": "Brushed Drill Kit",
+    "category": "Drills & Drivers",
+    "description": "Cordless brushed drill kit with lithium battery for general drilling and screwdriving tasks. Lightweight and easy to operate.",
+    "images": [
+      "product-images/brushed-drill-kit/brushed-drill-kit-1.jpg",
+      "product-images/brushed-drill-kit/brushed-drill-kit-main.jpg"
+    ],
+    "specs": {
+      "Voltage": "20V DC",
+      "Battery": "2.0Ah Li-ion",
+      "Max Torque": "30 Nm",
+      "Speed": "0-1400 RPM",
+      "Weight": "1.4 kg"
+    },
+    "applications": [
+      {
+        "title": "Wood Drilling",
+        "description": "Drilling holes in wood and plastic."
+      },
+      {
+        "title": "Screwdriving",
+        "description": "Driving and removing screws."
+      },
+      {
+        "title": "Home Projects",
+        "description": "Light home improvement and DIY tasks."
+      }
+    ],
+    "certifications": [
+      "CE",
+      "ISO 9001"
+    ],
+    "downloads": [
+      {
+        "name": "Product Catalog",
+        "type": "PDF",
+        "description": "Complete specifications and features"
+      },
+      {
+        "name": "User Manual",
+        "type": "PDF",
+        "description": "Operating instructions"
+      }
+    ]
   }
 ]
