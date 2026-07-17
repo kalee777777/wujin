@@ -561,10 +561,11 @@ function initInteractions() {
             const matchIndustry = currentIndustry === 'all' || industry === currentIndustry;
 
             if (matchCategory && matchPower && matchIndustry) {
+                card.classList.remove('filter-hidden');
                 card.classList.remove('hidden');
                 visible++;
             } else {
-                card.classList.add('hidden');
+                card.classList.add('filter-hidden');
             }
         });
 
@@ -662,23 +663,27 @@ function initPagination() {
     if (!productsGrid || !paginationContainer) return;
 
     const ITEMS_PER_PAGE = 12;
+    const MAX_VISIBLE_PAGES = 5;
     let currentPage = 1;
 
     function getVisibleCards() {
-        return Array.from(productsGrid.querySelectorAll('.product-page-card:not(.hidden)'));
+        return Array.from(productsGrid.querySelectorAll('.product-page-card'));
     }
 
     function renderPagination() {
-        const visibleCards = getVisibleCards();
-        const totalPages = Math.ceil(visibleCards.length / ITEMS_PER_PAGE);
+        const allCards = getVisibleCards();
+        // Only paginate cards that pass filter
+        const filteredCards = allCards.filter(c => !c.classList.contains('filter-hidden'));
+        const totalPages = Math.ceil(filteredCards.length / ITEMS_PER_PAGE);
 
-        // Hide all cards first
-        visibleCards.forEach(card => card.style.display = 'none');
+        // First remove all pagination hidden states
+        allCards.forEach(card => card.classList.remove('hidden'));
 
-        // Show cards for current page
+        // Hide all filtered cards, then show current page
         const start = (currentPage - 1) * ITEMS_PER_PAGE;
         const end = start + ITEMS_PER_PAGE;
-        visibleCards.slice(start, end).forEach(card => card.style.display = '');
+        filteredCards.forEach(card => card.classList.add('hidden'));
+        filteredCards.slice(start, end).forEach(card => card.classList.remove('hidden'));
 
         // Re-generate pagination HTML
         if (totalPages <= 1) {
@@ -689,13 +694,38 @@ function initPagination() {
 
         let html = '';
 
-        // Page numbers
-        for (let i = 1; i <= totalPages; i++) {
+        // Prev button
+        if (currentPage > 1) {
+            html += `<a class="page-btn prev" href="#" data-page="prev"><svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="14"><polyline points="15 18 9 12 15 6"></polyline></svg> Prev</a>`;
+        }
+
+        // Page numbers with ellipsis
+        let pageStart = Math.max(1, currentPage - Math.floor(MAX_VISIBLE_PAGES / 2));
+        let pageEnd = Math.min(totalPages, pageStart + MAX_VISIBLE_PAGES - 1);
+        if (pageEnd - pageStart + 1 < MAX_VISIBLE_PAGES) {
+            pageStart = Math.max(1, pageEnd - MAX_VISIBLE_PAGES + 1);
+        }
+
+        if (pageStart > 1) {
+            html += `<a class="page-btn" href="#" data-page="1">1</a>`;
+            if (pageStart > 2) {
+                html += `<span class="page-dots">...</span>`;
+            }
+        }
+
+        for (let i = pageStart; i <= pageEnd; i++) {
             if (i === currentPage) {
                 html += `<a class="page-btn active" href="#" data-page="${i}">${i}</a>`;
             } else {
                 html += `<a class="page-btn" href="#" data-page="${i}">${i}</a>`;
             }
+        }
+
+        if (pageEnd < totalPages) {
+            if (pageEnd < totalPages - 1) {
+                html += `<span class="page-dots">...</span>`;
+            }
+            html += `<a class="page-btn" href="#" data-page="${totalPages}">${totalPages}</a>`;
         }
 
         // Next button
@@ -710,10 +740,13 @@ function initPagination() {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
                 const page = btn.getAttribute('data-page');
-                const total = Math.ceil(getVisibleCards().length / ITEMS_PER_PAGE);
+                const allCards = Array.from(productsGrid.querySelectorAll('.product-page-card')).filter(c => !c.classList.contains('filter-hidden'));
+                const total = Math.ceil(allCards.length / ITEMS_PER_PAGE);
 
                 if (page === 'next') {
                     if (currentPage < total) currentPage++;
+                } else if (page === 'prev') {
+                    if (currentPage > 1) currentPage--;
                 } else {
                     currentPage = parseInt(page, 10);
                 }
