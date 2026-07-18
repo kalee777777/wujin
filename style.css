@@ -4149,6 +4149,12 @@ img { max-width: 100%; display: block; }
     text-transform: uppercase;
 }
 
+.blog-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
 .blog-info {
     padding: 20px;
 }
@@ -4239,6 +4245,12 @@ img { max-width: 100%; display: block; }
     color: var(--text-dim);
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+.event-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .event-info {
@@ -4350,6 +4362,12 @@ img { max-width: 100%; display: block; }
 .blog-hero-bg {
     position: absolute;
     inset: 0;
+}
+
+.blog-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-img-placeholder {
