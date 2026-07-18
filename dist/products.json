@@ -51,6 +51,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -103,6 +106,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -154,6 +160,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "dc"
     ]
   },
   {
@@ -207,6 +216,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -260,6 +272,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "dc"
     ]
   },
   {
@@ -312,6 +327,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -360,6 +378,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -409,6 +430,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -459,6 +483,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "dc"
     ]
   },
   {
@@ -508,12 +535,15 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "pneumatic"
     ]
   },
   {
     "folder": "tire-inflator",
     "name": "Tire Inflator Pump",
-    "category": "Measuring & Cleaning",
+    "category": "Wrenches & Impact Tools",
     "description": "Digital tire inflator with auto-stop function and pressure gauge for cars, motorcycles, and bicycles.",
     "images": [
       "product-images/tire-inflator/tire-inflator-1.jpg",
@@ -556,6 +586,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "dc"
     ]
   },
   {
@@ -604,6 +637,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -653,6 +689,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -701,6 +740,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -751,6 +793,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -799,6 +844,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -847,6 +895,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -895,6 +946,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -944,6 +998,10 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium",
+      "dc"
     ]
   },
   {
@@ -994,12 +1052,15 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
     "folder": "hammer-drill",
     "name": "Electric Hammer Drill",
-    "category": "Drills & Drivers",
+    "category": "Saws & Hammers",
     "description": "Versatile electric hammer drill with impact function for masonry, concrete, and stone drilling.",
     "images": [
       "product-images/hammer-drill/hammer-drill-1.jpg",
@@ -1046,6 +1107,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -1094,6 +1158,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -1142,6 +1209,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -1190,6 +1260,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -1240,6 +1313,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "gas"
     ]
   },
   {
@@ -1290,6 +1366,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -1338,6 +1417,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -1386,6 +1468,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "dc"
     ]
   },
   {
@@ -1435,6 +1520,10 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium",
+      "dc"
     ]
   },
   {
@@ -1483,6 +1572,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -1531,6 +1623,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -1580,6 +1675,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -1629,6 +1727,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -1677,6 +1778,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -1725,6 +1829,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "gas"
     ]
   },
   {
@@ -1774,6 +1881,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "gas"
     ]
   },
   {
@@ -1824,6 +1934,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -1872,12 +1985,15 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
     "folder": "generator",
     "name": "Portable Gasoline Generator",
-    "category": "Tool Kits & Accessories",
+    "category": "Garden & Outdoor",
     "description": "Portable gasoline generator with stable power output for construction sites and emergency backup power.",
     "images": [
       "product-images/generator/generator-1.jpg",
@@ -1920,12 +2036,15 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "gas"
     ]
   },
   {
     "folder": "concrete-mixer",
     "name": "Electric Concrete Mixer",
-    "category": "Tool Kits & Accessories",
+    "category": "Garden & Outdoor",
     "description": "Heavy-duty electric concrete mixer for construction material mixing with adjustable speed control.",
     "images": [
       "product-images/concrete-mixer/concrete-mixer-1.jpg",
@@ -1969,6 +2088,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -2017,6 +2139,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -2067,6 +2192,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -2115,6 +2243,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -2163,6 +2294,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -2211,6 +2345,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -2259,6 +2396,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -2308,12 +2448,15 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
     "folder": "sewing-machine",
     "name": "Electric Sewing Machine",
-    "category": "Measuring & Cleaning",
+    "category": "Tool Kits & Accessories",
     "description": "Multi-stitch electric sewing machine for home tailoring, crafting, and light textile work.",
     "images": [
       "product-images/sewing-machine/sewing-machine-1.jpg",
@@ -2358,6 +2501,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -2408,6 +2554,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -2456,6 +2605,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -2504,6 +2656,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "pneumatic"
     ]
   },
   {
@@ -2552,6 +2707,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -2600,6 +2758,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -2649,6 +2810,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -2697,6 +2861,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -2745,6 +2912,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -2793,6 +2963,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -2841,6 +3014,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -2890,6 +3066,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -2939,6 +3118,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -2987,6 +3169,10 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium",
+      "ac"
     ]
   },
   {
@@ -3035,6 +3221,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -3083,6 +3272,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -3131,6 +3323,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -3179,6 +3374,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -3227,6 +3425,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -3275,6 +3476,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -3323,6 +3527,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -3371,6 +3578,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "pneumatic"
     ]
   },
   {
@@ -3419,6 +3629,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -3467,6 +3680,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -3515,6 +3731,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -3563,6 +3782,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -3611,6 +3833,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -3659,6 +3884,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -3707,6 +3935,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -3755,6 +3986,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -3803,6 +4037,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -3851,6 +4088,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -3899,6 +4139,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -3947,6 +4190,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -3995,6 +4241,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium"
     ]
   },
   {
@@ -4043,6 +4292,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -4091,6 +4343,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "gas"
     ]
   },
   {
@@ -4139,6 +4394,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "ac"
     ]
   },
   {
@@ -4187,6 +4445,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   },
   {
@@ -4235,6 +4496,10 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "lithium",
+      "dc"
     ]
   },
   {
@@ -4282,6 +4547,9 @@
         "type": "PDF",
         "description": "Operating instructions"
       }
+    ],
+    "power_type": [
+      "manual"
     ]
   }
 ]

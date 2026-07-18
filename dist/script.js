@@ -541,26 +541,23 @@ function initInteractions() {
     // === PRODUCT PAGE FILTER ===
     const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
     const powerBtns = document.querySelectorAll('.power-btn[data-power]');
-    const industryBtns = document.querySelectorAll('.power-btn[data-industry]');
     const productPageCards = document.querySelectorAll('.product-page-card');
     const productCount = document.querySelector('.product-count strong');
 
     let currentCategory = 'all';
     let currentPower = 'all';
-    let currentIndustry = 'all';
 
     function applyFilters() {
         let visible = 0;
         productPageCards.forEach(card => {
             const cat = card.getAttribute('data-category');
-            const power = card.getAttribute('data-power') || 'all';
-            const industry = card.getAttribute('data-industry') || 'all';
+            const powerType = card.getAttribute('data-power-type') || '';
 
             const matchCategory = currentCategory === 'all' || cat === currentCategory;
-            const matchPower = currentPower === 'all' || power === currentPower;
-            const matchIndustry = currentIndustry === 'all' || industry === currentIndustry;
+            const matchPower = currentPower === 'all' ||
+                powerType.split(',').some(t => t.trim() === currentPower);
 
-            if (matchCategory && matchPower && matchIndustry) {
+            if (matchCategory && matchPower) {
                 card.classList.remove('filter-hidden');
                 card.classList.remove('hidden');
                 visible++;
@@ -591,17 +588,6 @@ function initInteractions() {
                 powerBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentPower = btn.getAttribute('data-power');
-                applyFilters();
-            });
-        });
-    }
-
-    if (industryBtns.length && productPageCards.length) {
-        industryBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                industryBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentIndustry = btn.getAttribute('data-industry');
                 applyFilters();
             });
         });

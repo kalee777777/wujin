@@ -63,10 +63,12 @@
 <span class="product-count">Showing <strong>88</strong> products</span>
 <div class="power-filter">
 <button class="power-btn active" data-power="all">All</button>
+<button class="power-btn" data-power="manual">Manual</button>
+<button class="power-btn" data-power="lithium">Lithium</button>
 <button class="power-btn" data-power="ac">AC Power</button>
 <button class="power-btn" data-power="dc">DC Power</button>
-<button class="power-btn" data-power="lithium">Lithium</button>
 <button class="power-btn" data-power="gas">Gas</button>
+<button class="power-btn" data-power="pneumatic">Pneumatic</button>
 </div>
 <div class="product-sort">
 <select>
@@ -77,7 +79,7 @@
 </div>
 </div>
 <div class="products-grid" id="productsGrid">
-<div class="product-page-card" data-category="drills" data-power="lithium" data-industry="drills">
+<div class="product-page-card" data-category="drills" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -96,7 +98,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=brushless-drill">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="drills" data-power="ac" data-industry="drills">
+<div class="product-page-card" data-category="drills" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -115,7 +117,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=brushless-impact-drill">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="drills" data-power="ac" data-industry="drills">
+<div class="product-page-card" data-category="drills" data-power-type="dc">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -133,7 +135,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=brushed-drill">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="drills" data-power="ac" data-industry="drills">
+<div class="product-page-card" data-category="drills" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -152,7 +154,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=impact-drill-set">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="drills" data-power="ac" data-industry="drills">
+<div class="product-page-card" data-category="drills" data-power-type="dc">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -171,7 +173,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=electric-screwdriver">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="drills" data-power="" data-industry="drills">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -185,12 +187,12 @@
 </div>
 </div>
 <div class="product-page-info">
-<span class="product-page-cat">Drills &amp; Drivers</span>
+<span class="product-page-cat">Tool Kits &amp; Accessories</span>
 <h4>Screwdriver Tool Set</h4>
 <a class="btn btn-dark btn-small" href="product-detail.html?product=screwdriver-set">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="wrenches" data-power="lithium" data-industry="wrenches">
+<div class="product-page-card" data-category="wrenches" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -209,7 +211,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=high-torque-wrench">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="wrenches" data-power="lithium" data-industry="wrenches">
+<div class="product-page-card" data-category="wrenches" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -228,7 +230,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=cordless-impact-wrench">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="wrenches" data-power="" data-industry="wrenches">
+<div class="product-page-card" data-category="wrenches" data-power-type="dc">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -247,7 +249,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=ratchet-wrench">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="wrenches" data-power="ac" data-industry="wrenches">
+<div class="product-page-card" data-category="wrenches" data-power-type="pneumatic">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -266,7 +268,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=pneumatic-impact-wrench">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="wrenches" data-power="" data-industry="wrenches">
+<div class="product-page-card" data-category="wrenches" data-power-type="dc">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -285,7 +287,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=tire-inflator">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="lithium" data-industry="grinding">
+<div class="product-page-card" data-category="grinding" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -304,7 +306,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=cordless-angle-grinder">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="ac" data-industry="grinding">
+<div class="product-page-card" data-category="grinding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -323,7 +325,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=wired-angle-grinder">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="" data-industry="grinding">
+<div class="product-page-card" data-category="grinding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -342,7 +344,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=angle-grinder">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="ac" data-industry="grinding">
+<div class="product-page-card" data-category="grinding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -361,7 +363,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=wired-sander">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="lithium" data-industry="grinding">
+<div class="product-page-card" data-category="grinding" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -380,7 +382,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=lithium-sander">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="ac" data-industry="grinding">
+<div class="product-page-card" data-category="grinding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -399,7 +401,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=wall-sander">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="ac" data-industry="grinding">
+<div class="product-page-card" data-category="grinding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -418,7 +420,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=grooving-tool">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="ac" data-industry="grinding">
+<div class="product-page-card" data-category="grinding" data-power-type="lithium,dc">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -437,7 +439,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=power-shears">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="" data-industry="saws">
+<div class="product-page-card" data-category="saws" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -456,7 +458,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=rotary-hammer">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="ac" data-industry="saws">
+<div class="product-page-card" data-category="saws" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -475,7 +477,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=hammer-drill">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="" data-industry="saws">
+<div class="product-page-card" data-category="saws" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -494,7 +496,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=demolition-hammer">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="ac" data-industry="saws">
+<div class="product-page-card" data-category="saws" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -513,7 +515,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=electric-saw">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="lithium" data-industry="saws">
+<div class="product-page-card" data-category="saws" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -532,7 +534,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=cordless-chainsaw">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="gas" data-industry="saws">
+<div class="product-page-card" data-category="saws" data-power-type="gas">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -551,7 +553,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=gasoline-chainsaw">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="lithium" data-industry="saws">
+<div class="product-page-card" data-category="saws" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -570,7 +572,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=mini-chainsaw">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="lithium" data-industry="saws">
+<div class="product-page-card" data-category="saws" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -589,7 +591,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=reciprocating-saw">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="ac" data-industry="saws">
+<div class="product-page-card" data-category="saws" data-power-type="dc">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -608,7 +610,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=nail-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="" data-industry="saws">
+<div class="product-page-card" data-category="saws" data-power-type="lithium,dc">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -627,7 +629,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=rebar-tying-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="welding" data-power="ac" data-industry="welding">
+<div class="product-page-card" data-category="welding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -646,7 +648,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=bonding-machine">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="welding" data-power="ac" data-industry="welding">
+<div class="product-page-card" data-category="welding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -665,7 +667,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=welding-machine">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="welding" data-power="ac" data-industry="welding">
+<div class="product-page-card" data-category="welding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -684,7 +686,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=welding-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="welding" data-power="ac" data-industry="welding">
+<div class="product-page-card" data-category="welding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -703,7 +705,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=heat-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="welding" data-power="" data-industry="welding">
+<div class="product-page-card" data-category="welding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -722,7 +724,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=hot-air-blower">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="garden" data-power="" data-industry="garden">
+<div class="product-page-card" data-category="garden" data-power-type="gas">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -741,7 +743,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=field-mower">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="garden" data-power="ac" data-industry="garden">
+<div class="product-page-card" data-category="garden" data-power-type="gas">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -760,7 +762,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=backpack-mower">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="garden" data-power="lithium" data-industry="garden">
+<div class="product-page-card" data-category="garden" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -779,7 +781,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=leaf-blower">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="garden" data-power="" data-industry="garden">
+<div class="product-page-card" data-category="garden" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -798,7 +800,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=pruning-shears">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="garden" data-power="gas" data-industry="garden">
+<div class="product-page-card" data-category="garden" data-power-type="gas">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -817,7 +819,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=generator">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="garden" data-power="ac" data-industry="garden">
+<div class="product-page-card" data-category="garden" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -836,7 +838,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=concrete-mixer">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="kits">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -854,7 +856,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=tool-sets">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="kits">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -873,7 +875,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=electric-tool-kit">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="kits">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -892,7 +894,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=hand-tools">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="ac" data-industry="kits">
+<div class="product-page-card" data-category="kits" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -911,7 +913,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=hot-melt-glue-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="kits">
+<div class="product-page-card" data-category="kits" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -930,7 +932,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=glue-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="ac" data-industry="kits">
+<div class="product-page-card" data-category="kits" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -949,7 +951,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=wood-planer">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="ac" data-industry="kits">
+<div class="product-page-card" data-category="kits" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -968,7 +970,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=woodworking-planer">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="ac" data-industry="kits">
+<div class="product-page-card" data-category="kits" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -987,7 +989,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=sewing-machine">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="" data-industry="measuring">
+<div class="product-page-card" data-category="measuring" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1006,7 +1008,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=laser-level">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="" data-industry="measuring">
+<div class="product-page-card" data-category="measuring" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1025,7 +1027,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=surveying-tools">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="" data-industry="measuring">
+<div class="product-page-card" data-category="measuring" data-power-type="pneumatic">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1044,7 +1046,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=spray-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="ac" data-industry="measuring">
+<div class="product-page-card" data-category="measuring" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1063,7 +1065,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=power-spray-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="" data-industry="measuring">
+<div class="product-page-card" data-category="measuring" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1082,7 +1084,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=water-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="lithium" data-industry="measuring">
+<div class="product-page-card" data-category="measuring" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1101,7 +1103,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=cleaning-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="diy">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1120,7 +1122,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=hand-tool-set-16pcs">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="diy">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1139,7 +1141,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=home-hand-tool-set">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="diy">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1158,7 +1160,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=hand-tool-box-set">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="lithium" data-industry="construction">
+<div class="product-page-card" data-category="grinding" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1177,7 +1179,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=lithium-angle-grinder">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="lithium" data-industry="diy">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1196,7 +1198,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=2-piece-tool-set">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="lithium" data-industry="diy">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1215,7 +1217,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=drill-wrench-2in1-kit">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="garden" data-power="lithium" data-industry="garden">
+<div class="product-page-card" data-category="garden" data-power-type="lithium,ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1234,7 +1236,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=edge-trimmer">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="diy">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1253,7 +1255,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=wire-stripper">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="" data-industry="diy">
+<div class="product-page-card" data-category="measuring" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1272,7 +1274,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=measuring-tape">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="automotive">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1291,7 +1293,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=socket-wrench-set">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="diy">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1310,7 +1312,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=caulking-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="grinding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1329,7 +1331,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=slotting-cutter">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="lithium" data-industry="diy">
+<div class="product-page-card" data-category="measuring" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1348,7 +1350,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=cordless-vacuum">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="woodworking">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1367,7 +1369,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=woodworking-tool-set">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="saws" data-power-type="pneumatic">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1386,7 +1388,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=framing-nailer">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="grinding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1405,7 +1407,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=concrete-cutter">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="grinding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1424,7 +1426,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=concrete-surface-finisher">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="welding" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="welding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1443,7 +1445,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=plastic-pipe-welder">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="measuring" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1462,7 +1464,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=tile-leveling-machine">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="lithium" data-industry="automotive">
+<div class="product-page-card" data-category="kits" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1481,7 +1483,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=electric-grease-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="kits" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1500,7 +1502,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=electric-pipe-expander">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="diy">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1519,7 +1521,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=insulated-screwdriver">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="diy">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1538,7 +1540,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=repair-tool-set">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="garden" data-power="lithium" data-industry="garden">
+<div class="product-page-card" data-category="garden" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1557,7 +1559,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=hedge-trimmer">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="ac" data-industry="diy">
+<div class="product-page-card" data-category="measuring" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1576,7 +1578,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=steam-cleaner">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="saws" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1595,7 +1597,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=rebar-cutter">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="grinding" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1614,7 +1616,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=aluminum-sheet-cutter">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="wrenches" data-power="lithium" data-industry="construction">
+<div class="product-page-card" data-category="wrenches" data-power-type="lithium">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1633,7 +1635,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=cordless-rivet-gun">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="measuring" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="measuring" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1652,7 +1654,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=dust-collector">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="garden" data-power="gas" data-industry="garden">
+<div class="product-page-card" data-category="garden" data-power-type="gas">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1671,7 +1673,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=snow-blower">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="saws" data-power="ac" data-industry="construction">
+<div class="product-page-card" data-category="saws" data-power-type="ac">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1690,7 +1692,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=rotary-hammer-pro">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="kits" data-power="" data-industry="diy">
+<div class="product-page-card" data-category="kits" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1709,7 +1711,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=screwdriver-tool-set">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="grinding" data-power="lithium" data-industry="construction">
+<div class="product-page-card" data-category="grinding" data-power-type="lithium,dc">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
@@ -1728,7 +1730,7 @@
 <a class="btn btn-dark btn-small" href="product-detail.html?product=electric-shears">View Details</a>
 </div>
 </div>
-<div class="product-page-card" data-category="drills" data-power="lithium" data-industry="diy">
+<div class="product-page-card" data-category="drills" data-power-type="manual">
 <div class="product-page-img">
 <div class="product-carousel" data-autoplay="true" data-interval="4000">
 <div class="carousel-slides">
