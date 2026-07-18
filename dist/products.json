@@ -513,7 +513,7 @@
   {
     "folder": "tire-inflator",
     "name": "Tire Inflator Pump",
-    "category": "Wrenches & Impact Tools",
+    "category": "Measuring & Cleaning",
     "description": "Digital tire inflator with auto-stop function and pressure gauge for cars, motorcycles, and bicycles.",
     "images": [
       "product-images/tire-inflator/tire-inflator-1.jpg",
@@ -999,7 +999,7 @@
   {
     "folder": "hammer-drill",
     "name": "Electric Hammer Drill",
-    "category": "Saws & Hammers",
+    "category": "Drills & Drivers",
     "description": "Versatile electric hammer drill with impact function for masonry, concrete, and stone drilling.",
     "images": [
       "product-images/hammer-drill/hammer-drill-1.jpg",
@@ -1877,7 +1877,7 @@
   {
     "folder": "generator",
     "name": "Portable Gasoline Generator",
-    "category": "Garden & Outdoor",
+    "category": "Tool Kits & Accessories",
     "description": "Portable gasoline generator with stable power output for construction sites and emergency backup power.",
     "images": [
       "product-images/generator/generator-1.jpg",
@@ -1925,7 +1925,7 @@
   {
     "folder": "concrete-mixer",
     "name": "Electric Concrete Mixer",
-    "category": "Garden & Outdoor",
+    "category": "Tool Kits & Accessories",
     "description": "Heavy-duty electric concrete mixer for construction material mixing with adjustable speed control.",
     "images": [
       "product-images/concrete-mixer/concrete-mixer-1.jpg",
@@ -2313,7 +2313,7 @@
   {
     "folder": "sewing-machine",
     "name": "Electric Sewing Machine",
-    "category": "Tool Kits & Accessories",
+    "category": "Measuring & Cleaning",
     "description": "Multi-stitch electric sewing machine for home tailoring, crafting, and light textile work.",
     "images": [
       "product-images/sewing-machine/sewing-machine-1.jpg",
