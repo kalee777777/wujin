@@ -222,62 +222,6 @@
     ]
   },
   {
-    "folder": "electric-screwdriver",
-    "name": "Electric Screwdriver",
-    "category": "Drills & Drivers",
-    "description": "Compact and lightweight electric screwdriver with adjustable torque settings for precision fastening tasks.",
-    "images": [
-      "product-images/electric-screwdriver/electric-screwdriver-1.jpg",
-      "product-images/electric-screwdriver/electric-screwdriver-2.jpg",
-      "product-images/electric-screwdriver/electric-screwdriver-3.jpg",
-      "product-images/electric-screwdriver/electric-screwdriver-4.jpg"
-    ],
-    "specs": {
-      "Voltage": "3.6V DC",
-      "Max Torque": "4 Nm",
-      "Speed": "210 RPM",
-      "Chuck": "1/4\" Hex",
-      "Weight": "0.5 kg"
-    },
-    "applications": [
-      {
-        "title": "Metal Drilling",
-        "description": "Precision drilling in metal materials."
-      },
-      {
-        "title": "Wood Working",
-        "description": "Efficient drilling and screwdriving in wood."
-      },
-      {
-        "title": "Construction",
-        "description": "General construction and renovation tasks."
-      },
-      {
-        "title": "DIY Projects",
-        "description": "Home improvement and hobby applications."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "dc"
-    ]
-  },
-  {
     "folder": "screwdriver-set",
     "name": "Screwdriver Tool Set",
     "category": "Drills & Drivers",
@@ -453,109 +397,6 @@
       "Speed": "280 RPM",
       "Drive": "3/8\"",
       "Weight": "1.0 kg"
-    },
-    "applications": [
-      {
-        "title": "Professional Use",
-        "description": "Industrial and commercial applications."
-      },
-      {
-        "title": "DIY Projects",
-        "description": "Home improvement and hobby work."
-      },
-      {
-        "title": "Maintenance",
-        "description": "General repair and upkeep tasks."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "dc"
-    ]
-  },
-  {
-    "folder": "pneumatic-impact-wrench",
-    "name": "Pneumatic Impact Wrench",
-    "category": "Wrenches & Impact Tools",
-    "description": "Heavy-duty pneumatic impact wrench for industrial assembly lines and automotive repair workshops.",
-    "images": [
-      "product-images/pneumatic-impact-wrench/pneumatic-impact-wrench-1.jpg",
-      "product-images/pneumatic-impact-wrench/pneumatic-impact-wrench-2.jpg",
-      "product-images/pneumatic-impact-wrench/pneumatic-impact-wrench-3.jpg",
-      "product-images/pneumatic-impact-wrench/pneumatic-impact-wrench-4.jpg"
-    ],
-    "specs": {
-      "Air Pressure": "90 PSI",
-      "Max Torque": "680 Nm",
-      "Speed": "7000 RPM",
-      "Drive": "1/2\"",
-      "Weight": "2.5 kg"
-    },
-    "applications": [
-      {
-        "title": "Professional Use",
-        "description": "Industrial and commercial applications."
-      },
-      {
-        "title": "DIY Projects",
-        "description": "Home improvement and hobby work."
-      },
-      {
-        "title": "Maintenance",
-        "description": "General repair and upkeep tasks."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "pneumatic"
-    ]
-  },
-  {
-    "folder": "tire-inflator",
-    "name": "Tire Inflator Pump",
-    "category": "Wrenches & Impact Tools",
-    "description": "Digital tire inflator with auto-stop function and pressure gauge for cars, motorcycles, and bicycles.",
-    "images": [
-      "product-images/tire-inflator/tire-inflator-1.jpg",
-      "product-images/tire-inflator/tire-inflator-2.png",
-      "product-images/tire-inflator/tire-inflator-3.jpg"
-    ],
-    "specs": {
-      "Voltage": "12V DC",
-      "Max Pressure": "150 PSI",
-      "Flow": "35 L/min",
-      "Power": "Car adapter",
-      "Weight": "0.8 kg"
     },
     "applications": [
       {
@@ -949,59 +790,6 @@
     ],
     "power_type": [
       "ac"
-    ]
-  },
-  {
-    "folder": "power-shears",
-    "name": "Electric Power Shears",
-    "category": "Grinding & Cutting",
-    "description": "Heavy-duty electric power shears for cutting sheet metal, roofing, and other thin materials.",
-    "images": [
-      "product-images/power-shears/power-shears-1.jpg",
-      "product-images/power-shears/power-shears-3.jpg",
-      "product-images/power-shears/power-shears-4.jpg",
-      "product-images/power-shears/power-shears-2.jpg"
-    ],
-    "specs": {
-      "Voltage": "20V DC",
-      "Cutting Capacity": "Steel 2mm",
-      "Speed": "2500 RPM",
-      "Motor": "Brushless",
-      "Weight": "1.4 kg"
-    },
-    "applications": [
-      {
-        "title": "Professional Use",
-        "description": "Industrial and commercial applications."
-      },
-      {
-        "title": "DIY Projects",
-        "description": "Home improvement and hobby work."
-      },
-      {
-        "title": "Maintenance",
-        "description": "General repair and upkeep tasks."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "lithium",
-      "dc"
     ]
   },
   {
@@ -1733,57 +1521,6 @@
     ]
   },
   {
-    "folder": "hot-air-blower",
-    "name": "Industrial Hot Air Blower",
-    "category": "Welding & Heating",
-    "description": "Industrial-grade hot air blower with high airflow for drying, curing, and heating applications.",
-    "images": [
-      "product-images/hot-air-blower/hot-air-blower-1.jpg",
-      "product-images/hot-air-blower/hot-air-blower-2.png",
-      "product-images/hot-air-blower/hot-air-blower-main.jpg"
-    ],
-    "specs": {
-      "Temperature": "20-600°C",
-      "Airflow": "500 L/min",
-      "Power": "2200W",
-      "Voltage": "220V AC",
-      "Weight": "1.0 kg"
-    },
-    "applications": [
-      {
-        "title": "Professional Use",
-        "description": "Industrial and commercial applications."
-      },
-      {
-        "title": "DIY Projects",
-        "description": "Home improvement and hobby work."
-      },
-      {
-        "title": "Maintenance",
-        "description": "General repair and upkeep tasks."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "ac"
-    ]
-  },
-  {
     "folder": "field-mower",
     "name": "Field Mower",
     "category": "Garden & Outdoor",
@@ -2249,57 +1986,6 @@
     ]
   },
   {
-    "folder": "hot-melt-glue-gun",
-    "name": "Electric Hot-Melt Glue Gun",
-    "category": "Tool Kits & Accessories",
-    "description": "Fast-heating hot-melt glue gun with adjustable temperature for crafting, repair, and DIY projects.",
-    "images": [
-      "product-images/hot-melt-glue-gun/hot-melt-glue-gun-1.jpg",
-      "product-images/hot-melt-glue-gun/hot-melt-glue-gun-2.jpg",
-      "product-images/hot-melt-glue-gun/hot-melt-glue-gun-3.jpg"
-    ],
-    "specs": {
-      "Temperature": "170°C",
-      "Glue Stick": "11mm",
-      "Power": "60W",
-      "Voltage": "220V AC",
-      "Weight": "0.3 kg"
-    },
-    "applications": [
-      {
-        "title": "Metal Fabrication",
-        "description": "Welding and joining metal components."
-      },
-      {
-        "title": "Repair Work",
-        "description": "Equipment and machinery repairs."
-      },
-      {
-        "title": "Construction",
-        "description": "Structural steel work."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "ac"
-    ]
-  },
-  {
     "folder": "glue-gun",
     "name": "Heavy-Duty Glue Gun",
     "category": "Tool Kits & Accessories",
@@ -2366,58 +2052,6 @@
       "Cutting Depth": "2mm",
       "Speed": "16000 RPM",
       "Weight": "2.8 kg"
-    },
-    "applications": [
-      {
-        "title": "Professional Use",
-        "description": "Industrial and commercial applications."
-      },
-      {
-        "title": "DIY Projects",
-        "description": "Home improvement and hobby work."
-      },
-      {
-        "title": "Maintenance",
-        "description": "General repair and upkeep tasks."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "ac"
-    ]
-  },
-  {
-    "folder": "woodworking-planer",
-    "name": "Electric Woodworking Planer",
-    "category": "Tool Kits & Accessories",
-    "description": "Benchtop electric woodworking planer for precise thickness planing of hardwood and softwood boards.",
-    "images": [
-      "product-images/woodworking-planer/woodworking-planer-1.jpg",
-      "product-images/woodworking-planer/woodworking-planer-1.jpg",
-      "product-images/woodworking-planer/woodworking-planer-2.jpg",
-      "product-images/woodworking-planer/woodworking-planer-5.png"
-    ],
-    "specs": {
-      "Power": "1200W",
-      "Cutting Width": "155mm",
-      "Cutting Depth": "3mm",
-      "Speed": "10000 RPM",
-      "Weight": "4.5 kg"
     },
     "applications": [
       {
@@ -2659,108 +2293,6 @@
     ],
     "power_type": [
       "pneumatic"
-    ]
-  },
-  {
-    "folder": "power-spray-gun",
-    "name": "Electric Power Spray Gun",
-    "category": "Measuring & Cleaning",
-    "description": "Electric power spray gun for efficient painting, staining, and coating applications on large surfaces.",
-    "images": [
-      "product-images/power-spray-gun/power-spray-gun-1.jpg",
-      "product-images/power-spray-gun/power-spray-gun-2.jpg",
-      "product-images/power-spray-gun/power-spray-gun-3.jpg"
-    ],
-    "specs": {
-      "Power": "450W",
-      "Flow Rate": "300ml/min",
-      "Nozzle": "1.5mm",
-      "Voltage": "220V AC",
-      "Weight": "1.5 kg"
-    },
-    "applications": [
-      {
-        "title": "Metal Fabrication",
-        "description": "Welding and joining metal components."
-      },
-      {
-        "title": "Repair Work",
-        "description": "Equipment and machinery repairs."
-      },
-      {
-        "title": "Construction",
-        "description": "Structural steel work."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "ac"
-    ]
-  },
-  {
-    "folder": "water-gun",
-    "name": "High-Pressure Water Gun",
-    "category": "Measuring & Cleaning",
-    "description": "High-pressure water gun for car washing, garden cleaning, and outdoor surface rinsing.",
-    "images": [
-      "product-images/water-gun/water-gun-1.png",
-      "product-images/water-gun/water-gun-2.png",
-      "product-images/water-gun/water-gun-main.png"
-    ],
-    "specs": {
-      "Pressure": "1500 PSI",
-      "Flow Rate": "6 L/min",
-      "Power": "1500W",
-      "Voltage": "220V AC",
-      "Weight": "8.0 kg"
-    },
-    "applications": [
-      {
-        "title": "Metal Fabrication",
-        "description": "Welding and joining metal components."
-      },
-      {
-        "title": "Repair Work",
-        "description": "Equipment and machinery repairs."
-      },
-      {
-        "title": "Construction",
-        "description": "Structural steel work."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "ac"
     ]
   },
   {
@@ -3533,57 +3065,6 @@
     ]
   },
   {
-    "folder": "framing-nailer",
-    "name": "Framing Nailer",
-    "category": "Saws & Hammers",
-    "description": "Pneumatic framing nailer for heavy-duty nailing in construction and framing applications. High driving force for dense materials.",
-    "images": [
-      "product-images/framing-nailer/framing-nailer-1.jpg",
-      "product-images/framing-nailer/framing-nailer-2.jpg",
-      "product-images/framing-nailer/framing-nailer-3.jpg"
-    ],
-    "specs": {
-      "Power": "220V AC",
-      "Nail Length": "50-90mm",
-      "Magazine Capacity": "100 nails",
-      "Operating Pressure": "0.4-0.8 MPa",
-      "Weight": "3.0 kg"
-    },
-    "applications": [
-      {
-        "title": "Framing",
-        "description": "Wood framing for residential and commercial construction."
-      },
-      {
-        "title": "Deck Building",
-        "description": "Nailing deck boards and structural components."
-      },
-      {
-        "title": "Sheathing",
-        "description": "Attaching sheathing panels to framing."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "pneumatic"
-    ]
-  },
-  {
     "folder": "concrete-cutter",
     "name": "Concrete Cutter",
     "category": "Grinding & Cutting",
@@ -3839,57 +3320,6 @@
     ]
   },
   {
-    "folder": "electric-pipe-expander",
-    "name": "Electric Pipe Expander",
-    "category": "Tool Kits & Accessories",
-    "description": "Electric pipe expander for expanding copper and aluminum pipes. Precise control for plumbing and HVAC installations.",
-    "images": [
-      "product-images/electric-pipe-expander/electric-pipe-expander-1.jpg",
-      "product-images/electric-pipe-expander/electric-pipe-expander-2.jpg",
-      "product-images/electric-pipe-expander/electric-pipe-expander-3.png"
-    ],
-    "specs": {
-      "Power": "800W",
-      "Voltage": "220V AC",
-      "Pipe Range": "16-32mm",
-      "Expanding Heads": "6 pcs",
-      "Weight": "2.8 kg"
-    },
-    "applications": [
-      {
-        "title": "Plumbing",
-        "description": "Expanding pipes for plumbing connections."
-      },
-      {
-        "title": "HVAC Installation",
-        "description": "Preparing pipes for air conditioning systems."
-      },
-      {
-        "title": "Refrigeration",
-        "description": "Pipe expansion for refrigeration systems."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "ac"
-    ]
-  },
-  {
     "folder": "insulated-screwdriver",
     "name": "Insulated Screwdriver",
     "category": "Tool Kits & Accessories",
@@ -3918,57 +3348,6 @@
       {
         "title": "Industrial Electrical",
         "description": "Professional electrical maintenance tasks."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "manual"
-    ]
-  },
-  {
-    "folder": "repair-tool-set",
-    "name": "Repair Tool Set",
-    "category": "Tool Kits & Accessories",
-    "description": "Multi-purpose repair tool set for general maintenance and repair work. Includes commonly used tools for various applications.",
-    "images": [
-      "product-images/repair-tool-set/repair-tool-set-1.jpg",
-      "product-images/repair-tool-set/repair-tool-set-2.jpg",
-      "product-images/repair-tool-set/repair-tool-set-3.png"
-    ],
-    "specs": {
-      "Pieces": "Multi pcs",
-      "Material": "Chrome Vanadium Steel",
-      "Case": "Blow-molded",
-      "Application": "Multi-purpose",
-      "Weight": "2.0 kg"
-    },
-    "applications": [
-      {
-        "title": "Equipment Repair",
-        "description": "Repairing household and office equipment."
-      },
-      {
-        "title": "Bicycle Maintenance",
-        "description": "Maintaining and repairing bicycles."
-      },
-      {
-        "title": "General Maintenance",
-        "description": "Routine repair and upkeep tasks."
       }
     ],
     "certifications": [
@@ -4040,57 +3419,6 @@
     ],
     "power_type": [
       "lithium"
-    ]
-  },
-  {
-    "folder": "steam-cleaner",
-    "name": "Steam Cleaner",
-    "category": "Measuring & Cleaning",
-    "description": "Electric steam cleaner for deep cleaning and sanitizing surfaces. High-temperature steam removes grease, stains, and bacteria without chemicals.",
-    "images": [
-      "product-images/steam-cleaner/steam-cleaner-1.jpg",
-      "product-images/steam-cleaner/steam-cleaner-2.jpg",
-      "product-images/steam-cleaner/steam-cleaner-3.jpg"
-    ],
-    "specs": {
-      "Power": "1500W",
-      "Voltage": "220V AC",
-      "Steam Temperature": "100°C+",
-      "Tank Capacity": "1.5L",
-      "Weight": "3.0 kg"
-    },
-    "applications": [
-      {
-        "title": "Home Cleaning",
-        "description": "Deep cleaning floors, kitchens, and bathrooms."
-      },
-      {
-        "title": "Automotive",
-        "description": "Cleaning vehicle interiors and engines."
-      },
-      {
-        "title": "Sanitization",
-        "description": "Killing bacteria and dust mites on surfaces."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "ac"
     ]
   },
   {
@@ -4244,57 +3572,6 @@
     ],
     "power_type": [
       "lithium"
-    ]
-  },
-  {
-    "folder": "dust-collector",
-    "name": "Dust Collector",
-    "category": "Measuring & Cleaning",
-    "description": "Industrial dust collector for capturing fine dust and debris during construction and woodworking. High suction power with filter system.",
-    "images": [
-      "product-images/dust-collector/dust-collector-1.jpg",
-      "product-images/dust-collector/dust-collector-2.jpg",
-      "product-images/dust-collector/dust-collector-3.jpg"
-    ],
-    "specs": {
-      "Power": "1500W",
-      "Voltage": "220V AC",
-      "Airflow": "250 m³/h",
-      "Tank Capacity": "30L",
-      "Weight": "8.0 kg"
-    },
-    "applications": [
-      {
-        "title": "Woodworking",
-        "description": "Collecting sawdust and wood chips."
-      },
-      {
-        "title": "Construction",
-        "description": "Capturing dust from drilling and cutting."
-      },
-      {
-        "title": "Renovation",
-        "description": "Keeping work areas clean during renovation."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "ac"
     ]
   },
   {
