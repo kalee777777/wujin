@@ -14,19 +14,13 @@
   {
     "folder": "brushed-drill",
     "name": "Brushed Impact Drill",
-    "power_type": ["dc"],
+    "power_type": ["lithium"],
     "function_category": "drills"
   },
   {
     "folder": "impact-drill-set",
     "name": "Multifunction Impact Drill Set",
-    "power_type": ["manual"],
-    "function_category": "drills"
-  },
-  {
-    "folder": "electric-screwdriver",
-    "name": "Electric Screwdriver",
-    "power_type": ["dc"],
+    "power_type": ["lithium"],
     "function_category": "drills"
   },
   {
@@ -44,25 +38,13 @@
   {
     "folder": "cordless-impact-wrench",
     "name": "Cordless Impact Wrench",
-    "power_type": ["lithium"],
+    "power_type": ["ac"],
     "function_category": "wrenches"
   },
   {
     "folder": "ratchet-wrench",
     "name": "Professional Ratchet Wrench Set",
-    "power_type": ["dc"],
-    "function_category": "wrenches"
-  },
-  {
-    "folder": "pneumatic-impact-wrench",
-    "name": "Pneumatic Impact Wrench",
-    "power_type": ["pneumatic"],
-    "function_category": "wrenches"
-  },
-  {
-    "folder": "tire-inflator",
-    "name": "Tire Inflator Pump",
-    "power_type": ["dc"],
+    "power_type": ["lithium"],
     "function_category": "wrenches"
   },
   {
@@ -80,7 +62,7 @@
   {
     "folder": "angle-grinder",
     "name": "Professional Angle Grinder",
-    "power_type": ["ac"],
+    "power_type": ["lithium"],
     "function_category": "grinding"
   },
   {
@@ -108,12 +90,6 @@
     "function_category": "grinding"
   },
   {
-    "folder": "power-shears",
-    "name": "Electric Power Shears",
-    "power_type": ["lithium", "dc"],
-    "function_category": "grinding"
-  },
-  {
     "folder": "rotary-hammer",
     "name": "26mm Rotary Hammer Drill Kit",
     "power_type": ["ac"],
@@ -134,7 +110,7 @@
   {
     "folder": "electric-saw",
     "name": "Multi-Purpose Electric Saw",
-    "power_type": ["ac"],
+    "power_type": ["lithium"],
     "function_category": "saws"
   },
   {
@@ -164,13 +140,13 @@
   {
     "folder": "nail-gun",
     "name": "Electric Nail Gun",
-    "power_type": ["dc"],
-    "function_category": "saws"
+    "power_type": ["lithium"],
+    "function_category": "garden"
   },
   {
     "folder": "rebar-tying-gun",
     "name": "Rebar Tying Gun",
-    "power_type": ["lithium", "dc"],
+    "power_type": ["lithium"],
     "function_category": "saws"
   },
   {
@@ -198,15 +174,9 @@
     "function_category": "welding"
   },
   {
-    "folder": "hot-air-blower",
-    "name": "Industrial Hot Air Blower",
-    "power_type": ["ac"],
-    "function_category": "welding"
-  },
-  {
     "folder": "field-mower",
     "name": "Field Mower",
-    "power_type": ["gas"],
+    "power_type": ["lithium"],
     "function_category": "garden"
   },
   {
@@ -218,7 +188,7 @@
   {
     "folder": "leaf-blower",
     "name": "Cordless Electric Leaf Blower",
-    "power_type": ["lithium"],
+    "power_type": ["gas"],
     "function_category": "garden"
   },
   {
@@ -242,13 +212,13 @@
   {
     "folder": "tool-sets",
     "name": "50-Piece Professional Combo Kit",
-    "power_type": ["manual"],
+    "power_type": ["lithium"],
     "function_category": "kits"
   },
   {
     "folder": "electric-tool-kit",
     "name": "Industrial Heavy-Duty Tool Set",
-    "power_type": ["manual"],
+    "power_type": ["lithium"],
     "function_category": "kits"
   },
   {
@@ -258,34 +228,22 @@
     "function_category": "kits"
   },
   {
-    "folder": "hot-melt-glue-gun",
-    "name": "Electric Hot-Melt Glue Gun",
-    "power_type": ["ac"],
-    "function_category": "kits"
-  },
-  {
     "folder": "glue-gun",
     "name": "Heavy-Duty Glue Gun",
     "power_type": ["ac"],
-    "function_category": "kits"
+    "function_category": "welding"
   },
   {
     "folder": "wood-planer",
     "name": "Electric Wood Planer",
     "power_type": ["ac"],
-    "function_category": "kits"
-  },
-  {
-    "folder": "woodworking-planer",
-    "name": "Electric Woodworking Planer",
-    "power_type": ["ac"],
-    "function_category": "kits"
+    "function_category": "grinding"
   },
   {
     "folder": "sewing-machine",
     "name": "Electric Sewing Machine",
     "power_type": ["ac"],
-    "function_category": "kits"
+    "function_category": "garden"
   },
   {
     "folder": "laser-level",
@@ -296,25 +254,13 @@
   {
     "folder": "surveying-tools",
     "name": "Surveying Tools Set",
-    "power_type": ["manual"],
+    "power_type": ["lithium"],
     "function_category": "measuring"
   },
   {
     "folder": "spray-gun",
     "name": "Professional HVLP Spray Gun",
-    "power_type": ["pneumatic"],
-    "function_category": "measuring"
-  },
-  {
-    "folder": "power-spray-gun",
-    "name": "Electric Power Spray Gun",
-    "power_type": ["ac"],
-    "function_category": "measuring"
-  },
-  {
-    "folder": "water-gun",
-    "name": "High-Pressure Water Gun",
-    "power_type": ["ac"],
+    "power_type": ["lithium"],
     "function_category": "measuring"
   },
   {
@@ -350,20 +296,20 @@
   {
     "folder": "2-piece-tool-set",
     "name": "2-Piece Tool Set",
-    "power_type": ["manual"],
-    "function_category": "kits"
+    "power_type": ["lithium"],
+    "function_category": "wrenches"
   },
   {
     "folder": "drill-wrench-2in1-kit",
     "name": "Drill & Wrench 2-in-1 Kit",
-    "power_type": ["manual"],
-    "function_category": "kits"
+    "power_type": ["lithium"],
+    "function_category": "drills"
   },
   {
     "folder": "edge-trimmer",
     "name": "Cordless Edge Trimmer",
     "power_type": ["lithium", "ac"],
-    "function_category": "garden"
+    "function_category": "grinding"
   },
   {
     "folder": "wire-stripper",
@@ -408,12 +354,6 @@
     "function_category": "kits"
   },
   {
-    "folder": "framing-nailer",
-    "name": "Framing Nailer",
-    "power_type": ["pneumatic"],
-    "function_category": "saws"
-  },
-  {
     "folder": "concrete-cutter",
     "name": "Concrete Cutter",
     "power_type": ["ac"],
@@ -422,7 +362,7 @@
   {
     "folder": "concrete-surface-finisher",
     "name": "Concrete Surface Finisher",
-    "power_type": ["ac"],
+    "power_type": ["lithium"],
     "function_category": "grinding"
   },
   {
@@ -434,7 +374,7 @@
   {
     "folder": "tile-leveling-machine",
     "name": "Tile Leveling Machine",
-    "power_type": ["ac"],
+    "power_type": ["lithium"],
     "function_category": "measuring"
   },
   {
@@ -444,20 +384,8 @@
     "function_category": "kits"
   },
   {
-    "folder": "electric-pipe-expander",
-    "name": "Electric Pipe Expander",
-    "power_type": ["ac"],
-    "function_category": "kits"
-  },
-  {
     "folder": "insulated-screwdriver",
     "name": "Insulated Screwdriver",
-    "power_type": ["manual"],
-    "function_category": "kits"
-  },
-  {
-    "folder": "repair-tool-set",
-    "name": "Repair Tool Set",
     "power_type": ["manual"],
     "function_category": "kits"
   },
@@ -468,21 +396,15 @@
     "function_category": "garden"
   },
   {
-    "folder": "steam-cleaner",
-    "name": "Steam Cleaner",
-    "power_type": ["ac"],
-    "function_category": "measuring"
-  },
-  {
     "folder": "rebar-cutter",
     "name": "Rebar Cutter",
-    "power_type": ["ac"],
+    "power_type": ["lithium"],
     "function_category": "saws"
   },
   {
     "folder": "aluminum-sheet-cutter",
     "name": "Aluminum Sheet Cutter",
-    "power_type": ["ac"],
+    "power_type": ["lithium"],
     "function_category": "grinding"
   },
   {
@@ -492,15 +414,9 @@
     "function_category": "wrenches"
   },
   {
-    "folder": "dust-collector",
-    "name": "Dust Collector",
-    "power_type": ["ac"],
-    "function_category": "measuring"
-  },
-  {
     "folder": "snow-blower",
     "name": "Gas Snow Blower",
-    "power_type": ["gas"],
+    "power_type": ["lithium"],
     "function_category": "garden"
   },
   {
@@ -518,13 +434,13 @@
   {
     "folder": "electric-shears",
     "name": "Electric Shears",
-    "power_type": ["lithium", "dc"],
+    "power_type": ["lithium"],
     "function_category": "grinding"
   },
   {
     "folder": "brushed-drill-kit",
     "name": "Brushed Drill Kit",
-    "power_type": ["manual"],
+    "power_type": ["lithium"],
     "function_category": "drills"
   }
 ]
