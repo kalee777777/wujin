@@ -4,6 +4,6 @@
   "private": true,
   "scripts": {
     "build": "exit 0",
-    "deploy": "npx wrangler pages deploy . --project-name=holgenvy-website"
+    "deploy": "npx wrangler pages deploy . --project-name=wujin"
   }
 }
