@@ -1,19 +1,31 @@
-# 后端依赖
+# 后端
 backend/node_modules/
 backend/data/
 backend/*.db
 backend/*.db-*
 backend/package-lock.json
+backend/.env
+backend/.env.*
 
-# 管理后台依赖
+# 管理后台
 admin/node_modules/
 admin/package-lock.json
+admin/dist/
 
 # 环境变量
-backend/.env.production
+.env
+.env.*
+*.env
+
+# 构建产物
+dist/
+
+# 大型二进制文件
+*.pdf
+*.docx
+*.tar.gz
 
 # 部署包
-*.tar.gz
 deploy/
 
 # 日志
