@@ -312,9 +312,8 @@ function initInteractions() {
 
     // Apply reveal to major sections
     const revealSections = document.querySelectorAll(
-        '.shop-cats, .features-bar, .todays-deal, .featured-products, ' +
-        '.promo-banner, .cat-grid-section, .full-banner, .best-sellers, ' +
-        '.split-showcase, .service-icons, .recent-collections, .newsletter'
+        '.shop-cats, .features-bar, .featured-products, ' +
+        '.service-icons, .recent-collections, .newsletter'
     );
 
     revealSections.forEach(section => {
