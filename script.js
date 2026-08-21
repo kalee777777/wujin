@@ -258,7 +258,7 @@ function initInteractions() {
             }
 
             btn.innerHTML = '<span>Subscribed!</span>';
-            btn.style.background = '#22C55E';
+            btn.style.background = 'linear-gradient(135deg, #B3000E, #E60012, #FF3344)';
             input.value = '';
 
             setTimeout(() => {
@@ -490,7 +490,7 @@ function initInteractions() {
 
             if (added) {
                 btn.innerHTML = '<span>Added to List!</span>';
-                btn.style.background = '#22C55E';
+                btn.style.background = 'linear-gradient(135deg, #B3000E, #E60012, #FF3344)';
             } else {
                 btn.innerHTML = '<span>Already in List</span>';
                 btn.style.background = '#F59E0B';
@@ -959,7 +959,7 @@ function initInquiryPage() {
             await submitInquiryToBackend(formData, 'inquiry-page');
 
             submitBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Inquiry Sent!';
-            submitBtn.style.background = '#22C55E';
+            submitBtn.style.background = 'linear-gradient(135deg, #B3000E, #E60012, #FF3344)';
 
             // Clear inquiry list after successful submission
             clearInquiryList();
@@ -1007,7 +1007,7 @@ function initContactForm() {
             await submitInquiryToBackend(formData, 'contact-page');
 
             submitBtn.innerHTML = '<span>Inquiry Sent!</span>';
-            submitBtn.style.background = '#22C55E';
+            submitBtn.style.background = 'linear-gradient(135deg, #B3000E, #E60012, #FF3344)';
 
             setTimeout(() => {
                 submitBtn.innerHTML = originalHTML;
