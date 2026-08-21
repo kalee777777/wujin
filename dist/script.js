@@ -341,6 +341,21 @@ function initInteractions() {
     const searchBar = document.querySelector('#searchBar');
     let searchTimeout = null;
 
+    // 前端本地搜索：缓存产品数据
+    let cachedProducts = null;
+
+    async function loadProducts() {
+        if (cachedProducts) return cachedProducts;
+        try {
+            const resp = await fetch('products.json');
+            cachedProducts = await resp.json();
+        } catch (e) {
+            console.error('Failed to load products.json:', e);
+            cachedProducts = [];
+        }
+        return cachedProducts;
+    }
+
     async function performSearch(query) {
         if (!query || query.trim().length === 0) {
             if (searchResults) searchResults.classList.remove('active');
@@ -354,25 +369,30 @@ function initInteractions() {
         }
 
         try {
-            const apiBase = getApiBase();
-            const response = await fetch(`${apiBase}/products/public/search?q=${encodeURIComponent(query.trim())}&limit=8`);
-            const data = await response.json();
+            const products = await loadProducts();
+            const q = query.trim().toLowerCase();
+            const matched = products.filter(p => {
+                const name = (p.name || '').toLowerCase();
+                const cat = (p.category || '').toLowerCase();
+                const desc = (p.description || '').toLowerCase();
+                return name.includes(q) || cat.includes(q) || desc.includes(q);
+            }).slice(0, 8);
 
             if (searchResults) {
-                if (!data.success || !data.data.results || data.data.results.length === 0) {
+                if (matched.length === 0) {
                     searchResults.innerHTML = '<div class="search-no-result">No products found for "' + query.trim() + '"</div>';
                     return;
                 }
 
                 let html = '';
-                data.data.results.forEach(item => {
-                    const imgSrc = item.image
-                        ? (item.image.startsWith('http') ? item.image : '/product-images/' + item.image)
+                matched.forEach(item => {
+                    const imgSrc = (item.images && item.images[0])
+                        ? item.images[0]
                         : '';
                     const imgHtml = imgSrc
                         ? `<img class="search-result-img" src="${imgSrc}" alt="${item.name}" onerror="this.style.display='none'">`
                         : `<div class="search-result-img" style="display:flex;align-items:center;justify-content:center;color:var(--text-light-muted);font-size:0.7rem;">N/A</div>`;
-                    const categoryName = item.category_name || 'Uncategorized';
+                    const categoryName = item.category || 'Uncategorized';
 
                     html += `
                         <a class="search-result-item" href="product-detail.html?folder=${encodeURIComponent(item.folder)}">
@@ -385,8 +405,14 @@ function initInteractions() {
                 });
 
                 // 如果有更多结果，显示 "View All" 链接
-                if (data.data.total > data.data.results.length) {
-                    html += `<a class="search-view-all" href="products.html?search=${encodeURIComponent(query.trim())}">View All ${data.data.total} Results →</a>`;
+                const totalMatched = products.filter(p => {
+                    const name = (p.name || '').toLowerCase();
+                    const cat = (p.category || '').toLowerCase();
+                    const desc = (p.description || '').toLowerCase();
+                    return name.includes(q) || cat.includes(q) || desc.includes(q);
+                }).length;
+                if (totalMatched > matched.length) {
+                    html += `<a class="search-view-all" href="products.html?search=${encodeURIComponent(query.trim())}">View All ${totalMatched} Results →</a>`;
                 }
 
                 searchResults.innerHTML = html;
