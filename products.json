@@ -222,61 +222,6 @@
     ]
   },
   {
-    "folder": "screwdriver-set",
-    "name": "Screwdriver Tool Set",
-    "category": "Drills & Drivers",
-    "description": "Complete screwdriver tool set with multiple bits and ergonomic handle design for various fastening needs.",
-    "images": [
-      "product-images/screwdriver-set/screwdriver-set-1.jpg",
-      "product-images/screwdriver-set/screwdriver-set-2.jpg",
-      "product-images/screwdriver-set/screwdriver-set-3.jpg"
-    ],
-    "specs": {
-      "Voltage": "4V DC",
-      "Max Torque": "5 Nm",
-      "Speed": "250 RPM",
-      "Bits": "32 pcs",
-      "Weight": "0.6 kg"
-    },
-    "applications": [
-      {
-        "title": "Metal Drilling",
-        "description": "Precision drilling in metal materials."
-      },
-      {
-        "title": "Wood Working",
-        "description": "Efficient drilling and screwdriving in wood."
-      },
-      {
-        "title": "Construction",
-        "description": "General construction and renovation tasks."
-      },
-      {
-        "title": "DIY Projects",
-        "description": "Home improvement and hobby applications."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "manual"
-    ]
-  },
-  {
     "folder": "high-torque-wrench",
     "name": "High Torque Lithium Wrench",
     "category": "Wrenches & Impact Tools",
@@ -1326,7 +1271,7 @@
     ],
     "specs": {
       "Power": "300W",
-      "Temperature": "0-450°C",
+      "Temperature": "0-450\u00b0C",
       "Voltage": "220V AC",
       "Application": "Plastic welding",
       "Weight": "1.5 kg"
@@ -1428,7 +1373,7 @@
       "product-images/welding-gun/welding-gun-4.jpg"
     ],
     "specs": {
-      "Temperature": "0-500°C",
+      "Temperature": "0-500\u00b0C",
       "Airflow": "150 L/min",
       "Power": "2000W",
       "Voltage": "220V AC",
@@ -1480,7 +1425,7 @@
       "product-images/heat-gun/heat-gun-5.png"
     ],
     "specs": {
-      "Temperature": "50-650°C",
+      "Temperature": "50-650\u00b0C",
       "Airflow": "300-600 L/min",
       "Power": "2000W",
       "Voltage": "220V AC",
@@ -1996,7 +1941,7 @@
       "product-images/glue-gun/glue-gun-main.jpg"
     ],
     "specs": {
-      "Temperature": "150°C",
+      "Temperature": "150\u00b0C",
       "Glue Stick": "7mm",
       "Power": "40W",
       "Voltage": "220V AC",
@@ -2153,7 +2098,7 @@
       "product-images/laser-level/laser-level-5.jpg"
     ],
     "specs": {
-      "Accuracy": "±2mm/10m",
+      "Accuracy": "\u00b12mm/10m",
       "Range": "30m",
       "Laser Class": "Class II",
       "Power": "AA batteries",
@@ -2205,7 +2150,7 @@
     ],
     "specs": {
       "Measuring Range": "0-40m",
-      "Accuracy": "±1.5mm",
+      "Accuracy": "\u00b11.5mm",
       "Display": "LCD backlit",
       "Power": "AAA batteries",
       "Weight": "0.3 kg"
@@ -2718,7 +2663,7 @@
       "product-images/wire-stripper/wire-stripper-3.png"
     ],
     "specs": {
-      "Wire Range": "0.5-6mm²",
+      "Wire Range": "0.5-6mm\u00b2",
       "Material": "Carbon Steel",
       "Handle": "Ergonomic Anti-slip",
       "Length": "180mm",
@@ -3179,7 +3124,7 @@
     "specs": {
       "Power": "1200W",
       "Voltage": "220V AC",
-      "Temperature Range": "0-300°C",
+      "Temperature Range": "0-300\u00b0C",
       "Pipe Size": "20-63mm",
       "Weight": "2.5 kg"
     },
@@ -3231,7 +3176,7 @@
       "Power": "500W",
       "Voltage": "220V AC",
       "Vibration Frequency": "36000 RPM",
-      "Suction Cup": "Ø115mm",
+      "Suction Cup": "\u00d8115mm",
       "Weight": "1.8 kg"
     },
     "applications": [
@@ -3434,7 +3379,7 @@
     "specs": {
       "Power": "2200W",
       "Voltage": "220V AC",
-      "Cutting Range": "Ø6-32mm",
+      "Cutting Range": "\u00d86-32mm",
       "Cutting Speed": "2-3 sec",
       "Weight": "15 kg"
     },
@@ -3536,7 +3481,7 @@
     "specs": {
       "Voltage": "20V DC",
       "Battery": "2.0Ah Li-ion",
-      "Rivet Range": "Ø3.2-6.4mm",
+      "Rivet Range": "\u00d83.2-6.4mm",
       "Pulling Force": "10 kN",
       "Weight": "1.5 kg"
     },
@@ -3674,57 +3619,6 @@
     ],
     "power_type": [
       "ac"
-    ]
-  },
-  {
-    "folder": "screwdriver-tool-set",
-    "name": "Screwdriver Tool Set",
-    "category": "Tool Kits & Accessories",
-    "description": "Comprehensive screwdriver set with multiple bit types and sizes for various fastening applications. Magnetic tips for easy screw handling.",
-    "images": [
-      "product-images/screwdriver-tool-set/screwdriver-tool-set-1.jpg",
-      "product-images/screwdriver-tool-set/screwdriver-tool-set-2.jpg",
-      "product-images/screwdriver-tool-set/screwdriver-tool-set-3.jpg"
-    ],
-    "specs": {
-      "Pieces": "Multi pcs",
-      "Material": "S2 Steel Bits",
-      "Handle": "Ergonomic TPR",
-      "Case": "Blow-molded",
-      "Weight": "1.2 kg"
-    },
-    "applications": [
-      {
-        "title": "Electronics Repair",
-        "description": "Precision screwdriving for electronics."
-      },
-      {
-        "title": "Furniture Assembly",
-        "description": "Assembling flat-pack furniture."
-      },
-      {
-        "title": "General Fastening",
-        "description": "Various screwdriving and fastening tasks."
-      }
-    ],
-    "certifications": [
-      "CE",
-      "ISO 9001"
-    ],
-    "downloads": [
-      {
-        "name": "Product Catalog",
-        "type": "PDF",
-        "description": "Complete specifications and features"
-      },
-      {
-        "name": "User Manual",
-        "type": "PDF",
-        "description": "Operating instructions"
-      }
-    ],
-    "power_type": [
-      "manual"
     ]
   },
   {

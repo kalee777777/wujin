@@ -2,445 +2,578 @@
   {
     "folder": "brushless-drill",
     "name": "36V MAX Lithium Cordless Drill",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "drills"
   },
   {
     "folder": "brushless-impact-drill",
     "name": "BL Series Brushless Impact Drill",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "drills"
   },
   {
     "folder": "brushed-drill",
     "name": "Brushed Impact Drill",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "drills"
   },
   {
     "folder": "impact-drill-set",
     "name": "Multifunction Impact Drill Set",
-    "power_type": ["lithium"],
-    "function_category": "drills"
-  },
-  {
-    "folder": "screwdriver-set",
-    "name": "Screwdriver Tool Set",
-    "power_type": ["manual"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "drills"
   },
   {
     "folder": "high-torque-wrench",
     "name": "High Torque Lithium Wrench",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "wrenches"
   },
   {
     "folder": "cordless-impact-wrench",
     "name": "Cordless Impact Wrench",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "wrenches"
   },
   {
     "folder": "ratchet-wrench",
     "name": "Professional Ratchet Wrench Set",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "wrenches"
   },
   {
     "folder": "cordless-angle-grinder",
     "name": "125mm Cordless Angle Grinder",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "wired-angle-grinder",
     "name": "Wired Electric Angle Grinder",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "angle-grinder",
     "name": "Professional Angle Grinder",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "wired-sander",
     "name": "Wired Electric Sander",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "lithium-sander",
     "name": "Lithium Cordless Sander",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "wall-sander",
     "name": "Electric Wall Sanding Machine",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "grooving-tool",
     "name": "Electric Concrete Grooving Tool",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "rotary-hammer",
     "name": "26mm Rotary Hammer Drill Kit",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "saws"
   },
   {
     "folder": "hammer-drill",
     "name": "Electric Hammer Drill",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "saws"
   },
   {
     "folder": "demolition-hammer",
     "name": "Heavy Duty Demolition Hammer",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "saws"
   },
   {
     "folder": "electric-saw",
     "name": "Multi-Purpose Electric Saw",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "saws"
   },
   {
     "folder": "cordless-chainsaw",
     "name": "Cordless Chainsaw",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "saws"
   },
   {
     "folder": "gasoline-chainsaw",
     "name": "Gasoline-Powered Chainsaw",
-    "power_type": ["gas"],
+    "power_type": [
+      "gas"
+    ],
     "function_category": "saws"
   },
   {
     "folder": "mini-chainsaw",
     "name": "Mini Cordless Chainsaw",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "saws"
   },
   {
     "folder": "reciprocating-saw",
     "name": "Lithium Reciprocating Saw",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "saws"
   },
   {
     "folder": "nail-gun",
     "name": "Electric Nail Gun",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "garden"
   },
   {
     "folder": "rebar-tying-gun",
     "name": "Rebar Tying Gun",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "saws"
   },
   {
     "folder": "bonding-machine",
     "name": "Portable Bonding Machine",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "welding"
   },
   {
     "folder": "welding-machine",
     "name": "Electric Welding Machine",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "welding"
   },
   {
     "folder": "welding-gun",
     "name": "Professional Welding Gun",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "welding"
   },
   {
     "folder": "heat-gun",
     "name": "Variable Temperature Heat Gun",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "welding"
   },
   {
     "folder": "field-mower",
     "name": "Field Mower",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "garden"
   },
   {
     "folder": "backpack-mower",
     "name": "Backpack Lawn Mower",
-    "power_type": ["gas"],
+    "power_type": [
+      "gas"
+    ],
     "function_category": "garden"
   },
   {
     "folder": "leaf-blower",
     "name": "Cordless Electric Leaf Blower",
-    "power_type": ["gas"],
+    "power_type": [
+      "gas"
+    ],
     "function_category": "garden"
   },
   {
     "folder": "pruning-shears",
     "name": "Pruning Shears",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "garden"
   },
   {
     "folder": "generator",
     "name": "Portable Gasoline Generator",
-    "power_type": ["gas"],
+    "power_type": [
+      "gas"
+    ],
     "function_category": "garden"
   },
   {
     "folder": "concrete-mixer",
     "name": "Electric Concrete Mixer",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "garden"
   },
   {
     "folder": "tool-sets",
     "name": "50-Piece Professional Combo Kit",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "electric-tool-kit",
     "name": "Industrial Heavy-Duty Tool Set",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "hand-tools",
     "name": "Professional Hand Tools Set",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "glue-gun",
     "name": "Heavy-Duty Glue Gun",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "welding"
   },
   {
     "folder": "wood-planer",
     "name": "Electric Wood Planer",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "sewing-machine",
     "name": "Electric Sewing Machine",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "garden"
   },
   {
     "folder": "laser-level",
     "name": "Self-Leveling Laser Level",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "measuring"
   },
   {
     "folder": "surveying-tools",
     "name": "Surveying Tools Set",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "measuring"
   },
   {
     "folder": "spray-gun",
     "name": "Professional HVLP Spray Gun",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "measuring"
   },
   {
     "folder": "cleaning-gun",
     "name": "Lithium Cleaning Gun",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "measuring"
   },
   {
     "folder": "hand-tool-set-16pcs",
     "name": "16-Piece Hand Tool Set",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "home-hand-tool-set",
     "name": "Home Hand Tool Set",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "hand-tool-box-set",
     "name": "Hand Tool Box Set",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "lithium-angle-grinder",
     "name": "Lithium Angle Grinder",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "2-piece-tool-set",
     "name": "2-Piece Tool Set",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "wrenches"
   },
   {
     "folder": "drill-wrench-2in1-kit",
     "name": "Drill & Wrench 2-in-1 Kit",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "drills"
   },
   {
     "folder": "edge-trimmer",
     "name": "Cordless Edge Trimmer",
-    "power_type": ["lithium", "ac"],
+    "power_type": [
+      "lithium",
+      "ac"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "wire-stripper",
     "name": "Wire Stripper",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "measuring-tape",
     "name": "Measuring Tape",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "measuring"
   },
   {
     "folder": "socket-wrench-set",
     "name": "Socket Wrench Set",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "caulking-gun",
     "name": "Caulking Gun",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "slotting-cutter",
     "name": "Slotting Cutter",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "cordless-vacuum",
     "name": "Cordless Vacuum Cleaner",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "measuring"
   },
   {
     "folder": "woodworking-tool-set",
     "name": "Woodworking Tool Set",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "concrete-cutter",
     "name": "Concrete Cutter",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "concrete-surface-finisher",
     "name": "Concrete Surface Finisher",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "plastic-pipe-welder",
     "name": "Plastic Pipe Welder",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "welding"
   },
   {
     "folder": "tile-leveling-machine",
     "name": "Tile Leveling Machine",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "measuring"
   },
   {
     "folder": "electric-grease-gun",
     "name": "Electric Grease Gun",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "insulated-screwdriver",
     "name": "Insulated Screwdriver",
-    "power_type": ["manual"],
+    "power_type": [
+      "manual"
+    ],
     "function_category": "kits"
   },
   {
     "folder": "hedge-trimmer",
     "name": "Cordless Hedge Trimmer",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "garden"
   },
   {
     "folder": "rebar-cutter",
     "name": "Rebar Cutter",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "saws"
   },
   {
     "folder": "aluminum-sheet-cutter",
     "name": "Aluminum Sheet Cutter",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "cordless-rivet-gun",
     "name": "Cordless Rivet Gun",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "wrenches"
   },
   {
     "folder": "snow-blower",
     "name": "Gas Snow Blower",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "garden"
   },
   {
     "folder": "rotary-hammer-pro",
     "name": "Rotary Hammer Pro",
-    "power_type": ["ac"],
+    "power_type": [
+      "ac"
+    ],
     "function_category": "saws"
-  },
-  {
-    "folder": "screwdriver-tool-set",
-    "name": "Screwdriver Tool Set",
-    "power_type": ["manual"],
-    "function_category": "kits"
   },
   {
     "folder": "electric-shears",
     "name": "Electric Shears",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "grinding"
   },
   {
     "folder": "brushed-drill-kit",
     "name": "Brushed Drill Kit",
-    "power_type": ["lithium"],
+    "power_type": [
+      "lithium"
+    ],
     "function_category": "drills"
   }
 ]
