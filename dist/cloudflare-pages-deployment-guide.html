@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudflare Pages Deployment Guide</title>
+    <style>
+        :root {
+            --primary: #f38020;
+            --primary-light: #fff0e0;
+            --bg: #fafafa;
+            --card: #ffffff;
+            --text: #1a1a2e;
+            --text-secondary: #555;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 0;
+        }
+        .header {
+            background: linear-gradient(135deg, #f38020 0%, #ff6b00 100%);
+            color: white;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .header h1 { font-size: 2.2rem; margin-bottom: 8px; }
+        .header p { font-size: 1.1rem; opacity: 0.9; }
+        .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 28px;
+            margin-bottom: 24px;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .step-header h2 { font-size: 1.2rem; }
+        .card ul, .card ol { padding-left: 20px; margin: 12px 0; }
+        .card li { margin-bottom: 8px; }
+        .card p { margin-bottom: 12px; }
+        code {
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-family: 'SF Mono', 'Fira Code', monospace;
+        }
+        .code-block {
+            background: #1a1a2e;
+            color: #e2e8f0;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            margin: 12px 0;
+            line-height: 1.5;
+        }
+        .note {
+            background: #fef3c7;
+            border-left: 4px solid var(--warning);
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+        }
+        .tip {
+            background: #d1fae5;
+            border-left: 4px solid var(--success);
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 12px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 10px 14px;
+            text-align: left;
+        }
+        th { background: #f8fafc; font-weight: 600; }
+        .badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .badge-ok { background: #d1fae5; color: #065f46; }
+        .badge-warn { background: #fef3c7; color: #92400e; }
+        .screenshot-placeholder {
+            background: #f1f5f9;
+            border: 2px dashed var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            margin: 12px 0;
+            font-size: 0.9rem;
+        }
+        hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+        @media (max-width: 640px) {
+            .header h1 { font-size: 1.5rem; }
+            .container { padding: 16px 12px; }
+            .card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>☁️ Cloudflare Pages Deployment Guide</h1>
+    <p>Deploy your static website in ~15 minutes — no credit card, no server, no ICP filing required</p>
+</div>
+
+<div class="container">
+
+    <!-- Overview -->
+    <div class="card" style="background: linear-gradient(135deg, #fff0e0 0%, #ffe4cc 100%); border-color: #fed7aa;">
+        <h2 style="margin-bottom: 8px;">What You'll Get</h2>
+        <p style="margin-bottom: 0;">
+            ✅ Global CDN · ✅ Automatic HTTPS · ✅ Custom domain · ✅ Free tier (unlimited bandwidth)<br>
+            Your domain <strong>holgenvy.com</strong> — images, CSS, JS all load normally in the browser.
+        </p>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="card">
+        <div class="step-header">
+            <span class="step-number">1</span>
+            <h2>Create a Cloudflare Account</h2>
+        </div>
+        <ol>
+            <li>Go to <a href="https://dash.cloudflare.com/sign-up" target="_blank">dash.cloudflare.com/sign-up</a></li>
+            <li>Sign up with your email (free plan is sufficient)</li>
+            <li>Verify your email address</li>
+        </ol>
+        <div class="tip">
+            💡 No credit card required. The Free plan includes unlimited websites, unlimited bandwidth, and automatic SSL.
+        </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="card">
+        <div class="step-header">
+            <span class="step-number">2</span>
+            <h2>Add Your Domain to Cloudflare</h2>
+        </div>
+        <ol>
+            <li>After logging in, click <strong>"Add a Site"</strong> (blue button)</li>
+            <li>Enter <code>holgenvy.com</code> and click <strong>"Add Site"</strong></li>
+            <li>Select the <strong>Free plan</strong> and click <strong>"Continue"</strong></li>
+            <li>Cloudflare will scan your existing DNS records — they will appear automatically</li>
+            <li>Click <strong>"Continue"</strong> to proceed</li>
+        </ol>
+        <div class="screenshot-placeholder">
+            📋 The scanned DNS records will be listed here (e.g. A records for your current IP).<br>
+            Keep them as-is unless you know what you're changing.
+        </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="card">
+        <div class="step-header">
+            <span class="step-number">3</span>
+            <h2>Change Nameservers at Your Domain Registrar</h2>
+        </div>
+        <p>Cloudflare will show you two nameserver addresses, for example:</p>
+        <div class="code-block">dahlia.ns.cloudflare.com<br>rory.ns.cloudflare.com</div>
+        <ol>
+            <li><strong>Your domain is registered at Alibaba Cloud (万网/阿里云)</strong></li>
+            <li>Log in to <a href="https://dc.console.aliyun.com/" target="_blank">Alibaba Cloud Domain Console</a></li>
+            <li>Find <code>holgenvy.com</code> → click <strong>"Manage"</strong> (管理)</li>
+            <li>Click <strong>"Change DNS Servers"</strong> (修改DNS)</li>
+            <li>Select <strong>"Custom DNS"</strong> (自定义DNS)</li>
+            <li>Enter the two Cloudflare nameservers you got above</li>
+            <li>Click <strong>"Confirm"</strong> (确认)</li>
+        </ol>
+        <div class="note">
+            ⚠️ DNS changes take <strong>a few minutes to 24 hours</strong> to propagate worldwide. Cloudflare will email you when it's active. You can proceed to Step 4 while waiting — it won't affect setup.
+        </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="card">
+        <div class="step-header">
+            <span class="step-number">4</span>
+            <h2>Deploy Your Site to Cloudflare Pages</h2>
+        </div>
+
+        <h3 style="margin-top: 0; margin-bottom: 12px;">Option A: Connect a Git Repository (Recommended)</h3>
+        <ol>
+            <li>In Cloudflare Dashboard, go to <strong>Workers & Pages</strong> → <strong>Pages</strong> (left sidebar)</li>
+            <li>Click <strong>"Create a project"</strong> → <strong>"Connect to Git"</strong></li>
+            <li>Authorize Cloudflare with your <strong>GitHub</strong> or <strong>GitLab</strong> account</li>
+            <li>Select the repository containing your website files</li>
+            <li>Under <strong>"Build settings"</strong>:
+                <ul>
+                    <li><strong>Project name:</strong> <code>holgenvy</code> (or any name)</li>
+                    <li><strong>Production branch:</strong> <code>main</code> (or <code>master</code>)</li>
+                    <li><strong>Build command:</strong> leave blank (for static HTML sites)</li>
+                    <li><strong>Build output directory:</strong> leave blank (or <code>/</code> if your files are in root)</li>
+                </ul>
+            </li>
+            <li>Click <strong>"Save and Deploy"</strong></li>
+        </ol>
+        <p style="margin: 12px 0;">⏳ Wait ~30 seconds — Cloudflare will clone your repo and deploy it.</p>
+
+        <hr>
+
+        <h3>Option B: Upload Files Directly</h3>
+        <ol>
+            <li>In Cloudflare Dashboard, go to <strong>Workers & Pages</strong> → <strong>Pages</strong></li>
+            <li>Click <strong>"Create a project"</strong> → <strong>"Direct Upload"</strong></li>
+            <li>Drag & drop your entire website folder (<code>.html</code>, <code>.css</code>, <code>.js</code>, images, etc.)</li>
+            <li>Click <strong>"Deploy"</strong></li>
+        </ol>
+        <div class="tip">
+            💡 Option B is great for one-time deployments. For ongoing updates, use Option A (Git) — every push to your repo triggers an automatic redeploy.
+        </div>
+
+        <div class="screenshot-placeholder">
+            📸 After deployment, you'll see a success page with a <code>*.pages.dev</code> URL (e.g. <code>holgenvy.pages.dev</code>).<br>
+            Your site is already live at that URL — test it before adding your custom domain.
+        </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="card">
+        <div class="step-header">
+            <span class="step-number">5</span>
+            <h2>Bind Your Custom Domain</h2>
+        </div>
+        <ol>
+            <li>In your Pages project page, click the <strong>"Custom domains"</strong> tab</li>
+            <li>Click <strong>"Set up a custom domain"</strong> (or "Add custom domain")</li>
+            <li>Enter <code>holgenvy.com</code> and click <strong>"Continue"</strong></li>
+            <li>Cloudflare will automatically add the required DNS records</li>
+            <li>Wait a moment for SSL provisioning (green lock appears automatically)</li>
+            <li>Optionally add <code>www.holgenvy.com</code> the same way</li>
+        </ol>
+        <div class="note">
+            ⚠️ Make sure the proxied cloud (☁️ orange) is enabled on the DNS record — this ensures HTTPS works and Cloudflare's CDN is active.
+        </div>
+    </div>
+
+    <!-- Step 6 -->
+    <div class="card">
+        <div class="step-header">
+            <span class="step-number">6</span>
+            <h2>Verify Everything Works</h2>
+        </div>
+        <ol>
+            <li>Open your browser and visit <code>https://holgenvy.com</code></li>
+            <li>Check that all pages load correctly</li>
+            <li>Check that <strong>images</strong> display normally (right-click → "Open image in new tab" should show the image directly)</li>
+            <li>If something is broken, check the <strong>"Deployments"</strong> tab in Cloudflare Pages for any build errors</li>
+            <li>Use browser DevTools (F12) → <strong>Network</strong> tab to see if any resources fail</li>
+        </ol>
+        <div class="tip">
+            💡 SSL certificate is issued automatically by Cloudflare. It usually takes about 30-60 seconds after binding the domain.
+        </div>
+    </div>
+
+    <!-- Summary Table -->
+    <div class="card">
+        <h2 style="margin-bottom: 16px;">Quick Reference</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Step</th>
+                    <th>What to Do</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Create Cloudflare account</td>
+                    <td><span class="badge badge-ok">2 min</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Add <code>holgenvy.com</code> to Cloudflare</td>
+                    <td><span class="badge badge-ok">3 min</span></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Change nameservers at Alibaba Cloud</td>
+                    <td><span class="badge badge-ok">5 min</span></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Deploy site to Cloudflare Pages</td>
+                    <td><span class="badge badge-ok">3 min</span></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Bind custom domain</td>
+                    <td><span class="badge badge-ok">2 min</span></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Verify & test</td>
+                    <td><span class="badge badge-ok">2 min</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><strong>Total</strong></td>
+                    <td><span class="badge badge-ok"><strong>~15 min</strong></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card">
+        <h2 style="margin-bottom: 16px;">FAQ</h2>
+
+        <h3 style="font-size: 1rem; margin-bottom: 4px;">Do I need ICP filing (备案)?</h3>
+        <p>No. Cloudflare Pages is a global service — <strong>no ICP filing is required</strong>.</p>
+
+        <h3 style="font-size: 1rem; margin-bottom: 4px; margin-top: 16px;">Will images load normally?</h3>
+        <p>Yes. Cloudflare does not add <code>Content-Disposition: attachment</code> headers like Alibaba Cloud's default domain does. Images, CSS, and JavaScript will all work as expected.</p>
+
+        <h3 style="font-size: 1rem; margin-bottom: 4px; margin-top: 16px;">What about page speed in China?</h3>
+        <p>Cloudflare's free plan routes traffic through overseas nodes. Speed is generally acceptable for content sites, but not as fast as a domestic CDN. If performance becomes critical later, you can add a China-based CDN after filing.</p>
+
+        <h3 style="font-size: 1rem; margin-bottom: 4px; margin-top: 16px;">Can I still use uniCloud as a backend?</h3>
+        <p>Yes. Keep your uniCloud cloud functions as <strong>API endpoints</strong> (accessed via the default domain or a CNAME), and use Cloudflare Pages to serve the frontend (HTML + CSS + JS + images). They work independently of each other.</p>
+
+        <h3 style="font-size: 1rem; margin-bottom: 4px; margin-top: 16px;">What if I change my code later?</h3>
+        <p>If using Git: just push your changes and Cloudflare redeploys automatically (usually within 1 minute). If using Direct Upload: simply upload the new files.</p>
+    </div>
+
+    <div style="text-align: center; color: var(--text-secondary); font-size: 0.85rem; padding: 24px 0;">
+        Generated for holgenvy.com · Cloudflare Pages Deployment Guide
+    </div>
+
+</div>
+
+</body>
+</html>
