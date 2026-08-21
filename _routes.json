@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "include": ["/*"],
+  "exclude": ["/admin/assets/*", "/product-images/*", "/assets/*", "/*.html", "/*.css", "/*.js"],
+  "routes": [
+    {
+      "pattern": "/admin/*",
+      "page": "/admin/dist/index.html"
+    }
+  ]
+}

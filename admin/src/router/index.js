@@ -78,8 +78,9 @@ const routes = [
   }
 ];
 
+const base = import.meta.env.DEV ? '/' : '/admin/';
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(base),
   routes
 });
 
