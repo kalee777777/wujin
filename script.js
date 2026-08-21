@@ -147,11 +147,8 @@ function initInteractions() {
         });
     }
 
-    // === PRODUCT TABS (Bottom Featured Products) ===
-    initHomeTabs('.featured-products:not(.featured-products-top)', 'data-tab', 'products.html');
-
-    // === PRODUCT TABS TOP (Industry Categories) ===
-    initHomeTabs('.featured-products-top', 'data-tab-top', 'industry.html');
+    // === PRODUCT TABS TOP (Industry Products) ===
+    initHomeTabs('.featured-products-top', 'data-tab-top', 'products.html');
 
     function initHomeTabs(containerSelector, dataAttr, targetPage) {
         const container = document.querySelector(containerSelector);
@@ -312,7 +309,8 @@ function initInteractions() {
 
     // Apply reveal to major sections
     const revealSections = document.querySelectorAll(
-        '.shop-cats, .features-bar, .featured-products, ' +
+        '.shop-cats, .features-bar, ' +
+        '.featured-products-top, ' +
         '.service-icons, .recent-collections, .newsletter'
     );
 
