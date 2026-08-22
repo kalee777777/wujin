@@ -87,14 +87,17 @@ function generatePostHtml(post) {
     <!-- ========== HERO ========== -->
     <section class="blog-hero">
         <div class="blog-hero-bg">
-            <div class="img-placeholder hero-img-placeholder">
+            ${post.cover_image
+              ? `<img src="${post.cover_image}" alt="${post.title}" style="width:100%;height:100%;object-fit:cover;">`
+              : `<div class="img-placeholder hero-img-placeholder">
                 <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                     <circle cx="8.5" cy="8.5" r="1.5"/>
                     <polyline points="21 15 16 10 5 21"/>
                 </svg>
                 <span>Featured Image Placeholder</span>
-            </div>
+            </div>`
+            }
         </div>
         <div class="blog-hero-overlay"></div>
     </section>
@@ -214,9 +217,12 @@ function generateBlogCard(post, filename) {
   const categoryLabel = CATEGORY_LABELS[post.category] || post.category;
   const dateFormatted = formatDate(post.published_at || post.created_at);
   const summary = post.summary || stripHtml(post.content || '').substring(0, 150);
+  const coverImg = post.cover_image
+    ? `<img src="${post.cover_image}" alt="${post.title}" loading="lazy">`
+    : `<div class="img-placeholder"><span>Blog Image</span></div>`;
   return `                <a href="${filename}" class="blog-card">
                     <div class="blog-img">
-                        <div class="img-placeholder"><span>Blog Image</span></div>
+                        ${coverImg}
                     </div>
                     <div class="blog-info">
                         <div class="blog-meta-top">
@@ -294,9 +300,12 @@ function generateResourcesLatestBlog(posts) {
     const categoryLabel = CATEGORY_LABELS[post.category] || post.category;
     const dateFormatted = formatDate(post.published_at || post.created_at);
     const summary = post.summary || stripHtml(post.content || '').substring(0, 150);
+    const coverImg = post.cover_image
+      ? `<img src="${post.cover_image}" alt="${post.title}" loading="lazy">`
+      : `<div class="img-placeholder"><span>Blog Image</span></div>`;
     return `                    <a href="${filename}" class="blog-card">
                         <div class="blog-img">
-                            <div class="img-placeholder"><span>Blog Image</span></div>
+                            ${coverImg}
                         </div>
                         <div class="blog-info">
                             <div class="blog-meta-top">
@@ -310,7 +319,8 @@ function generateResourcesLatestBlog(posts) {
                     </a>`;
   }).join('\n');
 
-  return `                <div class="section-title-with-more">
+  return `                <!-- BEGIN_BLOG_SECTION -->
+                <div class="section-title-with-more">
                     <h2 class="resources-section-title">Latest <span class="neon">Blog</span></h2>
                     <a href="blog.html" class="view-more-link">
                         View More
@@ -321,7 +331,8 @@ function generateResourcesLatestBlog(posts) {
                 </div>
                 <div class="blog-grid">
 ${cards}
-                </div>`;
+                </div>
+                <!-- END_BLOG_SECTION -->`;
 }
 
 // 更新 resources.html 中的 Latest Blog 部分
@@ -335,25 +346,48 @@ function updateResourcesHtml(posts) {
   let content = fs.readFileSync(resourcesPath, 'utf-8');
   const newBlogSection = generateResourcesLatestBlog(posts);
 
-  // 替换 Latest Blog 部分（从 section-title-with-more 或 resources-section-title + blog-grid 到 </div> 前）
-  const regex = /(<div class="section-title-with-more">[\s\S]*?<div class="blog-grid">[\s\S]*?<\/div>\s*<\/div>)/;
-  const match = content.match(regex);
-  
-  if (match) {
-    content = content.replace(match[1], newBlogSection);
-  } else {
-    // 尝试匹配旧的格式（无 view-more）
-    const oldRegex = /(<h2 class="resources-section-title">Latest[\s\S]*?<div class="blog-grid">[\s\S]*?<\/div>\s*<\/div>)/;
-    const oldMatch = content.match(oldRegex);
-    if (oldMatch) {
-      content = content.replace(oldMatch[1], newBlogSection);
-    }
+  // 方式1：使用 HTML 注释标记精确匹配（推荐）
+  const markerRegex = /<!-- BEGIN_BLOG_SECTION -->[\s\S]*?<!-- END_BLOG_SECTION -->/;
+  if (markerRegex.test(content)) {
+    content = content.replace(markerRegex, newBlogSection);
+    fs.writeFileSync(resourcesPath, content, 'utf-8');
+    return;
+  }
+
+  // 方式2：回退到旧逻辑（兼容首次 sync 无标记的情况）
+  // 匹配从 <div class="resources-section" id="blog"> 到 Sourcing Events 注释之间的所有内容
+  const sectionRegex = /(<div class="resources-section" id="blog">)[\s\S]*?(<!--\s*Sourcing\s*Events\s*-->)/;
+  const sectionMatch = content.match(sectionRegex);
+  if (sectionMatch) {
+    // 注意：newBlogSection 内容结束后需要关闭 resources-section div
+    content = content.replace(sectionMatch[0], sectionMatch[1] + '\n' + newBlogSection + '\n            </div>\n\n            ' + sectionMatch[2]);
   }
 
   fs.writeFileSync(resourcesPath, content, 'utf-8');
 }
 
 // ========== API 路由 ==========
+
+// 同步前端辅助函数
+function syncFrontend() {
+  const stmt = db.prepare('SELECT id, title, slug, category, summary, cover_image, author, read_time, content, published_at, created_at FROM posts WHERE status = 1 ORDER BY published_at DESC');
+  const allPosts = stmt.all();
+
+  // 1. 重新生成所有帖子详情页
+  for (const post of allPosts) {
+    const { filename, html } = generatePostHtml(post);
+    const detailPath = path.join(FRONTEND_DIR, filename);
+    fs.writeFileSync(detailPath, html, 'utf-8');
+  }
+
+  // 2. 更新 blog.html
+  const blogHtml = generateBlogHtml(allPosts);
+  const blogPath = path.join(FRONTEND_DIR, 'blog.html');
+  fs.writeFileSync(blogPath, blogHtml, 'utf-8');
+
+  // 3. 更新 resources.html
+  updateResourcesHtml(allPosts);
+}
 
 // 获取帖子列表（未登录也可访问部分接口）
 router.get('/', (req, res) => {
@@ -510,13 +544,13 @@ router.post('/publish', authMiddleware, (req, res) => {
     const postId = result.lastInsertRowid;
     
     // 2. 生成帖子详情页
-    const post = { id: postId, title, slug: postSlug, category: postCategory, content, summary: postSummary, author: postAuthor, read_time: postReadTime, published_at: publishedAt, created_at: publishedAt };
+    const post = { id: postId, title, slug: postSlug, category: postCategory, cover_image: cover_image || null, content, summary: postSummary, author: postAuthor, read_time: postReadTime, published_at: publishedAt, created_at: publishedAt };
     const { filename, html } = generatePostHtml(post);
     const detailPath = path.join(FRONTEND_DIR, filename);
     fs.writeFileSync(detailPath, html, 'utf-8');
     
     // 3. 获取所有已发布帖子
-    const allStmt = db.prepare('SELECT id, title, slug, category, summary, author, read_time, content, published_at, created_at FROM posts WHERE status = 1 ORDER BY published_at DESC');
+    const allStmt = db.prepare('SELECT id, title, slug, category, summary, cover_image, author, read_time, content, published_at, created_at FROM posts WHERE status = 1 ORDER BY published_at DESC');
     const allPosts = allStmt.all();
     
     // 4. 更新 blog.html
@@ -594,7 +628,7 @@ router.put('/:id', authMiddleware, (req, res) => {
 router.post('/sync-frontend', authMiddleware, (req, res) => {
   try {
     // 获取所有已发布帖子
-    const stmt = db.prepare('SELECT id, title, slug, category, summary, author, read_time, content, published_at, created_at FROM posts WHERE status = 1 ORDER BY published_at DESC');
+    const stmt = db.prepare('SELECT id, title, slug, category, summary, cover_image, author, read_time, content, published_at, created_at FROM posts WHERE status = 1 ORDER BY published_at DESC');
     const allPosts = stmt.all();
     
     if (allPosts.length === 0) {
@@ -633,13 +667,23 @@ router.post('/sync-frontend', authMiddleware, (req, res) => {
 // 删除帖子
 router.delete('/:id', authMiddleware, (req, res) => {
   try {
-    const checkStmt = db.prepare('SELECT id FROM posts WHERE id = ?');
+    const checkStmt = db.prepare('SELECT id, slug FROM posts WHERE id = ?');
     const existing = checkStmt.get(req.params.id);
     
     if (!existing) return res.status(404).json({ error: '帖子不存在' });
     
     const deleteStmt = db.prepare('DELETE FROM posts WHERE id = ?');
     deleteStmt.run(req.params.id);
+    
+    // 删除对应的静态HTML文件
+    const slug = existing.slug || 'post-' + req.params.id;
+    const detailPath = path.join(FRONTEND_DIR, `blog-post-${slug}.html`);
+    if (fs.existsSync(detailPath)) {
+      fs.unlinkSync(detailPath);
+    }
+    
+    // 同步前端（重新生成 blog.html 和 resources.html）
+    syncFrontend();
     
     res.json({ success: true, message: '帖子删除成功' });
   } catch (error) {
@@ -657,6 +701,10 @@ router.post('/batch-delete', authMiddleware, (req, res) => {
       return res.status(400).json({ error: '请提供要删除的帖子 ID 列表' });
     }
     
+    // 先获取要删除的帖子slug，用于删除静态文件
+    const placeholders = ids.map(() => '?').join(',');
+    const slugs = db.prepare(`SELECT slug FROM posts WHERE id IN (${placeholders})`).all(...ids);
+    
     const deleteStmt = db.prepare('DELETE FROM posts WHERE id = ?');
     
     const deleteMany = db.transaction((postIds) => {
@@ -666,6 +714,17 @@ router.post('/batch-delete', authMiddleware, (req, res) => {
     });
     
     deleteMany(ids);
+    
+    // 删除对应的静态HTML文件
+    for (const { slug } of slugs) {
+      const detailPath = path.join(FRONTEND_DIR, `blog-post-${slug}.html`);
+      if (fs.existsSync(detailPath)) {
+        fs.unlinkSync(detailPath);
+      }
+    }
+    
+    // 同步前端（重新生成 blog.html 和 resources.html）
+    syncFrontend();
     
     res.json({ success: true, message: `成功删除 ${ids.length} 个帖子` });
   } catch (error) {
