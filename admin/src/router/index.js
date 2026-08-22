@@ -21,24 +21,6 @@ const routes = [
         meta: { title: '数据看板' }
       },
       {
-        path: 'products',
-        name: 'Products',
-        component: () => import('@/views/Products.vue'),
-        meta: { title: '产品管理' }
-      },
-      {
-        path: 'products/add',
-        name: 'ProductAdd',
-        component: () => import('@/views/ProductEdit.vue'),
-        meta: { title: '新增产品' }
-      },
-      {
-        path: 'products/edit/:id',
-        name: 'ProductEdit',
-        component: () => import('@/views/ProductEdit.vue'),
-        meta: { title: '编辑产品' }
-      },
-      {
         path: 'posts',
         name: 'Posts',
         component: () => import('@/views/Posts.vue'),
@@ -55,12 +37,6 @@ const routes = [
         name: 'PostEdit',
         component: () => import('@/views/PostEdit.vue'),
         meta: { title: '编辑帖子' }
-      },
-      {
-        path: 'categories',
-        name: 'Categories',
-        component: () => import('@/views/Categories.vue'),
-        meta: { title: '分类管理' }
       },
       {
         path: 'inquiries',

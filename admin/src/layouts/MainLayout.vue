@@ -18,19 +18,9 @@
           <span>数据看板</span>
         </el-menu-item>
         
-        <el-menu-item index="/products">
-          <el-icon><Box /></el-icon>
-          <span>产品管理</span>
-        </el-menu-item>
-        
         <el-menu-item index="/posts">
           <el-icon><Document /></el-icon>
           <span>帖子管理</span>
-        </el-menu-item>
-        
-        <el-menu-item index="/categories">
-          <el-icon><Grid /></el-icon>
-          <span>分类管理</span>
         </el-menu-item>
         
         <el-menu-item index="/inquiries">
