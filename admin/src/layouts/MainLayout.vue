@@ -13,11 +13,6 @@
         active-text-color="#fff"
         @select="handleMenuSelect"
       >
-        <el-menu-item index="/dashboard">
-          <el-icon><DataAnalysis /></el-icon>
-          <span>数据看板</span>
-        </el-menu-item>
-        
         <el-menu-item index="/posts">
           <el-icon><Document /></el-icon>
           <span>帖子管理</span>

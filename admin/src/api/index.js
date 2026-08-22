@@ -34,12 +34,6 @@ export const uploadImage = (formData, folder = '') => {
   });
 };
 
-// 获取统计数据
-export const getDashboardStats = (params) => api.get('/stats/dashboard', { params });
-
-// 记录访问日志
-export const logVisit = (data) => api.post('/stats/log', data);
-
 // 获取询盘列表
 export const getInquiries = (params) => api.get('/inquiries', { params });
 

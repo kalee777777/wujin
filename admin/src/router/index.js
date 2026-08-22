@@ -11,15 +11,9 @@ const routes = [
   {
     path: '/',
     component: () => import('@/layouts/MainLayout.vue'),
-    redirect: '/dashboard',
+    redirect: '/posts',
     meta: { requiresAuth: true },
     children: [
-      {
-        path: 'dashboard',
-        name: 'Dashboard',
-        component: () => import('@/views/Dashboard.vue'),
-        meta: { title: '数据看板' }
-      },
       {
         path: 'posts',
         name: 'Posts',
@@ -67,7 +61,7 @@ router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth && !adminStore.isLoggedIn) {
     next('/login');
   } else if (to.path === '/login' && adminStore.isLoggedIn) {
-    next('/dashboard');
+    next('/posts');
   } else {
     next();
   }

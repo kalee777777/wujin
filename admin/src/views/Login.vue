@@ -85,7 +85,7 @@ async function handleLogin() {
     const res = await adminStore.login(loginForm.username, loginForm.password);
     if (res.success) {
       ElMessage.success('登录成功');
-      router.push('/dashboard');
+      router.push('/posts');
     } else {
       ElMessage.error(res.error || '登录失败');
     }
