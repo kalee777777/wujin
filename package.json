@@ -4,6 +4,10 @@
   "private": true,
   "scripts": {
     "build": "exit 0",
-    "deploy": "npx wrangler pages deploy . --project-name=wujin"
+    "deploy": "npx wrangler pages deploy . --project-name=wujin",
+    "migrate-db": "node scripts/migrate-to-d1.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3"
   }
 }

@@ -1,11 +1,16 @@
 {
   "version": 1,
-  "include": ["/*"],
-  "exclude": ["/admin/assets/*", "/product-images/*", "/assets/*", "/*.html", "/*.css", "/*.js"],
-  "routes": [
-    {
-      "pattern": "/admin/*",
-      "page": "/admin/dist/index.html"
-    }
+  "include": ["/api/*", "/blog-post-*", "/product-images/*"],
+  "exclude": [
+    "/assets/*",
+    "/*.css",
+    "/*.js",
+    "/*.json",
+    "/*.svg",
+    "/*.png",
+    "/*.jpg",
+    "/*.gif",
+    "/*.ico",
+    "/admin/dist/assets/*"
   ]
 }

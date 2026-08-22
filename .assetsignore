@@ -1,5 +1,12 @@
 backend/
-admin/
+admin/src/
+admin/node_modules/
+admin/public/
+admin/*.json
+admin/*.js
+admin/.gitignore
+functions/
+scripts/
 node_modules/
 *.pdf
 *.docx
@@ -8,7 +15,6 @@ node_modules/
 .trae/
 .trae-html-share-packages/
 .uploads/
-dist/
 deploy/
 product-classification-report/
 trae-visualization-guide/
@@ -26,3 +32,5 @@ package-lock.json
 README.md
 README.en.md
 *.md
+schema.sql
+d1-data.sql

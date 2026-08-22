@@ -5,3 +5,14 @@ compatibility_date = "2024-09-01"
 directory = "./"
 html_handling = "auto-trailing-slash"
 not_found_handling = "404-page"
+
+# Cloudflare D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "holgenvy"
+database_id = "YOUR_D1_DATABASE_ID"
+
+# Cloudflare R2 Bucket (for image uploads)
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "holgenvy-images"

@@ -1,0 +1,2 @@
+# Admin SPA routing - all /admin/* paths serve index.html
+/admin/*  /admin/dist/index.html  200
