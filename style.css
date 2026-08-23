@@ -2328,14 +2328,13 @@ img { max-width: 100%; display: block; }
         background: var(--dark-card);
         border-top: 1px solid var(--border-dark);
         border-bottom: 1px solid var(--border-dark);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease, padding 0.3s ease;
-        padding: 0;
+        max-height: none;
+        overflow: visible;
+        padding: 8px 0;
     }
     .cat-nav.active {
-        max-height: 500px;
-        padding: 12px 0;
+        max-height: none;
+        padding: 8px 0;
     }
     .cat-nav-inner {
         flex-direction: column;
