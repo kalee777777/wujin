@@ -89,6 +89,10 @@ function getApiBase() {
     if (port === '3001' || port === '9090') {
         return '/api';
     }
+    // 检查是否在 Vultr 服务器上（80端口）
+    if (window.location.hostname === '96.30.206.72' || window.location.hostname === 'holgenvy.com' || window.location.hostname === 'www.holgenvy.com') {
+        return '/api';
+    }
     return 'http://localhost:3001/api';
 }
 
@@ -1032,7 +1036,7 @@ function initContactForm() {
 
             await submitInquiryToBackend(formData, 'contact-page');
 
-            submitBtn.innerHTML = '<span>Inquiry Sent!</span>';
+            submitBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Inquiry Sent!';
             submitBtn.style.background = 'linear-gradient(135deg, #B3000E, #E60012, #FF3344)';
 
             setTimeout(() => {
