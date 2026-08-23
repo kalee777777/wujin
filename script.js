@@ -1076,9 +1076,192 @@ function initFaqAccordion() {
     });
 }
 
+// === BLOG PAGE LOGIC ===
+const BLOG_CATEGORIES = {
+    'industry-trends': 'Industry Trends',
+    'sourcing-guide': 'Sourcing Guide',
+    'product-spotlight': 'Product Spotlight',
+    'technical': 'Technical',
+    'product-guide': 'Product Guide'
+};
+
+let blogCurrentPage = 1;
+let blogCurrentCategory = '';
+const blogPageSize = 9;
+
+function initBlogPage() {
+    const blogGrid = document.getElementById('blogGrid');
+    if (!blogGrid) return; // Not on blog page
+
+    // Bind filter buttons
+    const filterBtns = document.querySelectorAll('.blog-filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            blogCurrentCategory = btn.dataset.category;
+            blogCurrentPage = 1;
+            loadBlogPosts();
+        });
+    });
+
+    loadBlogPosts();
+}
+
+async function loadBlogPosts() {
+    const blogGrid = document.getElementById('blogGrid');
+    const blogPagination = document.getElementById('blogPagination');
+    if (!blogGrid) return;
+
+    // Show loading
+    blogGrid.innerHTML = '<div class="blog-loading"><div class="spinner"></div><p>Loading articles...</p></div>';
+    blogPagination.innerHTML = '';
+
+    try {
+        const apiBase = getApiBase();
+        let url = `${apiBase}/posts?status=1&page=${blogCurrentPage}&limit=${blogPageSize}`;
+        if (blogCurrentCategory) url += `&category=${blogCurrentCategory}`;
+
+        const response = await fetch(url);
+        const result = await response.json();
+
+        if (!result.success || !result.data || !result.data.posts) {
+            throw new Error('Invalid API response');
+        }
+
+        const { posts, pagination } = result.data;
+
+        if (posts.length === 0) {
+            blogGrid.innerHTML = `
+                <div class="blog-empty" style="grid-column: 1 / -1;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                    </svg>
+                    <h3>No articles found</h3>
+                    <p>Check back later for new content.</p>
+                </div>`;
+            return;
+        }
+
+        // Render blog cards
+        blogGrid.innerHTML = posts.map(post => {
+            const slug = post.slug || post.title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+            const categoryLabel = BLOG_CATEGORIES[post.category] || post.category || 'Uncategorized';
+            const dateStr = formatDateShort(post.published_at || post.created_at);
+            const summary = post.summary || '';
+            const authorInitial = (post.author || 'H').charAt(0).toUpperCase();
+            const readTime = post.read_time || '5 min';
+            const coverImage = post.cover_image
+                ? `<img src="${post.cover_image}" alt="${escapeHtml(post.title)}" loading="lazy">`
+                : `<div class="img-placeholder"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Article Image</span></div>`;
+
+            return `
+                <a href="blog-post-${escapeHtml(slug)}.html" class="blog-card">
+                    <div class="blog-img">${coverImage}</div>
+                    <div class="blog-info">
+                        <div class="blog-meta-top">
+                            <span class="blog-tag">${escapeHtml(categoryLabel)}</span>
+                            <span class="blog-date">${escapeHtml(dateStr)}</span>
+                        </div>
+                        <h4>${escapeHtml(post.title)}</h4>
+                        <p>${escapeHtml(summary.length > 120 ? summary.substring(0, 120) + '...' : summary)}</p>
+                        <div class="blog-card-author">
+                            <span class="author-avatar">${authorInitial}</span>
+                            <span>${escapeHtml(post.author || 'HOLGENVY')} · ${readTime} read</span>
+                        </div>
+                    </div>
+                </a>`;
+        }).join('');
+
+        // Render pagination
+        renderBlogPagination(pagination);
+
+    } catch (error) {
+        console.error('Failed to load blog posts:', error);
+        blogGrid.innerHTML = `
+            <div class="blog-empty" style="grid-column: 1 / -1;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <h3>Unable to load articles</h3>
+                <p>Please try again later.</p>
+            </div>`;
+    }
+}
+
+function renderBlogPagination(pagination) {
+    const container = document.getElementById('blogPagination');
+    if (!container || pagination.totalPages <= 1) {
+        if (container) container.innerHTML = '';
+        return;
+    }
+
+    let html = '';
+
+    // Previous button
+    html += `<button ${pagination.page <= 1 ? 'disabled' : ''} onclick="goBlogPage(${pagination.page - 1})">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>`;
+
+    // Page numbers
+    const maxVisible = 5;
+    let startPage = Math.max(1, pagination.page - Math.floor(maxVisible / 2));
+    let endPage = Math.min(pagination.totalPages, startPage + maxVisible - 1);
+    if (endPage - startPage < maxVisible - 1) {
+        startPage = Math.max(1, endPage - maxVisible + 1);
+    }
+
+    if (startPage > 1) {
+        html += `<button onclick="goBlogPage(1)">1</button>`;
+        if (startPage > 2) html += `<button disabled>...</button>`;
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+        html += `<button class="${i === pagination.page ? 'active' : ''}" onclick="goBlogPage(${i})">${i}</button>`;
+    }
+
+    if (endPage < pagination.totalPages) {
+        if (endPage < pagination.totalPages - 1) html += `<button disabled>...</button>`;
+        html += `<button onclick="goBlogPage(${pagination.totalPages})">${pagination.totalPages}</button>`;
+    }
+
+    // Next button
+    html += `<button ${pagination.page >= pagination.totalPages ? 'disabled' : ''} onclick="goBlogPage(${pagination.page + 1})">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>`;
+
+    container.innerHTML = html;
+}
+
+function goBlogPage(page) {
+    blogCurrentPage = page;
+    loadBlogPosts();
+    window.scrollTo({ top: document.getElementById('blogGrid').offsetTop - 100, behavior: 'smooth' });
+}
+
+function formatDateShort(dateStr) {
+    if (!dateStr) return '';
+    const d = new Date(dateStr);
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+}
+
+function escapeHtml(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+}
+
 // === INITIALIZE ===
 document.addEventListener('DOMContentLoaded', () => {
     loadAllComponents().then(() => {
+        initBlogPage();
         initInquiryListPage();
         initInquiryPage();
         initContactForm();

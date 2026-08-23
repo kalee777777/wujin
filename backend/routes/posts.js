@@ -484,7 +484,7 @@ router.post('/', authMiddleware, (req, res) => {
     `);
     
     const postSlug = slug || generateSlug(title);
-    const publishedAt = status === 1 ? new Date().toISOString() : null;
+    const publishedAt = req.body.published_at || (status === 1 ? new Date().toISOString() : null);
     const postReadTime = read_time || estimateReadTime(content);
     
     const result = insertStmt.run(
