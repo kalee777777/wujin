@@ -46,9 +46,6 @@
         </el-form-item>
       </el-form>
       
-      <div style="text-align: center; color: #999; font-size: 12px;">
-        默认账号: admin / admin123 或 manager / manager123
-      </div>
     </div>
   </div>
 </template>
