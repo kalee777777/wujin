@@ -104,6 +104,14 @@ function initInteractions() {
     const heroPanels = document.querySelectorAll('.hero-slide[data-hero-panel]');
 
     if (sidebarCatLinks.length && heroPanels.length) {
+        // Pause all videos except the active one on load
+        heroPanels.forEach(panel => {
+            const video = panel.querySelector('video');
+            if (video && !panel.classList.contains('active')) {
+                video.pause();
+            }
+        });
+
         sidebarCatLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -112,6 +120,14 @@ function initInteractions() {
                 // Update active sidebar link
                 sidebarCatLinks.forEach(l => l.classList.remove('active'));
                 link.classList.add('active');
+
+                // Pause outgoing panel's video
+                heroPanels.forEach(panel => {
+                    if (!panel.classList.contains('active')) {
+                        const v = panel.querySelector('video');
+                        if (v) v.pause();
+                    }
+                });
 
                 // Switch hero panel
                 heroPanels.forEach(panel => {
@@ -122,6 +138,13 @@ function initInteractions() {
                             panel.style.transition = 'opacity 0.5s ease';
                             panel.style.opacity = '1';
                         });
+
+                        // Play incoming panel's video
+                        const v = panel.querySelector('video');
+                        if (v) {
+                            v.currentTime = 0;
+                            v.play().catch(() => {});
+                        }
                     } else {
                         panel.classList.remove('active');
                         panel.style.opacity = '0';
