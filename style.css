@@ -2325,22 +2325,33 @@ img { max-width: 100%; display: block; }
     .search-bar, .header-actions { display: none; }
     .mobile-toggle { display: flex; }
     .cat-nav {
-        background: var(--dark-card);
-        border-top: 1px solid var(--border-dark);
-        border-bottom: 1px solid var(--border-dark);
-        max-height: none;
-        overflow: visible;
-        padding: 8px 0;
+        background: transparent;
+        border-top: none;
+        border-bottom: none;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: max-height 0.35s ease, padding 0.35s ease, background 0.2s ease, border 0.2s ease;
     }
     .cat-nav.active {
-        max-height: none;
+        max-height: 500px;
         padding: 8px 0;
+        background: var(--dark-card);
+        border-bottom: 1px solid var(--border-dark);
     }
     .cat-nav-inner {
         flex-direction: column;
         height: auto;
-        padding: 12px 0;
+        padding: 0;
         gap: 0;
+    }
+    .cat-nav-inner .cat-links,
+    .cat-nav-inner .cat-phone,
+    .cat-nav-inner .cat-menu-btn {
+        display: none;
+    }
+    .cat-nav.active .cat-links {
+        display: flex;
     }
     .cat-menu-btn {
         display: none;
