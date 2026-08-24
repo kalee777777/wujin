@@ -40,16 +40,7 @@
                 </div>
                 <div class="about-intro-image">
                     <div class="video-wrapper">
-                        <iframe 
-                            width="100%" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/F1aTba8p5ss" 
-                            title="HOLGENVY Company Video" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" 
-                            allowfullscreen>
-                        </iframe>
+                        <div id="ytplayer"></div>
                     </div>
                 </div>
             </div>
@@ -194,5 +185,33 @@
     <div id="site-footer"></div>
 
     <script src="script.js?v=2"></script>
+    <script>
+    // YouTube IFrame API - auto play muted
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('ytplayer', {
+            height: '315',
+            width: '100%',
+            videoId: 'YiROVfP10zY',
+            playerVars: {
+                'autoplay': 1,
+                'mute': 1,
+                'loop': 1,
+                'playlist': 'YiROVfP10zY',
+                'controls': 1,
+                'modestbranding': 1,
+                'rel': 0
+            },
+            events: {
+                'onReady': function(e) { e.target.playVideo(); }
+            }
+        });
+    }
+    </script>
 </body>
 </html>
