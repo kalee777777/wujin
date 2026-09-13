@@ -50,9 +50,8 @@
         </el-row>
         
         <el-form-item label="封面图片">
-          <el-upload :action="uploadUrl" :headers="uploadHeaders" :show-file-list="false"
-            name="image" :on-success="handleCoverUpload" :on-error="handleCoverUploadError"
-            accept="image/*">
+          <el-upload :http-request="handleCoverUpload" :show-file-list="false"
+            name="image" accept="image/*">
             <div v-if="form.cover_image" style="position: relative;">
               <el-image :src="form.cover_image" style="width: 200px; height: 120px; object-fit: cover;" fit="cover" />
               <div style="position: absolute; top: 0; right: 0; padding: 4px;">
@@ -132,11 +131,6 @@ const rules = {
   content: [{ required: true, message: '请输入帖子内容', trigger: 'change' }]
 };
 
-const uploadUrl = '/api/upload/image';
-const uploadHeaders = computed(() => ({
-  Authorization: `Bearer ${localStorage.getItem('admin_token')}`
-}));
-
 const toolbarConfig = { excludeKeys: ['group-video'] };
 
 const editorConfig = {
@@ -145,7 +139,9 @@ const editorConfig = {
     uploadImage: {
       server: '/api/upload/image',
       fieldName: 'image',
-      headers: uploadHeaders.value,
+      get headers() {
+        return { Authorization: `Bearer ${localStorage.getItem('admin_token')}` };
+      },
       customInsert(res, insertFn) {
         if (res.success) {
           insertFn(`/${res.data.path}`, res.data.filename, `/${res.data.path}`);
@@ -156,11 +152,22 @@ const editorConfig = {
 };
 
 function handleCreated(editor) { editorRef.value = editor; }
-function handleCoverUpload(response) {
-  if (response.success) { form.cover_image = `/${response.data.path}`; }
-}
-function handleCoverUploadError(error) {
-  ElMessage.error('封面图片上传失败：' + (error?.message || '未知错误'));
+
+async function handleCoverUpload(options) {
+  const formData = new FormData();
+  formData.append('image', options.file);
+  try {
+    const res = await request.post('/upload/image', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    });
+    if (res.success) {
+      form.cover_image = `/${res.data.path}`;
+    } else {
+      ElMessage.error(res.error || '封面上传失败');
+    }
+  } catch (error) {
+    ElMessage.error('封面图片上传失败：' + (error?.message || '未知错误'));
+  }
 }
 
 async function fetchPost() {
