@@ -454,7 +454,33 @@ img { max-width: 100%; display: block; }
 
 .header-actions {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 16px;
+}
+
+/* === Multi-Language Switcher (translate.js) === */
+.translate-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.translateSelectLanguage {
+    background: var(--dark-card) !important;
+    color: var(--text-light) !important;
+    border: 1px solid var(--border-dark) !important;
+    border-radius: var(--radius-sm, 6px) !important;
+    padding: 6px 10px !important;
+    font-size: 0.8rem !important;
+    font-family: var(--font-body) !important;
+    cursor: pointer !important;
+    outline: none !important;
+    transition: var(--transition) !important;
+}
+
+.translateSelectLanguage:hover,
+.translateSelectLanguage:focus {
+    border-color: var(--neon) !important;
+    box-shadow: 0 0 8px var(--neon-glow) !important;
 }
 
 .action-icon {

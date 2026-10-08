@@ -1281,6 +1281,56 @@ function escapeHtml(str) {
     return div.innerHTML;
 }
 
+// === MULTI-LANGUAGE TRANSLATION (translate.js) ===
+function initLanguageTranslator() {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.staticfile.net/translate.js/3.5.2/translate.js';
+    script.async = true;
+    script.onload = function() {
+        if (window.translate) {
+            // Use v2
+            translate.setUseVersion2();
+
+            // Original site language
+            translate.language.setLocal('english');
+
+            // 7 languages: English, Russian, Chinese, French, Spanish, Portuguese, Italian
+            translate.selectLanguageTag.languages = 'english,chinese_simplified,russian,french,spanish,portuguese,italian';
+
+            // Ignore brand marks
+            translate.ignore.class.push('brand-name');
+            translate.ignore.class.push('brand-logo');
+            translate.ignore.class.push('brand-tag');
+
+            // Listen for DOM changes (for dynamically loaded components / cards)
+            translate.listener.start();
+
+            // Execute translation mount
+            translate.execute();
+        }
+    };
+    script.onerror = function() {
+        console.warn('translate.js primary CDN failed, loading fallback...');
+        const fallback = document.createElement('script');
+        fallback.src = 'https://res.zvo.cn/translate/translate.js';
+        fallback.async = true;
+        fallback.onload = function() {
+            if (window.translate) {
+                translate.setUseVersion2();
+                translate.language.setLocal('english');
+                translate.selectLanguageTag.languages = 'english,chinese_simplified,russian,french,spanish,portuguese,italian';
+                translate.ignore.class.push('brand-name');
+                translate.ignore.class.push('brand-logo');
+                translate.ignore.class.push('brand-tag');
+                translate.listener.start();
+                translate.execute();
+            }
+        };
+        document.body.appendChild(fallback);
+    };
+    document.body.appendChild(script);
+}
+
 // === INITIALIZE ===
 document.addEventListener('DOMContentLoaded', () => {
     loadAllComponents().then(() => {
@@ -1289,5 +1339,6 @@ document.addEventListener('DOMContentLoaded', () => {
         initInquiryPage();
         initContactForm();
         initFaqAccordion();
+        initLanguageTranslator();
     });
 });
