@@ -17,7 +17,54 @@
                 <div class="search-results" id="searchResults"></div>
             </div>
             <div class="header-actions">
-                <div id="translate" class="translate-container"></div>
+                <!-- Custom Language Selector with Flags & Dark UI -->
+                <div class="custom-lang-dropdown ignore" id="customLangDropdown">
+                    <button class="lang-trigger" id="langTriggerBtn" type="button" aria-haspopup="listbox" aria-expanded="false" title="Switch Language">
+                        <span class="flag-icon" id="currentLangFlag">🇺🇸</span>
+                        <span class="lang-current-label" id="currentLangLabel">EN</span>
+                        <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <ul class="lang-menu" id="langMenu" role="listbox">
+                        <li class="lang-item active" data-lang="english" role="option">
+                            <span class="flag-icon">🇺🇸</span>
+                            <span class="lang-name">English</span>
+                            <span class="lang-check">✓</span>
+                        </li>
+                        <li class="lang-item" data-lang="russian" role="option">
+                            <span class="flag-icon">🇷🇺</span>
+                            <span class="lang-name">Русский</span>
+                            <span class="lang-check">✓</span>
+                        </li>
+                        <li class="lang-item" data-lang="chinese_simplified" role="option">
+                            <span class="flag-icon">🇨🇳</span>
+                            <span class="lang-name">简体中文</span>
+                            <span class="lang-check">✓</span>
+                        </li>
+                        <li class="lang-item" data-lang="french" role="option">
+                            <span class="flag-icon">🇫🇷</span>
+                            <span class="lang-name">Français</span>
+                            <span class="lang-check">✓</span>
+                        </li>
+                        <li class="lang-item" data-lang="spanish" role="option">
+                            <span class="flag-icon">🇪🇸</span>
+                            <span class="lang-name">Español</span>
+                            <span class="lang-check">✓</span>
+                        </li>
+                        <li class="lang-item" data-lang="portuguese" role="option">
+                            <span class="flag-icon">🇵🇹</span>
+                            <span class="lang-name">Português</span>
+                            <span class="lang-check">✓</span>
+                        </li>
+                        <li class="lang-item" data-lang="italian" role="option">
+                            <span class="flag-icon">🇮🇹</span>
+                            <span class="lang-name">Italiano</span>
+                            <span class="lang-check">✓</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Hidden mount container for translate.js default tag -->
+                <div id="translate" style="display: none;"></div>
+
                 <a href="inquiry.html" class="action-icon">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                     <span>Inquiry</span>

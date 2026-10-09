@@ -1281,32 +1281,122 @@ function escapeHtml(str) {
     return div.innerHTML;
 }
 
-// === MULTI-LANGUAGE TRANSLATION (translate.js) ===
+// === MULTI-LANGUAGE TRANSLATION (Custom UI + translate.js) ===
+const LANG_CONFIG = {
+    english: { label: 'EN', flag: '🇺🇸', name: 'English' },
+    russian: { label: 'RU', flag: '🇷🇺', name: 'Русский' },
+    chinese_simplified: { label: '中文', flag: '🇨🇳', name: '简体中文' },
+    french: { label: 'FR', flag: '🇫🇷', name: 'Français' },
+    spanish: { label: 'ES', flag: '🇪🇸', name: 'Español' },
+    portuguese: { label: 'PT', flag: '🇵🇹', name: 'Português' },
+    italian: { label: 'IT', flag: '🇮🇹', name: 'Italiano' }
+};
+
+function setupCustomLanguageUI() {
+    const dropdown = document.getElementById('customLangDropdown');
+    const triggerBtn = document.getElementById('langTriggerBtn');
+    const menu = document.getElementById('langMenu');
+    const flagEl = document.getElementById('currentLangFlag');
+    const labelEl = document.getElementById('currentLangLabel');
+
+    if (!dropdown || !triggerBtn || !menu) return;
+
+    // Read stored language or default to english
+    let currentLang = localStorage.getItem('site_selected_lang') || 'english';
+    updateActiveLanguageUI(currentLang);
+
+    // Toggle dropdown
+    triggerBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = dropdown.classList.toggle('open');
+        triggerBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('open');
+            triggerBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Language selection
+    menu.querySelectorAll('.lang-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const langKey = item.getAttribute('data-lang');
+            if (langKey) {
+                switchLanguage(langKey);
+                dropdown.classList.remove('open');
+                triggerBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+
+    function updateActiveLanguageUI(langKey) {
+        const info = LANG_CONFIG[langKey] || LANG_CONFIG.english;
+        if (flagEl) flagEl.textContent = info.flag;
+        if (labelEl) labelEl.textContent = info.label;
+
+        menu.querySelectorAll('.lang-item').forEach(item => {
+            if (item.getAttribute('data-lang') === langKey) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    window.updateActiveLanguageUI = updateActiveLanguageUI;
+}
+
+function switchLanguage(langKey) {
+    localStorage.setItem('site_selected_lang', langKey);
+    if (window.updateActiveLanguageUI) {
+        window.updateActiveLanguageUI(langKey);
+    }
+
+    if (window.translate) {
+        if (typeof translate.changeLanguage === 'function') {
+            translate.changeLanguage(langKey);
+        } else if (translate.selectLanguageTag) {
+            translate.selectLanguageTag.select(langKey);
+        }
+    }
+}
+
 function initLanguageTranslator() {
+    setupCustomLanguageUI();
+
     const script = document.createElement('script');
     script.src = 'https://cdn.staticfile.net/translate.js/3.5.2/translate.js';
     script.async = true;
     script.onload = function() {
         if (window.translate) {
-            // Use v2
             translate.setUseVersion2();
-
-            // Original site language
             translate.language.setLocal('english');
-
-            // 7 languages: English, Russian, Chinese, French, Spanish, Portuguese, Italian
             translate.selectLanguageTag.languages = 'english,chinese_simplified,russian,french,spanish,portuguese,italian';
 
-            // Ignore brand marks
+            // Ignore brand and UI elements
             translate.ignore.class.push('brand-name');
             translate.ignore.class.push('brand-logo');
             translate.ignore.class.push('brand-tag');
+            translate.ignore.class.push('custom-lang-dropdown');
+            translate.ignore.class.push('lang-menu');
+            translate.ignore.class.push('flag-icon');
 
-            // Listen for DOM changes (for dynamically loaded components / cards)
             translate.listener.start();
-
-            // Execute translation mount
             translate.execute();
+
+            // Restore previously selected language if any
+            const savedLang = localStorage.getItem('site_selected_lang');
+            if (savedLang && savedLang !== 'english') {
+                setTimeout(() => {
+                    if (typeof translate.changeLanguage === 'function') {
+                        translate.changeLanguage(savedLang);
+                    }
+                }, 300);
+            }
         }
     };
     script.onerror = function() {
@@ -1322,8 +1412,20 @@ function initLanguageTranslator() {
                 translate.ignore.class.push('brand-name');
                 translate.ignore.class.push('brand-logo');
                 translate.ignore.class.push('brand-tag');
+                translate.ignore.class.push('custom-lang-dropdown');
+                translate.ignore.class.push('lang-menu');
+                translate.ignore.class.push('flag-icon');
                 translate.listener.start();
                 translate.execute();
+
+                const savedLang = localStorage.getItem('site_selected_lang');
+                if (savedLang && savedLang !== 'english') {
+                    setTimeout(() => {
+                        if (typeof translate.changeLanguage === 'function') {
+                            translate.changeLanguage(savedLang);
+                        }
+                    }, 300);
+                }
             }
         };
         document.body.appendChild(fallback);
